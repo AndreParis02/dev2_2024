@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_DEV2_2024", "01_DEV2_2024", "{62891638-29BC-43B3-944D-6DE63601DC75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cartella", "01_DEV2_2024\cartella\cartella.csproj", "{7D7B3EB1-7B82-4791-A0BF-C1BBC6597B2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prima_app", "01_DEV2_2024\prima_app\prima_app.csproj", "{1C18CD68-3EA2-40AB-9BC3-D913971BCDBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D7B3EB1-7B82-4791-A0BF-C1BBC6597B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D7B3EB1-7B82-4791-A0BF-C1BBC6597B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D7B3EB1-7B82-4791-A0BF-C1BBC6597B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D7B3EB1-7B82-4791-A0BF-C1BBC6597B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C18CD68-3EA2-40AB-9BC3-D913971BCDBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C18CD68-3EA2-40AB-9BC3-D913971BCDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C18CD68-3EA2-40AB-9BC3-D913971BCDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C18CD68-3EA2-40AB-9BC3-D913971BCDBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D7B3EB1-7B82-4791-A0BF-C1BBC6597B2B} = {62891638-29BC-43B3-944D-6DE63601DC75}
+		{1C18CD68-3EA2-40AB-9BC3-D913971BCDBB} = {62891638-29BC-43B3-944D-6DE63601DC75}
+	EndGlobalSection
+EndGlobal
