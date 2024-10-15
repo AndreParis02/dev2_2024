@@ -39,7 +39,7 @@ string etaStr = etaInt.ToString();
 Console.WriteLine($"Hai {etaInt} anni");
 
 /*
-i metodi di console permettono di gestire l'output o l'input ( il dialogo con l'utente) attaverso la console
+i metodi di console permettono di gestire l'output o l'input ( il dialogo con l'utente) attraverso la console
 WriteLine() stampa a video una stringa
 ReadLine() legge a video da stringa
 

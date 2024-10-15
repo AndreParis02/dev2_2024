@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_DEV2_2024", "01_DEV2_2024", "{62891638-29BC-43B3-944D-6DE63601DC75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cartella", "01_DEV2_2024\cartella\cartella.csproj", "{7D7B3EB1-7B82-4791-A0BF-C1BBC6597B2B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xx-Esercitazioni", "xx-Esercitazioni", "{C7D20A4D-9E33-40E0-BD62-3A5F1452DCBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prima_app", "01_DEV2_2024\prima_app\prima_app.csproj", "{1C18CD68-3EA2-40AB-9BC3-D913971BCDBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_metodi-console", "xx-Esercitazioni\01_metodi-console\01_metodi-console.csproj", "{582D3636-C46E-40C4-9367-BF3593949703}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,9 +26,14 @@ Global
 		{1C18CD68-3EA2-40AB-9BC3-D913971BCDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C18CD68-3EA2-40AB-9BC3-D913971BCDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C18CD68-3EA2-40AB-9BC3-D913971BCDBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582D3636-C46E-40C4-9367-BF3593949703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582D3636-C46E-40C4-9367-BF3593949703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582D3636-C46E-40C4-9367-BF3593949703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582D3636-C46E-40C4-9367-BF3593949703}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7D7B3EB1-7B82-4791-A0BF-C1BBC6597B2B} = {62891638-29BC-43B3-944D-6DE63601DC75}
 		{1C18CD68-3EA2-40AB-9BC3-D913971BCDBB} = {62891638-29BC-43B3-944D-6DE63601DC75}
+		{582D3636-C46E-40C4-9367-BF3593949703} = {C7D20A4D-9E33-40E0-BD62-3A5F1452DCBD}
 	EndGlobalSection
 EndGlobal
