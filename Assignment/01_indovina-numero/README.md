@@ -85,6 +85,6 @@ Console.WriteLine("Hai indovinato! Il numero da indovinare era: "+ numeroDaIndov
 
 ```bash
 git add --all
-git commit -m "Indovina numero: Versione 1"
+git commit -m "Indovina numero: Versione 2"
 git push -u origin main
 ```
