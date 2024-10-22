@@ -212,3 +212,27 @@ git add --all
 git commit -m "Indovina numero: Versione 4"
 git push -u origin main
 ```
+
+## Versione 5
+
+**Obiettivo:**
+Permetti all'utente di scegliere tra i diversi livelli di difficoltà che modificano il numero di punti sottrarri o l'intervallo dei numeri o il numero di tentativi possibili.
+
+**Istruzioni:**
+
+* inizia con un punteggio massimo (es. 100 punti)
+* Ad ogni tentativo fallito, sottrai un certo numero di punti (es. 20 punti)
+* Alla fine del gioco mostra il punteggio dell'utente
+
+>**Esempio codice:**
+
+```csharp
+
+```
+### Comandi versionamento
+
+```bash
+git add --all
+git commit -m "Indovina numero: Versione 5"
+git push -u origin main
+```

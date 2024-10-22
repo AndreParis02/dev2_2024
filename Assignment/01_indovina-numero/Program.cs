@@ -37,9 +37,3 @@ if( numPunti == 0)
 {
     Console.WriteLine($"Peccato non hai indovinato ed hai finito tutti i punti! Il numero da indovinare era: {numeroDaIndovinare}");
 }
-    
-   
-        
-        
-
-    
