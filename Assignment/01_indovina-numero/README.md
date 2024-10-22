@@ -97,3 +97,20 @@ git add --all
 git commit -m "Indovina numero: Versione 2"
 git push -u origin main
 ```
+## Versione 3
+
+**Obiettivo:**
+Imposta un numero massimo di tentativai ( ad esempio 5). Se l'utente indovina entro questi tentativi, il gioco termina.
+
+**Istruzioni:**
+
+* Imposta una variabile booleana per tenere traccia se l'utente ha indovinato.
+* Mantieni un contatore di tentativi all'interno del ciclo While.
+* Dopo ogni tentativo, decremente il numero di tentativi rimasti e informare l'utente.
+* Se i tentativi esauriscono senza che l'utente abbia indovinato, stampa un messaggio di sconfitta e rivela il numero.
+
+>**Esempio codice:**
+
+```csharp
+
+```
