@@ -1,6 +1,6 @@
 # INDOVINA NUMERO
 
-## Obiettivo
+## Obiettivo:
 
 l'obiettivo di questa applicazione e' di indovinare il **numero casuale** generato dal computer.
 
@@ -13,8 +13,10 @@ l'obiettivo di questa applicazione e' di indovinare il **numero casuale** genera
 5. Altrimenti, il computer fornisce un suggerimento (maggiore o minore) e l'utente può inserire un nuovo numero.
 6. Il gioco termina quando l'utente indovina il numero o quando raggiunge il numero massimo di tentativi.
 
-**Esempio codice:**
+>**Esempio codice:**
+
 ## Versione 1
+
 ```csharp
 Random random = new Random();// Random e la classe che genera numeri casuali
 int numeroDaIndovinare = random.Next(1, 101);// Next e il metodo che genera un numero casuale tra 1 e 100
@@ -45,12 +47,19 @@ git push -u origin main
 
 ## Versione 2
 
+**Obiettivo:**
+Modifica il programma precedente per fornire all'utente suggerimenti dopo ogni tentativo, indicando se il numero da indovinare è maggiore o minore di quello inserito.
+
+**Istruzioni:**
+
 * Usa un ciclo while per permettere all'utente di continuare a tentare finchè non indovina.
 * Dopo ogni tentativo errato, indica se il numero da indovinare è maggiore o minore di quello inserito.
 * Quando l'utente indovina, esci dal ciclo e stampa un messaggio di congratulazioni.
 
 >**Esempio codice:**
+
 ## Versione 2
+
 ```csharp
 Random random = new Random();// Random e la classe che genera numeri casuali
 int numeroDaIndovinare = random.Next(1, 101);// Next e il metodo che genera un numero casuale tra 1 e 100
