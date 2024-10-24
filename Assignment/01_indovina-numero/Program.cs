@@ -7,22 +7,24 @@ int numeroUtente = 0;
 
 List<int> tentativiUtente = new List<int>();
 
-Console.WriteLine("Scegli il livello di difficolta':");
-Console.WriteLine("1. Facile (1-50, 10 tentativi)");
-Console.WriteLine("2. Medio (1-100, 7 tentativi)");
-Console.WriteLine("3. Difficile (1-200, 5 tentativi)");
+int scelta = 0;
 
-// int scelta = int.Parse(Console.ReadLine());
-int scelta = 0; // Inizializzo la variabile scelta a 0
-bool successoLivelloDifficolta = int.TryParse(Console.ReadLine(), out scelta); // TryParse restituisce true se la conversione è riuscita, altrimenti false
+do{
+    Console.WriteLine("Scegli il livello di difficolta':");
+    Console.WriteLine("1. Facile (1-50, 10 tentativi)");
+    Console.WriteLine("2. Medio (1-100, 7 tentativi)");
+    Console.WriteLine("3. Difficile (1-200, 5 tentativi)");
 
-// se la conversione non è riuscita oppure la scelta non è compresa tra 1 e 3
-if (!successoLivelloDifficolta || scelta < 1 || scelta > 3)
-{
-    Console.WriteLine("Scelta non valida."); // Stampo un messaggio di errore
-}
-else
-{
+
+    bool successoLivelloDifficolta = int.TryParse(Console.ReadLine(), out scelta); // TryParse restituisce true se la conversione è riuscita, altrimenti false
+
+    // se la conversione non è riuscita oppure la scelta non è compresa tra 1 e 3
+    if (!successoLivelloDifficolta || scelta < 1 || scelta > 3)
+    {
+        Console.WriteLine("Scelta non valida."); // Stampo un messaggio di errore
+    }
+}while (scelta < 1 || scelta > 3)
+
     switch (scelta)
     {
         case 1:
@@ -87,4 +89,3 @@ else
     {
         Console.Write($"{tentativo} ");
     }
-}
