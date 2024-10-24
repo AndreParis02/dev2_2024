@@ -1,8 +1,11 @@
-﻿Random random = new Random();// Random e la classe che genera numeri casuali
+﻿Random random = new Random();
 int numeroInserito;
 int totPunti;
 int numPunti;
 int numeroDaIndovinare;
+
+List <int> tentativiUtente = new List<int>(); //creo una lista per memoriazzare i tentativi dell'utente
+
 
 Console.Clear();
 
@@ -30,6 +33,7 @@ switch (difficoltà)
         {
             numeroInserito = Convert.ToInt32(Console.ReadLine());
             numPunti -= 5;
+            tentativiUtente.Add(numeroInserito);
 
                 if(numeroInserito != numeroDaIndovinare && numPunti != 0)
                 {
@@ -72,6 +76,7 @@ switch (difficoltà)
         {
             numeroInserito = Convert.ToInt32(Console.ReadLine());
             numPunti -= 10;
+            tentativiUtente.Add(numeroInserito);
 
                 if(numeroInserito != numeroDaIndovinare && numPunti != 0)
                 {
@@ -115,6 +120,7 @@ switch (difficoltà)
         {
             numeroInserito = Convert.ToInt32(Console.ReadLine());
             numPunti -= 100;
+            tentativiUtente.Add(numeroInserito);
 
                 if(numeroInserito != numeroDaIndovinare && numPunti != 0)
                 {
@@ -158,6 +164,7 @@ switch (difficoltà)
         {
             numeroInserito = Convert.ToInt32(Console.ReadLine());
             numPunti -= 200;
+            tentativiUtente.Add(numeroInserito);
 
                 if(numeroInserito != numeroDaIndovinare && numPunti != 0)
                 {
@@ -188,4 +195,10 @@ switch (difficoltà)
     default:
         Console.WriteLine("non hai selezionato nessun livello di difficoltà!");
         break;
+}
+
+Console.WriteLine("tentativi effettuati: ");
+foreach(int tentativo in tentativiUtente)
+{
+    Console.Write($"{tentativo} "); //stampo i tentativi effettuati
 }
