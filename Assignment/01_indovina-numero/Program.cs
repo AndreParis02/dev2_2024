@@ -8,8 +8,9 @@ int punteggio = 0;
 bool haIndovinato = false;
 int tentativi = 0;
 int numeroUtente = 0;
+int punteggioLevato = 0;
 
-List<int> tentativiUtente = new List<int>(); // creo una lista per memorizzare i tentativi
+Dictionary<int, int> PunteggioTentativo = new Dictionary<int, int>(); // creo un dizionario per memorizzare i tentativi e il punteggio
 
 string risposta = "s"; // inizializzo la risposta a "s" per far partire il gioco
 
@@ -21,7 +22,7 @@ do
     {
         Console.WriteLine("Scegli il livello di difficolta':");
         Console.WriteLine("1. Facile (1-50, 10 tentativi)");
-        Console.WriteLine("2. Medio (1-100, 7 tentativi)");
+        Console.WriteLine("2. Medio (1-100, 5 tentativi)");
         Console.WriteLine("3. Difficile (1-200, 5 tentativi)");
 
         bool successoLivelloDifficolta = int.TryParse(Console.ReadLine(), out scelta);
@@ -38,17 +39,21 @@ do
         case 1:
             numeroDaIndovinare = random.Next(1, 51);
             punteggio = 100;
-            tentativi = 10;
+            punteggioLevato = 5;
+            tentativi = punteggio / punteggioLevato;
+            
             break;
         case 2:
             numeroDaIndovinare = random.Next(1, 101);
             punteggio = 100;
-            tentativi = 7;
+            punteggioLevato = 10;
+            tentativi = punteggio / punteggioLevato;
             break;
         case 3:
             numeroDaIndovinare = random.Next(1, 201);
             punteggio = 100;
-            tentativi = 5;
+            punteggioLevato = 20;
+            tentativi = punteggio / punteggioLevato;
             break;
         default:
             Console.WriteLine("Scelta non valida.");
@@ -70,7 +75,8 @@ do
             continue;
         }
 
-        tentativiUtente.Add(numeroUtente);
+        PunteggioTentativo.Add(tentativi, punteggio);
+        punteggio = punteggio - punteggioLevato;
         tentativi--;
 
         if (numeroUtente < numeroDaIndovinare)
@@ -95,9 +101,9 @@ do
 
     Console.WriteLine("Tentativi effettuati: ");
 
-    foreach (int tentativo in tentativiUtente)
+    foreach (var tentativo in PunteggioTentativo)
     {
-        Console.Write($"{tentativo} ");
+        Console.WriteLine($"{tentativo.Key}\t{string.Join(", ", tentativo.Value)}");
     }
 
     Console.WriteLine("Vuoi giocare di nuovo? (s/n)");
@@ -111,7 +117,7 @@ do
         // pulisco la console
         Console.Clear();
     }
-    haIndovinato = false; // resetto la variabile haIndovinato
-    tentativiUtente.Clear(); // cancello i tentativi effettuati
+    haIndovinato = false; 
+    PunteggioTentativo.Clear(); // cancello i tentativi effettuati
 
 } while (risposta == "s" || risposta == "S");
