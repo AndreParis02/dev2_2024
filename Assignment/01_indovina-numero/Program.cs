@@ -1,7 +1,4 @@
-﻿// possiamo evitare la confusione tra lettere maiuscole e minuscole (S s , N n) convertendo la risposta dell'utente in minuscolo o in maiuscolo cosi
-// risposta = Console.ReadLine().ToLower(); // converto la risposta in minuscolo
-// risposta = Console.ReadLine().ToUpper(); // converto la risposta in maiuscolo
-Console.Clear();
+﻿Console.Clear();
 Random random = new Random();
 int numeroDaIndovinare = 0;
 int punteggio = 0;
@@ -10,14 +7,17 @@ int tentativi = 0;
 int numeroUtente = 0;
 int punteggioLevato = 0;
 
-Dictionary<int, int> PunteggioTentativo = new Dictionary<int, int>(); // creo un dizionario per memorizzare i tentativi e il punteggio
+
+
+Dictionary<string, List<int>> DatiUtente = new Dictionary<string, List<int>>(); // creo un dizionario per memorizzare i tentativi e il punteggio
 
 string risposta = "s"; // inizializzo la risposta a "s" per far partire il gioco
 
 do
 {
     int scelta = 0;
-
+    Console.WriteLine("Inserisci il tuo nome:");
+    string nomeUtente = Console.ReadLine();
     do
     {
         Console.WriteLine("Scegli il livello di difficolta':");
@@ -75,7 +75,11 @@ do
             continue;
         }
 
-        PunteggioTentativo.Add(tentativi, punteggio);
+        if(!DatiUtente.ContainsKey(nomeUtente))
+    {
+        DatiUtente.Add(nomeUtente, new List<int>());
+    }
+        DatiUtente[nomeUtente].Add(numeroUtente);
         punteggio = punteggio - punteggioLevato;
         tentativi--;
 
@@ -101,9 +105,9 @@ do
 
     Console.WriteLine("Tentativi effettuati: ");
 
-    foreach (var tentativo in PunteggioTentativo)
+    foreach (var DatiUtenti in DatiUtente)
     {
-        Console.WriteLine($"{tentativo.Key}\t{string.Join(", ", tentativo.Value)}");
+        Console.WriteLine($"{DatiUtenti.Key}\t{string.Join(", ", DatiUtenti.Value)}");
     }
 
     Console.WriteLine("Vuoi giocare di nuovo? (s/n)");
@@ -118,6 +122,6 @@ do
         Console.Clear();
     }
     haIndovinato = false; 
-    PunteggioTentativo.Clear(); // cancello i tentativi effettuati
+    //Lista.Clear(); // cancello i tentativi effettuati
 
 } while (risposta == "s" || risposta == "S");
