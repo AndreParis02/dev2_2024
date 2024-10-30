@@ -45,14 +45,14 @@ do
             break;
         case 2:
             numeroDaIndovinare = random.Next(1, 101);
-            punteggio = 100;
-            punteggioLevato = 10;
+            punteggio = 200;
+            punteggioLevato = 20;
             tentativi = punteggio / punteggioLevato;
             break;
         case 3:
             numeroDaIndovinare = random.Next(1, 201);
-            punteggio = 100;
-            punteggioLevato = 20;
+            punteggio = 300;
+            punteggioLevato = 60;
             tentativi = punteggio / punteggioLevato;
             break;
         default:
@@ -60,8 +60,7 @@ do
             break;
     }
 
-    Console.WriteLine("Indovina il numero. Punteggio massimo: 100 punti.");
-
+    Console.WriteLine($"Indovina il numero. Punteggio massimo: {punteggio} punti.");
     while (!haIndovinato && tentativi > 0)
     {
         Console.Write("Tentativo: ");
