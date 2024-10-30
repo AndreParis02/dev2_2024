@@ -1,6 +1,6 @@
-﻿// METODI DIZIONARIO
+﻿﻿// METODI DIZIONARIO
 /*
-i metodi per manipolare i dizionari sono:
+i metodi disponibili per manipolare i dizionari sono:
 - Add
 - Clear
 - ContainsKey
@@ -11,93 +11,102 @@ i metodi per manipolare i dizionari sono:
 
 Console.Clear();
 
-//Esempio di metodo Add
-//aggiunge un elemento al dizionario
+// ESEMPIO DI METODO ADD
+// aggiunge un elemento a un dizionario
+
+// dichiara e inizializza un dizionario di stringhe e interi
 Dictionary<string, int> dizionario1 = new Dictionary<string, int>
 {
-    {"uno",1 },
-    {"due",2 },
-    {"tre",3 }
-
+     { "uno", 1 },
+     { "due", 2 },
+     { "tre", 3 }
 };
 
-dizionario1.Add("quattro", 4); //aggiunge "quattro" con valore 4 a dizionario1
+dizionario1.Add("quatt", 4); // aggiunge "quattro" con valore 4 a dizionario1
 
-//Esempio di metodo Remove
-//rimuove un elemento al dizionario
+// ESEMPIO DI METODO REMOVE
+// rimuove un elemento da un dizionario
 
-//rimuove l'elemento con chiave "due" da dizionario1
+// rimuove l'elemento con chiave "due" da dizionario1
 dizionario1.Remove("due");
 
-//Esempio di metodo ContainsKey
-//restituisce true se il dizionario contiene una chiave
+// ESEMPIO DI METODO CONTAINSKEY
+// restituisce true se un dizionario contiene una chiave
 
-//Restituisce true se dizionario1 contiene la chiave "uno"
-Console.WriteLine(dizionario1.ContainsKey("uno"));
+// restituisce true se dizionario1 contiene la chiave "uno"
+Console.WriteLine(dizionario1.ContainsKey("due"));
 
-//Esempio di metodo ContainsValue
-//restituisce true se il dizionario contiene un valore
+// ESEMPIO DI METODO CONTAINSVALUE
+// restituisce true se un dizionario contiene un valore
 
-//Restituisce true se dizionario1 contiene il valore 3
-Console.WriteLine(dizionario1.ContainsValue(3));
+// restituisce true se dizionario1 contiene il valore 3
+Console.WriteLine(dizionario1.ContainsValue(2));
 
-//Esempio di metodo Clear
-//cancella gli elementi di un dizionario
+// ESEMPIO DI METODO CLEAR
+// cancella gli elementi di un dizionario
 
-//cancella gli elementi da dizionario1
+// cancella gli elementi di dizionario1
 dizionario1.Clear();
 
-//Esempio di dizionario con una coppia con una chiave e due valori
-Dictionary<string, List<int>> dizionario2 = new Dictionary<string, List<int>>
-{
-    {"uno", new List<int> {1, 2, 3}},
-    {"due", new List<int> {4, 5, 6}},
-    {"tre", new List<int> {7, 8, 9}},
-};
-
-//aggiunge 10 alla lista di valori associata alla chiave "uno"
-dizionario2.["uno"].Add(10);
-
-//stampo il dizionario aggiornato
-foreach(var coppia in dizionario2)
+// stampo il dizionario aggiornato
+foreach (var coppia in dizionario1)
 {
     Console.WriteLine($"{coppia.Key}\t{coppia.Value}");
 }
 
-//Esempio di dizionario con più chiavi associate ad un unico valore
+// ESEMPIO DI DIZIONARIO CON UNA COPPIA CON UNA CHIAVE E DUE VALORI
 
-//dichiara e inizializza un dizionario di liste e stringhe e interi
-Dictionary<List<string>,int> dizionario3 = new Dictionary<List<string>, int>
+// dichiara e inizializza un dizionario di stringhe e liste di interi
+Dictionary<string, List<int>> dizionario2 = new Dictionary<string, List<int>>
 {
-    {new List<string> {"uno", "due", "tre"},1 },
-    {new List<string> {"quattro", "cinque", "sei"},2 },
-    {new List<string> {"sette", "otto", "nove"},3 }
+    { "uno", new List<int> { 1, 2, 3 } },
+    { "due", new List<int> { 4, 5, 6 } },
+    { "tre", new List<int> { 7, 8, 9 } }
 };
 
-//stampo il dizionario aggiornato
-foreach(var coppia in dizionario3)
+// aggiunge 10 alla lista di valori associata alla chiave "uno"
+dizionario2["uno"].Add(10);
+
+// stampo il dizionario aggiornato
+foreach (var coppia in dizionario2)
 {
-    Console.WriteLine($"{string.Join(", ",)}\t{coppia.Value}");
+    Console.WriteLine($"{coppia.Key}\t{string.Join(", ", coppia.Value)}");
 }
 
-//Esempio di TryGetValue
+// ESEMPIO DI DIZIONARIO CON UNA COPPIA CON PIU CHIAVI ASSOCIATE AD UN VALORE
+
+// dichiara e inizializza un dizionario di liste di stringhe e interi
+Dictionary<List<string>, int> dizionario3 = new Dictionary<List<string>, int>
+{
+    { new List<string> { "uno", "due", "tre" }, 1 },
+    { new List<string> { "quattro", "cinque", "sei" }, 2 },
+    { new List<string> { "sette", "otto", "nove" }, 3 }
+};
+
+// stampo il dizionario
+foreach (var coppia in dizionario3)
+{
+    Console.WriteLine($"{string.Join(", ", coppia.Key)}\t{coppia.Value}");
+}
+
+// ESEMPIO DI METODO TRYGETVALUE
 // cerca un elemento in un dizionario e restituisce il valore associato
 
-//dichiara e inizializza un dizionario di stringhe e interi
-Dictionary<string, int> dizionario4 = new Dicotionary<string, int>
+// dichiara e inizializza un dizionario di stringhe e interi
+Dictionary<string, int> dizionario4 = new Dictionary<string, int>
 {
-    {"uno",1 },
-    {"due",2 },
-    {"tre",3 }
-
+    { "uno", 1 },
+    { "due", 2 },
+    { "tre", 3 }
 };
+
 int valore;
-//cerca un elemento con chiave "due" in dizionario4 e restituisce il valore associato
-if(dizionario4.TryGetValue("due",out valore))
+// cerca l'elemento con chiave "due" in dizionario4 e restituisce il valore associato
+if (dizionario4.TryGetValue("due", out valore))
 {
     Console.WriteLine(valore);
 }
 else
 {
-    Console.WriteLine("chiave non trovata");
+    Console.WriteLine("Chiave non trovata.");
 }
