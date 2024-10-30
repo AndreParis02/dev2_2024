@@ -1486,3 +1486,29 @@ git add --all
 git commit -m "Indovina numero: Versione 12"
 git push -u origin main
 ```
+
+## FLOWCHART 
+
+```mermaid
+flowchart TD
+
+    A[Start] --> B(inserisci il nome)
+    B --> C{Scegli il livello di difficoltà}
+    C -->|da 1 a 50, 10 tentativi| D[Facile]
+    C -->|da 1 a 100, 5 tentativi| E[Medio]
+    C -->|da 1 a 200, 5 tentativi| F[Difficile]
+    D --> G[inserisci il numero:]
+    E --> G
+    F --> G
+    G--> H{Ha indovinato}
+    H -->|si| R
+    H -->|no| L[Il numero da indovinare e maggiore]
+    H -->|no| N[Il numero da indovinare e minore]
+    L --> O{Ha finito i tentativi}
+    N --> O
+    O -->|Si| R{Vuoi giocare di nuovo? s/n}
+    O -->|No| Q[Riprova]
+    Q --> G
+    R -->|No| S[End]
+    R -->|si| A
+```
