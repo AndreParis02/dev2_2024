@@ -72,3 +72,16 @@ git add --all
 git commit -m "Sorteggio partecipanti: Versione 1"
 git push -u origin main
 ```
+---
+
+## FLOWCHART
+
+```mermaid
+flowchart LR
+    A([Start])--> B{La Lista è vuota?}
+    B-->|No|C(Sorteggia il nome)
+    B-->|Si|E
+    C-->D{Vuoi sorteggiare un altro nome?}
+   D-->|Si|B
+   D-->|No|E([End])
+   ```

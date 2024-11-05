@@ -1,14 +1,12 @@
 ﻿Random random = new Random();
 
-List<string> partecipanti = new List<string>() {"Andrea", "Anita", "Ivan", "Diego", "Sofia", "Giorgio", "Felipe", "Tamer" }; 
+List<string> partecipanti = new List<string>() //{"Andrea", "Anita", "Ivan", "Diego", "Sofia", "Giorgio", "Felipe", "Tamer" }; 
 
 int numeroSorteggiato;
 
 partecipanti.Sort(); // ordina gli elementi di partecipanti
 
 string risposta = "s"; 
-
-
 
     do
     {
