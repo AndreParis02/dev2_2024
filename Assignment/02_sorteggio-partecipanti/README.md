@@ -89,8 +89,9 @@ flowchart LR
    ## Versione 2
 
 **Obiettivo:**
-- 
-**Istruzioni:**
+- Scrivere un programma che permetta di sorteggiare i partecipanti del corso di una lista di nomi dividendoli in gruppi.
+- Il programma deve chiedere all'utente il numero di squadre.
+- Se il numero dei partecipanti non è divisibile per il numero di squadre, i partecipanti rimanenti viengono assegnati in modo casuale 
 
 >**Esempio codice:**
 
