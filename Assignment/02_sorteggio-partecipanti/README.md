@@ -85,3 +85,23 @@ flowchart LR
    D-->|Si|B
    D-->|No|E([End])
    ```
+
+   ## Versione 2
+
+**Obiettivo:**
+- 
+**Istruzioni:**
+
+>**Esempio codice:**
+
+```csharp
+
+```
+
+### Comandi versionamento
+
+```bash
+git add --all
+git commit -m "Sorteggio partecipanti: Versione 2"
+git push -u origin main
+```
