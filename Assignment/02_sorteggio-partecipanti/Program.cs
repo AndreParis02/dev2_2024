@@ -1,6 +1,6 @@
 ﻿Random random = new Random();
 
-List<string> partecipanti = new List<string>() //{"Andrea", "Anita", "Ivan", "Diego", "Sofia", "Giorgio", "Felipe", "Tamer" }; 
+List<string> partecipanti = new List<string>() {"Andrea", "Anita", "Ivan", "Diego", "Sofia", "Giorgio", "Felipe", "Tamer" }; 
 
 int numeroSorteggiato;
 
