@@ -1,57 +1,98 @@
-﻿Random random = new Random();
+﻿// creo la lista dei partecipanti
+List<string> partecipanti = new List<string> { "Partecipante 1", "Partecipante 2", "Partecipante 3", "Partecipante 4", "Partecipante 5", "Partecipante 6", "Partecipante 7", "Partecipante 8", "Partecipante 9", "Partecipante 10" };
 
-List<string> partecipanti = new List<string>() {"Andrea", "Anita", "Ivan", "Diego", "Sofia", "Giorgio", "Felipe", "Tamer" }; 
-Dictionary<string, List<String>> squadre = new Dictionary<string, List<String>>();
-int numeroSorteggiato;
+// creo un oggetto Random per generare numeri casuali
+Random random = new Random();
 
-int nSquadre = 0;
-int nComponenti = 0;
+// pulisco la console
+Console.Clear();
 
-
-partecipanti.Sort(); // ordina gli elementi di partecipanti
-
-string risposta = "s"; 
-Console.WriteLine(partecipanti.Count);
-Console.WriteLine("Inserisci il numero di squadre: ");
-nSquadre = Console.Read();
-
-
-if((partecipanti.Count % nSquadre) == 0)
+// stampo la lista dei partecipanti
+Console.WriteLine("Partecipanti:");
+foreach (string partecipante in partecipanti)
 {
-    nComponenti = partecipanti.Count / nSquadre;
+    Console.WriteLine(partecipante);
 }
-string[] squadra1 = new string[nComponenti];
-    do
+
+// chiedo all utente se vuole inserire o eliminare un partecipante o sorteggiare i partecipanti
+while (true)
+{
+    Console.WriteLine("Vuoi inserire un partecipante, eliminare un partecipante o sorteggiare i partecipanti? (i/e/s)");
+    string risposta = Console.ReadLine();
+    // pulisco la console
+    Console.Clear();
+    if (risposta == "i")
     {
-        if(partecipanti.Count > 0)
+        Console.WriteLine("Inserisci il nome del partecipante:");
+        string partecipante = Console.ReadLine();
+        partecipanti.Add(partecipante);
+    }
+    else if (risposta == "e")
+    {
+        Console.WriteLine("Inserisci il nome del partecipante:");
+        string partecipante = Console.ReadLine();
+        partecipanti.Remove(partecipante);
+    }
+    else if (risposta == "s")
+    {
+        // chiedo all'utente il numero di squadre
+        Console.WriteLine("Inserisci il numero di squadre:");
+        int numeroSquadre = int.Parse(Console.ReadLine());
+
+        // creo una lista per ogni squadra
+        List<string>[] squadre = new List<string>[numeroSquadre];
+        for (int i = 0; i < numeroSquadre; i++)
         {
-            for(int i = 0;i < nComponenti;i++)
-            {
-                numeroSorteggiato = random.Next(0, partecipanti.Count);
-                squadre.Add;
-                partecipanti.RemoveAt(numeroSorteggiato);
-            }
-
-            
-
-            Console.WriteLine("Vuoi sorteggiare ancora? (s/n)");
-            risposta = Console.ReadLine();
-            
-            Console.Clear();
-
-            while (risposta != "s" && risposta != "S" && risposta != "n" && risposta != "N")
-            {
-                Console.WriteLine("Risposta non valida. Vuoi sorteggiare ancora? (s/n)");
-                risposta = Console.ReadLine();
-            
-                Console.Clear();
-
-                partecipanti.RemoveAt(numeroSorteggiato);
-            }
-        }else
-        {
-            Console.WriteLine("La lista è vuota!");
-        break;
+            squadre[i] = new List<string>();
         }
 
-    } while (risposta == "s" || risposta == "S");
+        // calcolo quanti partecipanti ci sono in ogni squadra
+        int partecipantiPerSquadra = partecipanti.Count / numeroSquadre;
+
+        // se il numero di partecipanti non è divisibile per il numero di squadre, aggiungo un partecipante in più ad una squadra
+        int partecipantiInPiù = partecipanti.Count % numeroSquadre;
+
+        // per ogni squadra
+        for (int i = 0; i < numeroSquadre; i++)
+        {
+            // aggiungo i partecipanti
+            for (int j = 0; j < partecipantiPerSquadra; j++)
+            {
+                // genero un numero casuale tra 0 e il numero di partecipanti rimasti
+                int index = random.Next(partecipanti.Count);
+                // aggiungo il partecipante alla squadra
+                squadre[i].Add(partecipanti[index]);
+                // rimuovo il partecipante dalla lista dei partecipanti
+                partecipanti.RemoveAt(index);
+            }
+
+            // se ci sono partecipanti in più, aggiungo un partecipante in più alla squadra corrente
+            if (partecipantiInPiù > 0)
+            {
+                // genero un numero casuale tra 0 e il numero di partecipanti rimasti
+                int index = random.Next(partecipanti.Count);
+                // aggiungo il partecipante alla squadra
+                squadre[i].Add(partecipanti[index]);
+                // rimuovo il partecipante dalla lista dei partecipanti
+                partecipanti.RemoveAt(index);
+                // decremento il numero di partecipanti in più
+                partecipantiInPiù--;
+            }
+
+            // stampo i partecipanti della squadra
+            Console.WriteLine($"Squadra {i + 1}:");
+            foreach (string partecipante in squadre[i])
+            {
+                Console.WriteLine(partecipante);
+            }
+            Console.WriteLine();
+        }
+        break;
+    }
+    // stampo la lista dei partecipanti
+    Console.WriteLine("Partecipanti:");
+    foreach (string partecipante in partecipanti)
+    {
+        Console.WriteLine(partecipante);
+    }
+}
