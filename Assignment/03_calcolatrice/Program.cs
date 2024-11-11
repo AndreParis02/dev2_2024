@@ -45,8 +45,21 @@ switch (scelta)
             break;
 
         case 4:
+        try
+        {
             Console.WriteLine("Hai scelto moltiplicazione");
             Result = numero1 / numero2;
+        }
+        catch (DivideByZeroException e)
+        {
+            Console.WriteLine($"Divisione per zero: {e.Message}");
+            //esempio di HResult
+            Console.WriteLine($"Codice errore: {e.HResult}");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Errore: {e.Message}");
+        }
         break;
 
         default:
