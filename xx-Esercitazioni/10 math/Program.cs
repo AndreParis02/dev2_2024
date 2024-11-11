@@ -103,7 +103,7 @@ Console.WriteLine($"Circonferenza: {circonferenza}");
 // ESERCIZI
 
 // Arrotonda un array di numeri decimali alla seconda cifra decimale usando Math.Round
-double[] numeri = { 3.14159, 2.71828, 1.61803};
+double[] Numeri = { 3.14159, 2.71828, 1.61803};
 double[] arrotondati = new double[numeri.Length]; // Array per i numeri arrotondati di lunghezza uguale a numeri
 for (int i = 0; i < numeri.Length; i++)
 {
