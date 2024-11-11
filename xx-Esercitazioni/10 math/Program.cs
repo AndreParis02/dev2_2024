@@ -1,4 +1,4 @@
-﻿﻿// Math
+﻿// Math
 // La libreria Math in C# è una collezione di metodi statici che forniscono funzionalità matematiche di base, come calcoli su numeri,
 // trigonometria, logaritmi, e così via.
 

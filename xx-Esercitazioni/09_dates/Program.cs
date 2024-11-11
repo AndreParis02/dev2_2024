@@ -130,8 +130,10 @@ Console.WriteLine($"La differenza tra le due date e di {difference.Days} giorni"
 DateTime startDate = DateTime.Today;
 DateTime endDate = new DateTime(2024, 12, 31);
 TimeSpan differenceDate = endDate - startDate;
-Console.WriteLine($"La differenza tra le due date e di {differenceDate.Days} giorni");
+Console.WriteLine($"La differenza tra le due date e di {differenceDate.Days} giorni"); 
+//Days restituisce il numero di giorni in intero
 Console.WriteLine($"La differenza tra le due date e di {differenceDate.TotalDays} giorni");
+//TotalDays restituisce il numero di giorni in decimale
 Console.WriteLine($"La differenza tra le due date e di {differenceDate.TotalHours} ore");
 
 // manipalzione di date usando il metodo Add
