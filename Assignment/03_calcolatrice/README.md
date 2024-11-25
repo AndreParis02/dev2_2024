@@ -5,75 +5,149 @@
 ## Obiettivo
 
 - Scrivere un programma che simuli una calcolatrice semplice.
-- L'utente deve poter inserire due numeri e selezionare un operatore matematico (+, -, *, /)
-- il programma deve eseguire l'operazione selezionata e stampare il risultato.
+- L utente deve poter inserire due numeri e selezionare un operatore matematico (+, -, *, /)
+- Il programma deve eseguire l'operazione selezionata e stampare il risultato.
 - Il programma non gestisce nessun tipo di errore o di eccezione.
 
 ```csharp
-int numero1;
-int numero2;
-int Result = 0;
-int scelta = 0;
-
-// pulisco la console
-Console.Clear();
-
-Console.WriteLine("Benvenuto nella calcolatrice semplice");
-
-Console.WriteLine("Inserisci il primo numero: ");
-int.TryParse(Console.ReadLine(), out numero1);
-
-Console.WriteLine("Inserisci il secondo numero: ");
-int.TryParse(Console.ReadLine(), out numero2);
-
-
-
-Console.WriteLine("1. Somma (+)");
-Console.WriteLine("2. Sottrazione (-)");
-Console.WriteLine("3. Moltiplicazione (*)");
-Console.WriteLine("4. Divisione (/)");
-
-Console.WriteLine("Scegli l'operazione da svolgere:");
-int.TryParse(Console.ReadLine(), out scelta);
-
-// pulisco la console
-Console.Clear();
-
-switch (scelta)
-    {
-        case 1:
-            Console.WriteLine("Hai scelto somma");
-            Result = numero1 + numero2;
-            break;
-
-        case 2:
-            Console.WriteLine("Hai scelto sottrazione");
-            Result = numero1 - numero2;
-            break;
-
-        case 3:
-            Console.WriteLine("Hai scelto moltiplicazione");
-            Result = numero1 * numero2;
-            break;
-
-        case 4:
-            Console.WriteLine("Hai scelto moltiplicazione");
-            Result = numero1 / numero2;
+// Chiedi all'utente di inserire due numeri
+Console.Write("Inserisci il primo numero: ");
+double num1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Inserisci il secondo numero: ");
+double num2 = Convert.ToDouble(Console.ReadLine());
+// Chiedi all'utente di selezionare un operatore matematico
+Console.Write("Seleziona un operatore (+, -, *, /): ");
+// char operatore = Convert.ToChar(Console.ReadLine());
+// usando il char posso usare il readkey per leggere un solo carattere
+char operatore = Console.ReadKey().KeyChar; // restituisce il carattere premuto dall'utente senza dover premere invio
+Console.WriteLine();
+// Esegui l'operazione selezionata
+double risultato = 0;
+switch (operatore)
+{
+    case '+':
+        risultato = num1 + num2;
         break;
-
-        default:
-            Console.WriteLine("Scelta non valida.");
-            break;
-    }
-
-
-Console.WriteLine($"il risultato dell'operazione è: {Result}");
+    case '-':
+        risultato = num1 - num2;
+        break;
+    case '*':
+        risultato = num1 * num2;
+        break;
+    case '/':
+        risultato = num1 / num2;
+        break;
+    default:
+        Console.WriteLine("Operatore non valido.");
+        break;
+}
+// Stampa il risultato
+Console.WriteLine($"Il risultato dell'operazione è: {risultato}");
 ```
 
-### Comandi versionamento
+## Comandi di versionamento
 
 ```bash
 git add --all
-git commit -m "Calcolatrice semplice: versione 1"
-git push -u origin main
+git commit -m "Implement calcolatrice semplice"
+git push
+```
+
+# Versione 2
+
+## Obiettivo
+
+- Aggiungere la gestione degli errori per evitare crash del programma.
+- Se l'utente inserisce un valore non numerico, il programma deve stampare un messaggio di errore dicendo di inserire un numero valido
+- Se l'utente seleziona un operatore non valido, il programma deve stampare un messaggio di errore dicendo di selezionare un operatore valido
+- Se l'utente tenta di dividere per zero, il programma deve stampare un messaggio di errore dicendo che la divisione per zero non è consentita
+- Il programma deve usare i blocchi try-catch per gestire gli errori
+
+```csharp
+// Chiedi all'utente di inserire due numeri
+double num1 = 0;
+double num2 = 0;
+bool inputValido = false;
+while (!inputValido)
+{
+    try
+    {
+        Console.Write("Inserisci il primo numero: ");
+        num1 = Convert.ToDouble(Console.ReadLine());
+        inputValido = true;
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine("Inserisci un numero valido.");
+    }
+}
+inputValido = false;
+while (!inputValido)
+{
+    try
+    {
+        Console.Write("Inserisci il secondo numero: ");
+        num2 = Convert.ToDouble(Console.ReadLine());
+        inputValido = true;
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine("Inserisci un numero valido.");
+    }
+}
+// Chiedi all'utente di selezionare un operatore matematico
+char operatore = ' ';
+inputValido = false;
+while (!inputValido)
+{
+    Console.Write("Seleziona un operatore (+, -, *, /): ");
+    operatore = Console.ReadKey().KeyChar;
+    Console.WriteLine();
+    if (operatore == '+' || operatore == '-' || operatore == '*' || operatore == '/')
+    {
+        inputValido = true;
+    }
+    else
+    {
+        Console.WriteLine("Operatore non valido.");
+    }
+}
+// Esegui l'operazione selezionata
+double risultato = 0;
+try
+{
+    switch (operatore)
+    {
+        case '+':
+            risultato = num1 + num2;
+            break;
+        case '-':
+            risultato = num1 - num2;
+            break;
+        case '*':
+            risultato = num1 * num2;
+            break;
+        case '/':
+            if (num2 == 0)
+            {
+                throw new DivideByZeroException();
+            }
+            risultato = num1 / num2;
+            break;
+    }
+    // Stampa il risultato
+    Console.WriteLine($"Il risultato dell'operazione è: {risultato}");
+}
+catch (DivideByZeroException)
+{
+    Console.WriteLine("Impossibile dividere per zero.");
+}
+```
+
+## Comandi di versionamento
+
+```bash
+git add --all
+git commit -m "Aggiunta gestione errori alla calcolatrice"
+git push
 ```

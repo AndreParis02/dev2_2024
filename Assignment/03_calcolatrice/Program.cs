@@ -1,72 +1,82 @@
-﻿int numero1;
-int numero2;
-int Result = 0;
-int scelta = 0;
+﻿// Chiedi all'utente di inserire due numeri
+double num1 = 0; // Inizializzo le variabili num1 e num2 a 0
+double num2 = 0; // Inizializzo le variabili num1 e num2 a 0
 
-// pulisco la console
-Console.Clear();
-
-Console.WriteLine("Benvenuto nella calcolatrice semplice");
-
-Console.WriteLine("Inserisci il primo numero: ");
-int.TryParse(Console.ReadLine(), out numero1);
-
-Console.WriteLine("Inserisci il secondo numero: ");
-int.TryParse(Console.ReadLine(), out numero2);
-
-
-
-Console.WriteLine("1. Somma (+)");
-Console.WriteLine("2. Sottrazione (-)");
-Console.WriteLine("3. Moltiplicazione (*)");
-Console.WriteLine("4. Divisione (/)");
-
-Console.WriteLine("Scegli l'operazione da svolgere:");
-int.TryParse(Console.ReadLine(), out scelta);
-
-// pulisco la console
-Console.Clear();
-
-switch (scelta)
+// primo blocco try-catch per gestire l'eccezione FormatException
+bool inputValido = false; // Inizializzo la variabile inputValido a false
+while (!inputValido)
+{
+    try
     {
-        case 1:
-            Console.WriteLine("Hai scelto somma");
-            Result = numero1 + numero2;
+        Console.Write("Inserisci il primo numero: ");
+        num1 = Convert.ToDouble(Console.ReadLine());
+        inputValido = true;
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine("Inserisci un numero valido.");
+    }
+}
+
+// secondo blocco try-catch per gestire l'eccezione FormatException
+inputValido = false;
+while (!inputValido)
+{
+    try
+    {
+        Console.Write("Inserisci il secondo numero: ");
+        num2 = Convert.ToDouble(Console.ReadLine());
+        inputValido = true;
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine("Inserisci un numero valido.");
+    }
+}
+// Chiedi all'utente di selezionare un operatore matematico
+char operatore = ' ';
+inputValido = false;
+while (!inputValido)
+{
+    Console.Write("Seleziona un operatore (+, -, *, /): ");
+    operatore = Console.ReadKey().KeyChar;
+    Console.WriteLine();
+    if (operatore == '+' || operatore == '-' || operatore == '*' || operatore == '/')
+    {
+        inputValido = true;
+    }
+    else
+    {
+        Console.WriteLine("Operatore non valido.");
+    }
+}
+// Esegui l'operazione selezionata
+double risultato = 0;
+try
+{
+    switch (operatore)
+    {
+        case '+':
+            risultato = num1 + num2;
             break;
-
-        case 2:
-            Console.WriteLine("Hai scelto sottrazione");
-            Result = numero1 - numero2;
+        case '-':
+            risultato = num1 - num2;
             break;
-
-        case 3:
-            Console.WriteLine("Hai scelto moltiplicazione");
-            Result = numero1 * numero2;
+        case '*':
+            risultato = num1 * num2;
             break;
-
-        case 4:
-        try
-        {
-            Console.WriteLine("Hai scelto moltiplicazione");
-            Result = numero1 / numero2;
-        }
-        catch (DivideByZeroException e)
-        {
-            Console.WriteLine($"Divisione per zero: {e.Message}");
-            //esempio di HResult
-            Console.WriteLine($"Codice errore: {e.HResult}");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine($"Errore: {e.Message}");
-        }
-        break;
-
-        default:
-            Console.WriteLine("Scelta non valida.");
+        case '/':
+            if (num2 == 0)
+            {
+                throw new DivideByZeroException();
+            }
+            risultato = num1 / num2;
             break;
     }
-
-
-
-Console.WriteLine($"il risultato dell'operazione è: {Result}");
+    // Stampa il risultato
+    Console.WriteLine($"Il risultato dell'operazione è: {risultato}");
+}
+catch (DivideByZeroException)
+{
+    Console.WriteLine("Impossibile dividere per zero.");
+}
