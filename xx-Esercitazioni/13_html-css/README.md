@@ -249,3 +249,307 @@ Gli attributi sono informazioni aggiuntive sui tag HTML che possono modificare i
 ```html
 <input type="text" name="nome">
 ```
+
+# CSS
+
+I CSS (Cascading Style Sheets) sono utilizzati per controllare la presentazione di un documento HTML.
+Questo include il layout, i colori e i font.
+
+I CSS possono essere applicati in tre modi:
+
+- Inline: applicato direttamente all'elemento
+```html
+<p style="color: red;">Questo è un paragrafo rosso.</p>
+```
+
+- Internal: applicato all'interno del tag `<style>` nel tag `<head>`
+```html
+<style>
+    body {
+        background-color: lightblue;
+    }
+</style>
+```
+
+- External: collegato a un file CSS esterno
+```html
+<link rel="stylesheet" type="text/css" href="style.css">
+```
+
+# SELETTORE CSS
+
+I selettori CSS vengono utilizzati per selezionare gli elementi HTML a cui si desidera applicare uno stile.
+
+- Selettore di tipo: seleziona tutti gli elementi di un determinato tipo
+```css
+p {
+    color: red;
+}
+```
+
+- Selettore di classe: seleziona tutti gli elementi con una determinata classe
+```css
+.paragrafo {
+    color: red;
+}
+```
+
+- Selettore di ID: seleziona un elemento con un determinato ID
+```css
+#paragrafo {
+    color: red;
+}
+```
+
+- Selettore universale: seleziona tutti gli elementi
+```css
+* {
+    color: red;
+    text-decoration: none;
+}
+```
+
+- Selettore discendente: seleziona un elemento figlio di un altro elemento 
+> il selettore selezionerà tutti i paragrafi figli di un div
+```css
+div p {
+    color: red;
+}
+```
+
+- Selettore figlio: seleziona un elemento figlio di un altro elemento
+> il selettore selezionerà tutti i paragrafi figli diretti di un div
+```css
+div > p {
+    color: red;
+}
+```
+
+# PROPRIETÀ CSS
+
+Le proprietà CSS vengono utilizzate per definire lo stile di un elemento HTML.
+
+- `color`: colore del testo
+```css
+p {
+    color: red;
+}
+```
+
+- `background-color`: colore di sfondo
+```css
+body {
+    background-color: lightblue;
+}
+```
+
+- `font-family`: famiglia di caratteri
+```css
+p {
+    font-family: Arial, sans-serif;
+}
+```
+
+- `font-size`: dimensione del carattere
+```css
+p {
+    font-size: 16px;
+}
+```
+
+- `font-weight`: spessore del carattere
+```css
+p {
+    font-weight: bold;
+}
+```
+
+- `text-align`: allineamento del testo
+```css
+p {
+    text-align: center;
+}
+```
+
+- `text-decoration`: decorazione del testo
+```css
+a {
+    text-decoration: none;
+}
+```
+
+- `border`: bordo
+```css
+div {
+    border: 1px solid black;
+}
+```
+
+- `margin`: margine esterno
+```css
+div {
+    margin: 10px;
+}
+```
+
+- `padding`: margine interno
+```css
+div {
+    padding: 10px;
+}
+```
+
+- `width`: larghezza
+```css
+div {
+    width: 100px;
+}
+```
+
+- `height`: altezza
+```css
+div {
+    height: 100px;
+}
+```
+
+# Tipi di unità di misura (il viewport e la parte visibile della pagina)
+
+- `px`: pixel
+- `%`: percentuale
+- `em`: dimensione del carattere (es. 1em = dimensione del carattere radice)
+- `rem`: dimensione del carattere
+- `vw`: larghezza della viewport
+- `vh`: altezza della viewport
+
+# Media Query
+
+Le media query vengono utilizzate per applicare stili diversi in base alle dimensioni del dispositivo.
+
+```css
+@media screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+```
+
+# CSS FLEXBOX
+
+Il CSS Flexbox è un layout model che permette di creare layout complessi e flessibili senza l'utilizzo di float o posizionamenti.
+
+```css
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+```
+
+Impostando l attributo display:flex rendo disponibile l elemento ad accettare i parametri specifici sulla flessibilita come ad esempio
+
+- `justify-content`: allineamento orizzontale
+- `align-items`: allineamento verticale
+- `flex-direction`: direzione del layout
+- `flex-wrap`: avvolgimento del layout
+- `flex-grow`: flessibilità del layout
+- `flex-shrink`: ridimensionamento del layout
+- `flex-basis`: dimensione base del layout
+- `align-self`: allineamento di un elemento specifico
+
+# CSS GRID
+
+Il CSS Grid è un layout model che permette di creare layout complessi e flessibili senza l'utilizzo di float o posizionamenti.
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+}
+```
+
+Impostando l attributo display:grid rendo disponibile l elemento ad accettare i parametri specifici sulla flessibilita come ad esempio
+
+- `grid-template-columns`: colonne del layout
+- `grid-template-rows`: righe del layout
+- `grid-column-gap`: spazio tra le colonne
+- `grid-row-gap`: spazio tra le righe
+- `grid-gap`: spazio tra le colonne e le righe
+- `grid-column-start`: inizio della colonna
+- `grid-column-end`: fine della colonna
+- `grid-row-start`: inizio della riga
+- `grid-row-end`: fine della riga
+- `grid-area`: area del layout
+- `grid-template-areas`: aree del layout
+
+# CSS ANIMAZIONI
+
+Le animazioni CSS vengono utilizzate per creare effetti di animazione su elementi HTML.
+
+```css
+@keyframes example {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+```
+
+Esempio di utilizzo con progress bar:
+
+```css
+.progress {
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+    animation: progress 5s;
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+```
+
+# CSS TRASFORMAZIONI
+
+Le trasformazioni CSS vengono utilizzate per modificare la posizione, la rotazione e le dimensioni degli elementi HTML.
+
+```css
+div {
+    transform: rotate(45deg);
+}
+```
+
+Esempio di utilizzo con bottone:
+
+```css
+.button {
+    width: 100px;
+    height: 50px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    transition: background-color 0.5s;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+```
