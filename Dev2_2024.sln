@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_gestione-eccezioni", "xx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_calcolatrice", "Assignment\03_calcolatrice\03_calcolatrice.csproj", "{CCCD9B9E-A9F8-436D-8E86-CF688556E3BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_verifica-competenze-1", "Assignment\13_verifica-competenze-1\13_verifica-competenze-1.csproj", "{E5FE469A-8E41-465A-816C-370FFD0C74F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,6 +102,10 @@ Global
 		{CCCD9B9E-A9F8-436D-8E86-CF688556E3BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCCD9B9E-A9F8-436D-8E86-CF688556E3BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCCD9B9E-A9F8-436D-8E86-CF688556E3BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5FE469A-8E41-465A-816C-370FFD0C74F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FE469A-8E41-465A-816C-370FFD0C74F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5FE469A-8E41-465A-816C-370FFD0C74F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5FE469A-8E41-465A-816C-370FFD0C74F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F155E750-A8FD-445C-A39D-1CEACB070361} = {C5E2B1F9-3754-4495-BCFC-BA757C7E0735}
@@ -116,5 +122,6 @@ Global
 		{45329169-E9EA-4F21-ABAA-DEDFA767CED0} = {C5E2B1F9-3754-4495-BCFC-BA757C7E0735}
 		{A98A741D-0CDE-47F2-BA7A-0D2EBE2E2416} = {C5E2B1F9-3754-4495-BCFC-BA757C7E0735}
 		{CCCD9B9E-A9F8-436D-8E86-CF688556E3BE} = {3EF261B4-351A-457B-BF1A-F33DB7D65D0B}
+		{E5FE469A-8E41-465A-816C-370FFD0C74F1} = {3EF261B4-351A-457B-BF1A-F33DB7D65D0B}
 	EndGlobalSection
 EndGlobal
