@@ -1,0 +1,11 @@
+
+{
+    "nome": "Andrea",
+    "cognome": "Paris",
+    "eta": 22,
+    "indirizzo":
+    {
+        "via": "Via Ricca",
+        "città": "Genova"
+    }
+}
