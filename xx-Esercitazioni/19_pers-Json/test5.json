@@ -1,0 +1,27 @@
+{
+  "nome": "Andrea",
+  "eta": 22,
+  "impiegato": true,
+  "indirizzo": {
+    "via": "Via Ricca",
+    "citta": "Genova",
+    "CAP": "16129"
+  },
+  "numeriDiTelefono": [
+    {
+      "tipo": "casa",
+      "numero": "1234-5678"
+    },
+    {
+      "tipo": "telefono",
+      "numero": "8765-4321"
+    }
+  ],
+  "lingueParlate": [
+    "italiano",
+    "inglese",
+    "spagnolo"
+  ],
+  "sposato": false,
+  "patente": null
+}
