@@ -1,6 +1,8 @@
-{
-  "ID": "654321",
-  "nome": "Pane",
-  "quantita": "2",
-  "prezzo": "1,50"
-}
+[
+  {
+    "ID": "246810",
+    "nome": "Bresaola",
+    "quantita": 2,
+    "prezzo": 5.8
+  }
+]

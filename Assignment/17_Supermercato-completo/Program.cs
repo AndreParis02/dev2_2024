@@ -1,27 +1,28 @@
 ﻿
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-
+using System.Collections.Generic;
+using System.IO;
 bool temp = true;
-while(temp)
+while (temp)
 {
-    Console.WriteLine("Sei:\n 1. un cliente; \n 2. Un dipendente; \n 0. Esci\n");    
+    Console.WriteLine("Sei:\n 1. un cliente; \n 2. Un dipendente; \n 0. Esci\n");
     string dip = Console.ReadLine();
 
-    switch(dip)
+    switch (dip)
     {
         case "1":
             manipolazioneCarrello();
-        break;
+            break;
         case "2":
             manipolazioneCatalogo();
-        break;
+            break;
         case "0":
-                temp = false;
-                break;
-            default:
-                Console.WriteLine("Scelta non valida. Riprova.");
-                break;
+            temp = false;
+            break;
+        default:
+            Console.WriteLine("Scelta non valida. Riprova.");
+            break;
     }
 
 }
@@ -50,22 +51,22 @@ static void manipolazioneCarrello()
 
         switch (scelta)
         {
-             case "1":
+            case "1":
                 VisualizzaProdottiCarrello();
                 break;
-/*
-            case "2":
-                ModificaQtaProdotto();
-                break;
-  */          
+            /*
+                        case "2":
+                            ModificaQtaProdotto();
+                            break;
+              */
             case "3":
                 AggiungiAlCarrello();
                 break;
-   /*         
+                       
             case "4":
                 RimuoviDalCarrello();
                 break;
-*/
+
             case "0":
                 continua = false;
                 break;
@@ -101,26 +102,21 @@ static void manipolazioneCatalogo()
             case "1":
                 VisualizzaProdottiCatalogo();
                 break;
-
             case "2":
                 ModificaProdottoCatalogo();
                 break;
-            
             case "3":
                 AggiungiAlCatalogo();
                 break;
-            
             case "4":
                 RimuoviDalCatalogo();
                 break;
-
             case "0":
                 continua = false;
                 break;
-
             default:
                 Console.WriteLine("Scelta non valida. Riprova.");
-                break;
+            break;
         }
     }
 }
@@ -153,72 +149,78 @@ static void ModificaProdottoCatalogo()
     dynamic obj = JsonConvert.DeserializeObject(catalogo)!;
     //modifico l'oggetto dall'array
     List<dynamic> list = obj.ToObject<List<dynamic>>();
-    for(int i = 0;i < list.Count; i++)
+    for (int i = 0; i < list.Count; i++)
     {
-        if(list[i].nome == temp)
+        if (list[i].nome == temp)
         {
             Console.Write("\nInserisci il campo che vuoi modificare \n 1- ID \n 2- nome \n 3- prezzo \n 4- quantità \n 5- tutto \n 0- esci\n");
             string mod = Console.ReadLine()!;
-            
+
             string ID_Modificato;
-            string prezzo_Modificato;
+            double prezzo_Modificato;
             string nome_Modificato;
             int qta_Modificato;
             bool continua = true;
 
-                switch (mod)
-                {
+            switch (mod)
+            {
                 case "1":
-                        Console.WriteLine("inserisci l'ID del prodotto modificato");
-                        ID_Modificato = Console.ReadLine()!;
-                        list[i].ID = ID_Modificato;
-                        Console.WriteLine("ID del prodotto modificato con successo!");
+                    Console.WriteLine("inserisci l'ID del prodotto modificato");
+                    ID_Modificato = Console.ReadLine()!;
+                    list[i].ID = ID_Modificato;
+                    Console.WriteLine("ID del prodotto modificato con successo!");
                     break;
-                    case "2":
-                        Console.WriteLine("inserisci il nome del prodotto modificato");
-                        nome_Modificato = Console.ReadLine()!;
-                        list[i].nome = nome_Modificato;
-                        Console.WriteLine("Nome del prodotto modificato con successo!");
+                case "2":
+                    Console.WriteLine("inserisci il nome del prodotto modificato");
+                    nome_Modificato = Console.ReadLine()!;
+                    list[i].nome = nome_Modificato;
+                    Console.WriteLine("Nome del prodotto modificato con successo!");
                     break;
-                    case "3":
-                        Console.WriteLine("inserisci il prezzo del prodotto modificato (usa il punto anziche la virgola)");
-                        prezzo_Modificato = Console.ReadLine()!;
+                case "3":
+                    Console.WriteLine("inserisci il prezzo del prodotto modificato (usa la virgola)");
+                    if (double.TryParse(Console.ReadLine(), out prezzo_Modificato))
+                    {
                         list[i].prezzo = prezzo_Modificato;
                         Console.WriteLine("Prezzo del prodotto modificato con successo!");
+                    }
                     break;
-                    case "4":
-                        Console.WriteLine("inserisci la quantità del prodotto modificato ");
-                        qta_Modificato = Int32.Parse(Console.ReadLine()!);
-                        list[i].quantita = qta_Modificato;
-                        Console.WriteLine("Quantità del prodotto modificata con successo!");
+                case "4":
+                    Console.WriteLine("inserisci la quantità del prodotto modificato ");
+                    qta_Modificato = Int32.Parse(Console.ReadLine()!);
+                    list[i].quantita = qta_Modificato;
+                    Console.WriteLine("Quantità del prodotto modificata con successo!");
                     break;
-                    case "5":
-                        Console.WriteLine("inserisci l'ID del prodotto modificato");
-                        ID_Modificato = Console.ReadLine()!;
-                        list[i].ID = ID_Modificato;
+                case "5":
+                    Console.WriteLine("inserisci l'ID del prodotto modificato");
+                    ID_Modificato = Console.ReadLine()!;
+                    list[i].ID = ID_Modificato;
 
-                          Console.WriteLine("inserisci l'ID del prodotto modificato");
-                        ID_Modificato = Console.ReadLine()!;
-                        list[i].ID = ID_Modificato;
+                    Console.WriteLine("inserisci il nome del prodotto modificato");
+                    nome_Modificato = Console.ReadLine()!;
+                    list[i].nome = nome_Modificato;
+                    Console.WriteLine("Nome del prodotto modificato con successo!");
 
-                        Console.WriteLine("inserisci il prezzo del prodotto modificato (usa il punto anziche la virgola)");
-                        prezzo_Modificato = Console.ReadLine()!;
+                    Console.WriteLine("inserisci il prezzo del prodotto modificato (usa la virgola)");
+                    if (double.TryParse(Console.ReadLine(), out prezzo_Modificato))
+                    {
                         list[i].prezzo = prezzo_Modificato;
+                        Console.WriteLine("Prezzo del prodotto modificato con successo!");
+                    }
 
-                        Console.WriteLine("inserisci la quantità del prodotto modificato");
-                        qta_Modificato = Int32.Parse(Console.ReadLine()!);
-                        list[i].quantita = qta_Modificato;
+                    Console.WriteLine("inserisci la quantità del prodotto modificato");
+                    qta_Modificato = Int32.Parse(Console.ReadLine()!);
+                    list[i].quantita = qta_Modificato;
 
-                        Console.WriteLine("prodotto modificato con successo!");
+                    Console.WriteLine("prodotto modificato con successo!");
                     break;
-                    case "0":
+                case "0":
                     continua = false;
                     break;
-                    default:
+                default:
                     Console.WriteLine("Scelta non valida. Riprova.");
                     break;
-                }   
-               
+            }
+
         }
     }
     //serializzo l'array
@@ -240,40 +242,40 @@ static void AggiungiAlCatalogo()
 
     string ID_Add;
     string nome_Add;
-    string prezzo_Add;
+    double prezzo_Add;
     int qta_Add;
     bool Presente = false;
-        
+
     Console.Write("\nInserisci il nome del prodotto da aggiungere al catalogo: ");
     nome_Add = Console.ReadLine()!;
-    
-    for(int i = 0;i < list.Count; i++)
+
+    for (int i = 0; i < list.Count; i++)
     {
-        if(list[i].nome == nome_Add)
+        if (list[i].nome == nome_Add)
         {
             Presente = true;
         }
     }
 
-    if(Presente == false)
+    if (Presente == false)
     {
         Console.WriteLine("inserisci l'ID del prodotto da aggiungere");
         ID_Add = Console.ReadLine()!;
 
         Console.WriteLine("inserisci il prezzo del prodotto da aggiungere (usa il punto anziche la virgola)");
-        prezzo_Add = Console.ReadLine()!;
+        double.TryParse(Console.ReadLine(), out prezzo_Add);
 
         Console.WriteLine("inserisci la quantità del prodotto da aggiungere");
         qta_Add = Int32.Parse(Console.ReadLine()!);
 
 
-        var objnew = new {ID = ID_Add, nome= nome_Add, prezzo = prezzo_Add, quantita = qta_Add};
+        var objnew = new { ID = ID_Add, nome = nome_Add, prezzo = prezzo_Add, quantita = qta_Add };
         //aggiungo l'oggetto all'array
         list.Add(objnew);
         //serializzo l'array
         string jsonAdd = JsonConvert.SerializeObject(list, Formatting.Indented);
         //scrivo il file
-        File.WriteAllText("catalogo.json", jsonAdd);      
+        File.WriteAllText("catalogo.json", jsonAdd);
     }
     else
     {
@@ -293,13 +295,13 @@ static void RimuoviDalCatalogo()
     List<dynamic> list = obj.ToObject<List<dynamic>>();
 
     string nome_Remove;
-      
+
     Console.Write("\nInserisci il nome del prodotto da rimuovere dal catalogo: ");
     nome_Remove = Console.ReadLine()!;
     int pres = 0;
-    for(int i = 0;i < list.Count; i++)
+    for (int i = 0; i < list.Count; i++)
     {
-        if(list[i].nome == nome_Remove)
+        if (list[i].nome == nome_Remove)
         {
             list.RemoveAt(i);
             //serializzo l'array
@@ -309,9 +311,9 @@ static void RimuoviDalCatalogo()
             Console.WriteLine($"Il prodotto {nome_Remove} è stato rimosso con successo dal catalogo");
             pres = 1;
         }
-    } 
+    }
 
-    if(pres == 0)
+    if (pres == 0)
     {
         Console.WriteLine($"Il prodotto {nome_Remove} non è presente nel catalogo");
     }
@@ -335,67 +337,123 @@ static void VisualizzaProdottiCarrello()
 
 //------------------------------------------Funzione aggiungi prodotto al Carrello------------------------------------------
 
+
 static void AggiungiAlCarrello()
 {
-    //leggo il file
-    string catalogo = File.ReadAllText("catalogo.json");
-    string carrello = File.ReadAllText("carrello.json");
-    //deserializzo il file
-    dynamic obj = JsonConvert.DeserializeObject(catalogo)!;
-    dynamic carr = JsonConvert.DeserializeObject(carrello)!;
-    //modifico l'oggetto dall'array
-    List<dynamic> Catalogo = obj.ToObject<List<dynamic>>();
-    List<dynamic> Carrello = carr.ToObject<List<dynamic>>();
+    // Leggi i file JSON
+    string catalogoContent = File.ReadAllText("catalogo.json");
+    string carrelloContent = File.ReadAllText("carrello.json");
 
-    string nome_Add;
-    string qta_Add;
-    bool Presente = false;
+    // Deserializza i file in liste di dynamic
+    var catalogo = JsonConvert.DeserializeObject<List<dynamic>>(catalogoContent);
+    var carrello = JsonConvert.DeserializeObject<List<dynamic>>(carrelloContent);
 
-        
+    // Chiedi all'utente il nome del prodotto
     Console.Write("\nInserisci il nome del prodotto da aggiungere al carrello: ");
-    nome_Add = Console.ReadLine()!;
-    
-    
-    for(int i = 0;i < Catalogo.Count; i++)
-    {
-                if(Carrello[i].nome == nome_Add)
-            {
-                Console.Write($"\nIl prodotto {nome_Add} è già presente nel carrello in {Carrello[i].quantita}; \nVuoi modificare la quantità? (s/n)");
-                char risposta = Console.ReadKey().KeyChar;
-                if(risposta == 'S' || risposta == 's')
-                {
-                    Console.Write($"\nInserisci la quantità di {nome_Add} da modificare nel carrello: ");
-                    qta_Add = Console.ReadLine()!;
-                    Carrello[i].quantita = qta_Add;
-                    Console.Write($"\nQuantità aggiornata");
-                }
-                if(risposta == 'N' || risposta == 'n')
-                {
-                    Console.Write($"\nLa quantità di {nome_Add} è rimasta invariata!");
+    string nomeProdotto = Console.ReadLine()!;
 
-                }
-                if(risposta == 'N' || risposta == 'n' || risposta == 'S' || risposta == 's')
-                {
-                    Console.Write($"\nRisposta non valida!");
-                    break;
-                }
-            }
-        
-        
-        if(Catalogo[i].nome == nome_Add)
+    // Cerca il prodotto nel carrello
+    var prodottoInCarrello = carrello.Find(p => (string)p.nome == nomeProdotto);
+
+    if (prodottoInCarrello != null)
+    {
+        // Il prodotto è già nel carrello
+        Console.WriteLine($"\nIl prodotto \"{nomeProdotto}\" è già presente nel carrello con quantità {prodottoInCarrello.quantita}.");
+        Console.Write("Vuoi modificare la quantità? (s/n): ");
+        char risposta = Console.ReadKey().KeyChar;
+        Console.WriteLine();
+
+        if (risposta == 's' || risposta == 'S')
         {
-            Presente = true;
-            Console.Write($"\nInserisci la quantità di {nome_Add} da aggiungere al carrello: ");
-            qta_Add = Console.ReadLine()!;
-            var prova = new{ID = Catalogo[i].ID, nome = Catalogo[i].nome, quantita = qta_Add,prezzo = Catalogo[i].prezzo};
-             string Inserimento  = JsonConvert.SerializeObject(prova, Formatting.Indented);
-             File.WriteAllText("carrello.json", Inserimento);
+            Console.Write("Inserisci la nuova quantità: ");
+            if (int.TryParse(Console.ReadLine(), out int nuovaQuantità) && nuovaQuantità > 0)
+            {
+                prodottoInCarrello.quantita = nuovaQuantità;
+                Console.WriteLine("Quantità aggiornata nel carrello.");
+            }
+            else
+            {
+                Console.WriteLine("Quantità non valida. Operazione annullata.");
+            }
+        }
+        else if (risposta == 'n' || risposta == 'N')
+        {
+            Console.WriteLine("Quantità invariata.");
+        }
+        else
+        {
+            Console.WriteLine("Risposta non valida. Operazione annullata.");
+        }
+    }
+    else
+    {
+        // Cerca il prodotto nel catalogo
+        var prodottoInCatalogo = catalogo.Find(p => (string)p.nome == nomeProdotto);
+
+        if (prodottoInCatalogo != null)
+        {
+            Console.Write("Inserisci la quantità da aggiungere: ");
+            if (int.TryParse(Console.ReadLine(), out int quantità) && quantità > 0)
+            {
+                // Aggiungi il prodotto al carrello
+                carrello.Add(new
+                {
+                    ID = prodottoInCatalogo.ID,
+                    nome = prodottoInCatalogo.nome,
+                    quantita = quantità,
+                    prezzo = prodottoInCatalogo.prezzo
+                });
+
+                Console.WriteLine($"Il prodotto \"{nomeProdotto}\" è stato aggiunto al carrello.");
+            }
+            else
+            {
+                Console.WriteLine("Quantità non valida. Operazione annullata.");
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Il prodotto \"{nomeProdotto}\" non è disponibile nel catalogo.");
         }
     }
 
-    if(Presente == false)
+    // Scrivi i dati aggiornati nel file carrello.json
+    string carrelloAggiornato = JsonConvert.SerializeObject(carrello, Formatting.Indented);
+    File.WriteAllText("carrello.json", carrelloAggiornato);
+}
+
+//------------------------------------------Funzione rimuovi prodotto dal catalogo------------------------------------------
+
+static void RimuoviDalCarrello()
+{
+    //leggo il file
+    string carrello = File.ReadAllText("carrello.json");
+    //deserializzo il file
+    dynamic obj = JsonConvert.DeserializeObject(carrello)!;
+    //modifico l'oggetto dall'array
+    List<dynamic> listCarr = obj.ToObject<List<dynamic>>();
+
+    string nome_Remove;
+
+    Console.Write("\nInserisci il nome del prodotto da rimuovere dal carrello: ");
+    nome_Remove = Console.ReadLine()!;
+    int pres = 0;
+    for (int i = 0; i < listCarr.Count; i++)
     {
-        Console.WriteLine($"Il prodotto {nome_Add} non è presente nel catalogo! \n Impossibile aggiungerlo al carrello!");
+        if (listCarr[i].nome == nome_Remove)
+        {
+            listCarr.RemoveAt(i);
+            //serializzo l'array
+            string jsonRemove = JsonConvert.SerializeObject(listCarr, Formatting.Indented);
+            //scrivo il file
+            File.WriteAllText("carrello.json", jsonRemove);
+            Console.WriteLine($"Il prodotto {nome_Remove} è stato rimosso con successo dal carrello");
+            pres = 1;
+        }
     }
 
+    if (pres == 0)
+    {
+        Console.WriteLine($"Il prodotto {nome_Remove} non è presente nel carrello");
+    }
 }

@@ -2,19 +2,19 @@
   {
     "ID": "654321",
     "nome": "Pane",
-    "prezzo": "1,50",
+    "prezzo": 1.50,
     "quantita": 10
   },
   {
     "ID": "3691215",
     "nome": "Acqua",
-    "prezzo": "2,50",
+    "prezzo": 2.50,
     "quantita": 6
   },
   {
     "ID": "246810",
     "nome": "Bresaola",
-    "prezzo": "5,80",
+    "prezzo": 5.80,
     "quantita": 8
   }
 ]
