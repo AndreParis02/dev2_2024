@@ -5,13 +5,13 @@
 Realizzare dei layout html di varie pagine generiche di un sito di supermercato utilizzando il framework Bootstrap.
 
 ## Dettagli
-- Creare un layout per la homepage del supermercato. L'homepage deve contenere una barra di navigazione, un intestazione, una sezione prodotti in evidenza (con un carousel o simili) e una sezione di prodotti in offerta oltre ad una selezione di prodotti generici in vetrina.
+- Creare un layout per la homepage del supermercato. L'homepage deve contenere una barra di navigazione, un intestazione, una sezione prodotti in evidenza (con un carousel o simili) e una sezione di prodotti in offerta oltre ad una selezione di prodotti generici in vetrina. (FATTO)
 
-- Creare un layout per la pagina di dettaglio di un prodotto. La pagina deve contenere una barra di navigazione, un'intestazione, una sezione con le informazioni del prodotto alcune immagini e una sezione con prodotti correlati.
+- Creare un layout per la pagina di dettaglio di un prodotto. La pagina deve contenere una barra di navigazione, un'intestazione, una sezione con le informazioni del prodotto alcune immagini e una sezione con prodotti correlati.(FATTO)
 
-- Creare un layout con la pagina di contatti del supermercato. La pagina deve contenre una barra di navigazione, un intestazione, un modulo di contatto (potrebbe essere il form dove gli utenti richiedono un servizio).
+- Creare un layout con la pagina di contatti del supermercato. La pagina deve contenere una barra di navigazione, un intestazione, un modulo di contatto (potrebbe essere il form dove gli utenti richiedono un servizio). (FATTO)
 
-- Creare un layout di registrazione del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione un modulo di registrazione nel quale l'utente possa inserire i propri dati personali con la possibilità di scegliere il suo ruolo (cliente, dipendente, amministatore)
+- Creare un layout di registrazione del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione un modulo di registrazione nel quale l'utente possa inserire i propri dati personali con la possibilità di scegliere il suo ruolo (cliente, dipendente, amministatore) (FATTO)
 
 - Creare un layout per la pagina di login del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione, un modulo di login nel quale l'utente possa inserire le proprie credenziali.
 

@@ -353,7 +353,7 @@ static void AggiungiAlCarrello()
     string nomeProdotto = Console.ReadLine()!;
 
     // Cerca il prodotto nel carrello
-    var prodottoInCarrello = carrello.Find(p => (string)p.nome == nomeProdotto);
+    var prodottoInCarrello = carrello.Find(p => (string)p.nome == nomeProdotto); // modifica 
 
     if (prodottoInCarrello != null)
     {
