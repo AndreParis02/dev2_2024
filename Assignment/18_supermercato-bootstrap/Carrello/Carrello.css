@@ -9,15 +9,21 @@
     --bs-dark: #343a40;      /* Colore scuro */  
   }
   
-  .btn {  
-    background-color: var(--bs-primary);  
-    border: 1px solid #333333;
-    color: white;  
-  }
+/* Imposta il corpo della pagina come un contenitore flex */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Imposta l'altezza minima della pagina al 100% della finestra */
+}
 
+/* Imposta il contenuto principale per espandersi */
+.container {
+    flex: 1; /* Fai sì che il contenuto principale occupi tutto lo spazio disponibile */
+}
 
+/* Stile per il footer */
 footer {
-    background-color: #41aaff;
+    background-color: #1d93e7;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -33,10 +39,3 @@ footer .social-icons a {
 footer .social-icons a:hover {
     color: #4174ff;
 }
-
-.card{
-    margin:0 auto;
-    border: none;
-}
-
-

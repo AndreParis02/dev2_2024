@@ -9,36 +9,21 @@
     --bs-dark: #343a40;      /* Colore scuro */  
   }
   
-  .btn {  
-    background-color: var(--bs-primary);  
-    border: 1px solid #333333;
-    color: white;  
-  }
-
-.carousel {
-    width: 70%;
-    margin: auto;
+/* Imposta il corpo della pagina come un contenitore flex */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Imposta l'altezza minima della pagina al 100% della finestra */
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    height: 50px;
-    width: 50px;
-    background-color: rgb(73, 81, 87);
-    border-radius: 50%;
-    border: 2px solid #333333;
+/* Imposta il contenuto principale per espandersi */
+.container {
+    flex: 1; /* Fai sì che il contenuto principale occupi tutto lo spazio disponibile */
 }
 
-.carousel-item img {
-    width: 85%;
-    /* Adatta l'immagine alla larghezza del carosello */
-    height: auto;
-    border: 2px solid #333333;
-}
-
-
+/* Stile per il footer */
 footer {
-    background-color: #41aaff;
+    background-color: #1d93e7;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -55,15 +40,8 @@ footer .social-icons a:hover {
     color: #4174ff;
 }
 
-.card {
-    border: none;
-    margin:0 auto;
-}
-
-.container{
-    min-height: 100vh; 
-    min-width: 100vh;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-}
+.btn_add {  
+    background-color: var(--bs-success);  
+    border: 1px solid #333333;
+    color: white;  
+  }

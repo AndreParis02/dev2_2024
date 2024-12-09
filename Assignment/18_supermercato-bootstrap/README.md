@@ -13,11 +13,11 @@ Realizzare dei layout html di varie pagine generiche di un sito di supermercato 
 
 - Creare un layout di registrazione del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione un modulo di registrazione nel quale l'utente possa inserire i propri dati personali con la possibilità di scegliere il suo ruolo (cliente, dipendente, amministatore) (FATTO)
 
-- Creare un layout per la pagina di login del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione, un modulo di login nel quale l'utente possa inserire le proprie credenziali.
+- Creare un layout per la pagina di login del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione, un modulo di login nel quale l'utente possa inserire le proprie credenziali. (FATTO)
 
-- Creare un layout per la pagina del carrello del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione una tabella con i prodotti selezionati dall'utente e un pulsante per procedere all'acquisto e i pulsanti per modificare le quantità o eliminare un prodotto.
+- Creare un layout per la pagina del carrello del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione una tabella con i prodotti selezionati dall'utente e un pulsante per procedere all'acquisto e i pulsanti per modificare le quantità o eliminare un prodotto. (FATTO)
 
-- Creare un layout per la pagina riservata agli amministratori del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una tabella con i prodotti in vendita e un pulsante per aggiugere, eliminare o modificare un prodotto o un utente.
+- Creare un layout per la pagina riservata agli amministratori del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una tabella con i prodotti in vendita e un pulsante per aggiugere, eliminare o modificare un prodotto o un utente. (FATTO)
 
 - Creare un layout per la pagina riserevata ai dipendenti del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una tabella con i prodotti in vendita e le azione che il dipendente può compiere su di essi.
 
@@ -46,3 +46,22 @@ Realizzare dei layout html di varie pagine generiche di un sito di supermercato 
 - Utilizzare il sito colorhunt o coolors per la scelta dei colori da usare nel sito web (https://coolors.co/ o https://colorhunt.co/)
 
 - Utilizzare il più possibile le impostazioni aria realtive all'accessibilità
+
+
+# CHECK DEI REQUISITI
+
+[] Utilizzo delle variabili CSS attraverso il selettore :root
+[] Sovrascrittura delle classi di Bootstrap con !important
+[] Personalizzazione dei colori principali
+[] Supporto a temi dinamici (stile dark e light che abbiano una serie di attributi che stanno bene con il tema)
+[] Modifica dei font e dei titoli
+[] Personalizzazione della griglia e dei layout
+[] Personalizzazione della navbar e pulsanti
+[] Typography con google font
+[] Personalizzazione icone
+[] Utilizzo dei mixin responsivi
+[] Creazione di layout complessi con griglie nidificate
+[] Utilizzo delle classi di visibilità
+[] Allineamento e spaziature responsivi
+[] Utilizzo di font responsiva
+[] Personalizzazione dei modali e di altri componenti
