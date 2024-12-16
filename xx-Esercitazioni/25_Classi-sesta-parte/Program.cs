@@ -1,23 +1,26 @@
-﻿using Newtonsoft.Json;
+﻿
+using Newtonsoft.Json;
+// comando installazione pacchetto Newtonsoft.Json
+// dotnet add package Newtonsoft.Json
 class Program
 {
     static void Main(string[] args)
     {
-        //Creare un oggetto di tipo ProdottoRepository per gestire il salvataggio e il caricamento dei dati
+        // Creare un oggetto di tipo ProdottoRepository per gestire il salvataggio e il caricamento dei dati
         ProdottoRepository repository = new ProdottoRepository();
 
-        //Caricare i dati da file con il metodo CaricaProdotti della classe ProdottiRepository (repository)
+        // Caricare i dati da file con il metodo CaricaProdotti della classe ProdottoRepository (repository)
         List<ProdottoAdvanced> prodotti = repository.CaricaProdotti();
 
-        //Creare un oggetto di tipo ProdottoAdvancedManager per gestire i prodotti
-        ProdottoAdvancedManager manager = new ProdottoAdvancedManager();
+        // Creare un oggetto di tipo ProdottoAdvancedManager per gestire i prodotti
+        ProdottoAdvancedManager manager = new ProdottoAdvancedManager(prodotti);
 
-        //Menu interattivo per eseguire operazioni CRUD sui prodotti
+        // Menu interattivo per eseguire operazioni CRUD sui prodotti
 
-        //variabile per controllare se il programma deve continuare o uscire
+        // variabile per controllare se il programma deve continuare o uscire
         bool continua = true;
 
-        //il ciclo while continua finchè le variabile continua è true
+        // il ciclo while continua finché la variabile continua è true
         while (continua)
         {
             Console.WriteLine("\nMenu:");
@@ -26,22 +29,22 @@ class Program
             Console.WriteLine("3. Trova Prodotto per ID");
             Console.WriteLine("4. Aggiorna Prodotto");
             Console.WriteLine("5. Elimina Prodotto");
-            Console.WriteLine("6. Salva ed Esci");
+            Console.WriteLine("6. Esci");
 
-            //acquisire l'iput dell'utente
+            // acquisire l'input dell'utente
             Console.Write("\nScelta: ");
             string scelta = Console.ReadLine();
 
-            //switch-case per gestire le scelte dell'utente che usa scelta come variabile di controllo
+            // switch-case per gestire le scelte dell'utente che usa scelta come variabile di controllo
             switch (scelta)
             {
                 case "1":
-                    Console.WriteLine("\nProdotti: ");
+                    Console.WriteLine("\nProdotti:");
 
-                    //visualizzare i prodotti con il metodo OttieniProdotti dalla classe ProdottoAdvancedManager (manager)
+                    // Visualizzare i prodotti con il metodo OttieniProdotti della classe ProdottoAdvancedManager (manager)
                     foreach (var prodotto in manager.OttieniProdotti())
                     {
-                        Console.WriteLine($"ID: {prodotto.ID}, Nome: {prodotto.NomeProdotto}, Prezzo: {prodotto.PrezzoProdotto}, Giacenza: {prodotto.GiacenzaProdotto}");
+                        Console.WriteLine($"ID: {prodotto.Id}, Nome: {prodotto.NomeProdotto}, Prezzo: {prodotto.PrezzoProdotto}, Giacenza: {prodotto.GiacenzaProdotto}");
                     }
                     break;
                 case "2":
@@ -53,13 +56,13 @@ class Program
                     decimal prezzo = decimal.Parse(Console.ReadLine());
                     Console.Write("Giacenza: ");
                     int giacenza = int.Parse(Console.ReadLine());
-                    manager.AggiungiProdotto(new ProdottoAdvanced { ID = id, NomeProdotto = nome, PrezzoProdotto = prezzo, GiacenzaProdotto = giacenza });
+                    manager.AggiungiProdotto(new ProdottoAdvanced { Id = id, NomeProdotto = nome, PrezzoProdotto = prezzo, GiacenzaProdotto = giacenza });
                     break;
                 case "3":
                     Console.Write("ID: ");
                     int idProdotto = int.Parse(Console.ReadLine());
                     ProdottoAdvanced prodottoTrovato = manager.TrovaProdotto(idProdotto);
-                    if(prodottoTrovato != null)
+                    if (prodottoTrovato != null)
                     {
                         Console.WriteLine($"\nProdotto trovato per ID {idProdotto}: {prodottoTrovato.NomeProdotto}");
                     }
@@ -77,7 +80,7 @@ class Program
                     decimal prezzoNuovo = decimal.Parse(Console.ReadLine());
                     Console.Write("Giacenza: ");
                     int giacenzaNuova = int.Parse(Console.ReadLine());
-                    manager.AggiornaProdotto(idProdottoDaAggiornare,new ProdottoAdvanced { ID = idProdottoDaAggiornare, NomeProdotto = nomeNuovo, PrezzoProdotto = prezzoNuovo, GiacenzaProdotto = giacenzaNuova });
+                    manager.AggiornaProdotto(idProdottoDaAggiornare, new ProdottoAdvanced { Id = idProdottoDaAggiornare, NomeProdotto = nomeNuovo, PrezzoProdotto = prezzoNuovo, GiacenzaProdotto = giacenzaNuova });
                     break;
                 case "5":
                     Console.Write("ID: ");
@@ -86,21 +89,21 @@ class Program
                     break;
                 case "6":
                     repository.SalvaProdotti(manager.OttieniProdotti());
-                    continua = false;
+                    continua = false; // imposto la variabile continua a false per uscire dal ciclo while
                     break;
                 default:
-                    Console.WriteLine("Scelta non valida. Riprova.");
+                    Console.WriteLine("Scelta non valida. Riprovare.");
                     break;
             }
-
         }
     }
 }
 
 public class ProdottoAdvanced
+
 {
     private int id;
-    public int ID
+    public int Id
     {
         get { return id; }
         set
@@ -114,7 +117,6 @@ public class ProdottoAdvanced
     }
 
     private string nomeProdotto;
-
     public string NomeProdotto
     {
         get { return nomeProdotto; }
@@ -127,6 +129,7 @@ public class ProdottoAdvanced
             nomeProdotto = value;
         }
     }
+
     private decimal prezzoProdotto;
     public decimal PrezzoProdotto
     {
@@ -142,7 +145,6 @@ public class ProdottoAdvanced
     }
 
     private int giacenzaProdotto;
-
     public int GiacenzaProdotto
     {
         get { return giacenzaProdotto; }
@@ -152,32 +154,42 @@ public class ProdottoAdvanced
 
 public class ProdottoAdvancedManager
 {
-    private List<ProdottoAdvanced> prodotti; //prodotti è private perchè non voglio che venga modificato dall'esterno
+    // Lista di prodotti di tipo ProdottoAdvanced per memorizzare i prodotti
+    private List<ProdottoAdvanced> prodotti;
+    
+    // Oggetto di tipo ProdottoRepository per salvare i dati su file
+    private ProdottoRepository repository;
 
-    public ProdottoAdvancedManager()
+    // Costruttore per inizializzare la lista prodotti con i prodotti passati come argomento
+    // la differenza tra un costruttore ed un metodo è che il costruttore viene chiamato automaticamente quando si crea un'istanza della classe
+    // il compilatore capisce che e un costruttore perche ha lo stesso nome della classe
+    // uso la maiuscola per il nome del parametro per distinguerlo dal campo
+    // il parametro è una lista di prodotti di tipo ProdottoAdvanced (Prodotti)
+    // il campo prodotti è un riferimento alla lista di prodotti passata come argomento (prodotti)
+    // i parametri del costruttore sono condivisi con i metodi della classe e possono essere usati come se fossero proprieta della classe
+    public ProdottoAdvancedManager(List<ProdottoAdvanced> Prodotti)
     {
-        prodotti = new List<ProdottoAdvanced>(); //inizializzo la lista dei prodotti nel costruttore pubblico in modo che sia accessibile all'esterno
-
+        // Inizializzare la lista prodotti con i prodotti passati come argomento
+        prodotti = Prodotti;
+        // inizializzare l'oggetto repository per gestire il salvataggio e il caricamento dei dati
+        repository = new ProdottoRepository();
     }
 
-    //metodo per aggiungere un prodotto alla lista
     public void AggiungiProdotto(ProdottoAdvanced prodotto)
     {
         prodotti.Add(prodotto);
     }
 
-    //metodo per visualizzare la lista dei prodotti
     public List<ProdottoAdvanced> OttieniProdotti()
     {
         return prodotti;
     }
 
-    //metodo per cercare un prodotto
     public ProdottoAdvanced TrovaProdotto(int id)
     {
         foreach (var prodotto in prodotti)
         {
-            if (prodotto.ID == id)
+            if (prodotto.Id == id)
             {
                 return prodotto;
             }
@@ -185,7 +197,6 @@ public class ProdottoAdvancedManager
         return null;
     }
 
-    //metodo per modificare un prodotto esistente
     public void AggiornaProdotto(int id, ProdottoAdvanced nuovoProdotto)
     {
         var prodotto = TrovaProdotto(id);
@@ -197,49 +208,57 @@ public class ProdottoAdvancedManager
         }
     }
 
-    //metodo per eliminare il prodotto
     public void EliminaProdotto(int id)
     {
         var prodotto = TrovaProdotto(id);
         if (prodotto != null)
         {
             prodotti.Remove(prodotto);
+            // elimina il file JSON corrispondente al prodotto
+            string filePath = Path.Combine("Prodotti", $"{id}.json");
+            File.Delete(filePath);
+            Console.WriteLine($"Prodotto eliminato: {filePath}");
         }
+    }
+
+    public void SalvaProdotti()
+    {
+        repository.SalvaProdotti(prodotti);
     }
 }
 
 public class ProdottoRepository
 {
+    private readonly string folderPath = "Prodotti";
 
-    private readonly string filePath = "prodotti.json";
     public void SalvaProdotti(List<ProdottoAdvanced> prodotti)
     {
-        string jsonData = JsonConvert.SerializeObject(prodotti, Formatting.Indented);
-        File.WriteAllText(filePath, jsonData);
-        Console.WriteLine($"Dati salvati in {filePath}:\n");
-        //Console.WriteLine($"Dati salvati in {filePath}:\n{jsonData}\n");
+        if (!Directory.Exists(folderPath))
+        {
+            Directory.CreateDirectory(folderPath);
+        }
+
+        foreach (var prodotto in prodotti)
+        {
+            string filePath = Path.Combine(folderPath, $"{prodotto.Id}.json");
+            string jsonData = JsonConvert.SerializeObject(prodotto, Formatting.Indented);
+            File.WriteAllText(filePath, jsonData);
+            Console.WriteLine($"Prodotto salvato in {filePath}:\n{jsonData}\n");
+        }
     }
 
     public List<ProdottoAdvanced> CaricaProdotti()
     {
-        if (File.Exists(filePath))
+        List<ProdottoAdvanced> prodotti = new List<ProdottoAdvanced>();
+        if (Directory.Exists(folderPath))
         {
-            string readJsonData = File.ReadAllText(filePath);
-            List<ProdottoAdvanced> prodotti = JsonConvert.DeserializeObject<List<ProdottoAdvanced>>(readJsonData); //deserializzo i dati letti dal file
-            Console.WriteLine("Dati caricati da file:");
-            foreach (var prodotto in prodotti)
+            foreach (var file in Directory.GetFiles(folderPath, "*.json"))
             {
-                Console.WriteLine($"ID: {prodotto.ID}, Nome: {prodotto.NomeProdotto}, Prezzo: {prodotto.PrezzoProdotto}, Giacenza: {prodotto.GiacenzaProdotto}");
+                string readJsonData = File.ReadAllText(file);
+                ProdottoAdvanced prodotto = JsonConvert.DeserializeObject<ProdottoAdvanced>(readJsonData);
+                prodotti.Add(prodotto);
             }
-            return prodotti;
         }
-        else
-        {
-            Console.WriteLine("Nessun dato trovato. Inizializzare una nuova lista di prodotti.");
-            return new List<ProdottoAdvanced>();
-        }
+        return prodotti;
     }
 }
-
-
-

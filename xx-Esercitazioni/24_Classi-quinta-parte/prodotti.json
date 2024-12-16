@@ -1,0 +1,14 @@
+[
+  {
+    "ID": 1,
+    "NomeProdotto": "Pane",
+    "PrezzoProdotto": 1.20,
+    "GiacenzaProdotto": 100
+  },
+  {
+    "ID": 2,
+    "NomeProdotto": "Pasta",
+    "PrezzoProdotto": 2.20,
+    "GiacenzaProdotto": 50
+  }
+]

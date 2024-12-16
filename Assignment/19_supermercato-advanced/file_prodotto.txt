@@ -1,0 +1,266 @@
+Main completo 
+
+using Newtonsoft.Json;
+// comando per installare la libreria Newtonsoft.Json
+// dotnet add package Newtonsoft.Json
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Creare un oggetto di tipo ProdottoRepository per gestire il salvataggio e il caricamento dei dati
+        ProdottoRepository repository = new ProdottoRepository();
+
+        // Caricare i dati da file con il metodo CaricaProdotti della classe ProdottoRepository (repository)
+        List<Prodotto> prodotti = repository.CaricaProdotti();
+
+        // Creare un oggetto di tipo ProdottoManager per gestire i prodotti
+        ProdottoManager manager = new ProdottoManager(prodotti);
+
+        // Menu interattivo per eseguire operazioni CRUD sui prodotti
+
+        // variabile per controllare se il programma deve continuare o uscire
+        bool continua = true;
+
+        // il ciclo while continua finché la variabile continua è true
+        while (continua)
+        {
+            Console.WriteLine("\nMenu:");
+            Console.WriteLine("1. Visualizza Prodotti");
+            Console.WriteLine("2. Aggiungi Prodotto");
+            Console.WriteLine("3. Trova Prodotto per ID");
+            Console.WriteLine("4. Aggiorna Prodotto");
+            Console.WriteLine("5. Elimina Prodotto");
+            Console.WriteLine("6. Salva ed Esci");
+
+            // acquisire l'input dell'utente
+            // Console.Write("\nScelta: ");
+            // string scelta = Console.ReadLine();
+            // string scelta acquisita mediante il metodo LeggiInteri della classe InputManager
+            string scelta = InputManager.LeggiIntero("\nScelta", 1, 6).ToString();
+            // pulisco la console
+            Console.Clear();
+
+            // switch-case per gestire le scelte dell'utente che usa scelta come variabile di controllo
+            switch (scelta)
+            {
+                case "1":
+                    Console.WriteLine("\nProdotti:");
+                    manager.StampaProdottiIncolonnati();
+                    break;
+                case "2":
+                    string nome = InputManager.LeggiStringa("\nNome: ");
+                    decimal prezzo = InputManager.LeggiDecimale("\nPrezzo: ");
+                    int giacenza = InputManager.LeggiIntero("\nGiacenza: ");
+                    manager.AggiungiProdotto(new Prodotto { Nome = nome, Prezzo = prezzo, Giacenza = giacenza });
+                    break;
+                case "3":
+                    int idProdotto = InputManager.LeggiIntero("\nID: ");
+                    Prodotto prodottoTrovato = manager.TrovaProdotto(idProdotto);
+                    if (prodottoTrovato != null)
+                    {
+                        Console.WriteLine($"\nProdotto trovato per ID {idProdotto}: {prodottoTrovato.Nome}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\nProdotto non trovato per ID {idProdotto}");
+                    }
+                    break;
+                case "4":
+                    int idProdottoDaAggiornare = InputManager.LeggiIntero("\nID: ");
+                    string nomeNuovo = InputManager.LeggiStringa("\nNome: ");
+                    decimal prezzoNuovo = InputManager.LeggiDecimale("\nPrezzo: ");
+                    int giacenzaNuova = InputManager.LeggiIntero("\nGiacenza: ");
+                    manager.AggiornaProdotto(idProdottoDaAggiornare, new Prodotto { Nome = nomeNuovo, Prezzo = prezzoNuovo, Giacenza = giacenzaNuova });
+                    break;
+                case "5":
+                    int idProdottoDaEliminare = InputManager.LeggiIntero("\nID: ");
+                    manager.EliminaProdotto(idProdottoDaEliminare);
+                    break;
+                case "6":
+                    repository.SalvaProdotti(manager.OttieniProdotti());
+                    continua = false; // imposto la variabile continua a false per uscire dal ciclo while
+                    break;
+                default:
+                    Console.WriteLine("Scelta non valida. Riprovare.");
+                    break;
+            }
+        }
+    }
+}
+
+
+//------------------------------------------Test Cliente-------------------------------------------
+
+
+using Newtonsoft.Json;
+// comando per installare la libreria Newtonsoft.Json
+// dotnet add package Newtonsoft.Json
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Creare un oggetto di tipo ProdottoRepository per gestire il salvataggio e il caricamento dei dati
+        ClienteRepository repository = new ClienteRepository();
+
+        // Caricare i dati da file con il metodo CaricaProdotti della classe ProdottoRepository (repository)
+        List<Cliente> clienti = repository.CaricaClienti();
+
+        // Creare un oggetto di tipo ProdottoManager per gestire i prodotti
+        ClienteManager manager = new ClienteManager(clienti);
+
+        // Menu interattivo per eseguire operazioni CRUD sui prodotti
+
+        // variabile per controllare se il programma deve continuare o uscire
+        bool continua = true;
+
+        // il ciclo while continua finché la variabile continua è true
+        while (continua)
+        {
+            Console.WriteLine("\nMenu:");
+            Console.WriteLine("1. Visualizza Clienti");
+            Console.WriteLine("2. Aggiungi Cliente");
+            Console.WriteLine("3. Trova Cliente per ID");
+            Console.WriteLine("4. Aggiorna Cliente");
+            Console.WriteLine("5. Elimina Cliente");
+            Console.WriteLine("6. Salva ed Esci");
+
+            // acquisire l'input dell'utente
+            // Console.Write("\nScelta: ");
+            // string scelta = Console.ReadLine();
+            // string scelta acquisita mediante il metodo LeggiInteri della classe InputManager
+            string scelta = InputManager.LeggiIntero("\nScelta", 1, 6).ToString();
+            // pulisco la console
+            Console.Clear();
+
+            // switch-case per gestire le scelte dell'utente che usa scelta come variabile di controllo
+            switch (scelta)
+            {
+                case "1":
+                    Console.WriteLine("\nProdotti:");
+                    manager.StampaClientiIncolonnati();
+                    break;
+                case "2":
+                    string username = InputManager.LeggiStringa("\nNome: ");
+                    decimal credito = InputManager.LeggiDecimale("\nCredito: ");
+                    manager.AggiungiCliente(new Cliente { Username = username, Credito = credito});
+                    break;
+                case "3":
+                    int idCliente = InputManager.LeggiIntero("\nID: ");
+                    Cliente ClienteTrovato = manager.TrovaCliente(idCliente);
+                    if (ClienteTrovato != null)
+                    {
+                        Console.WriteLine($"\nCliente trovato per ID {idCliente}: {ClienteTrovato.Username}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\nCliente non trovato per ID {idCliente}");
+                    }
+                    break;
+                case "4":
+                    int idClienteDaAggiornare = InputManager.LeggiIntero("\nID: ");
+                    string usernameNuovo = InputManager.LeggiStringa("\nUsername: ");
+                    decimal creditoNuovo = InputManager.LeggiDecimale("\nCredito: ");
+                    manager.AggiornaCliente(idClienteDaAggiornare, new Cliente { Username = usernameNuovo, Credito = creditoNuovo});
+                    break;
+                case "5":
+                    int idClienteDaEliminare = InputManager.LeggiIntero("\nID: ");
+                    manager.EliminaCliente(idClienteDaEliminare);
+                    break;
+                case "6":
+                    repository.SalvaClienti(manager.OttieniClienti());
+                    continua = false; // imposto la variabile continua a false per uscire dal ciclo while
+                    break;
+                default:
+                    Console.WriteLine("Scelta non valida. Riprovare.");
+                    break;
+            }
+        }
+    }
+}
+
+//---------------------------------------------Test Dipendente-----------------------------------------------------
+
+using Newtonsoft.Json;
+// comando per installare la libreria Newtonsoft.Json
+// dotnet add package Newtonsoft.Json
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Creare un oggetto di tipo ProdottoRepository per gestire il salvataggio e il caricamento dei dati
+        DipendenteRepository repository = new  DipendenteRepository();
+
+        // Caricare i dati da file con il metodo CaricaProdotti della classe ProdottoRepository (repository)
+        List<Dipendente>  dipendenti = repository.CaricaDipendenti();
+
+        // Creare un oggetto di tipo ProdottoManager per gestire i prodotti
+        DipendenteManager manager = new DipendenteManager(dipendenti);
+        // Menu interattivo per eseguire operazioni CRUD sui prodotti
+
+        // variabile per controllare se il programma deve continuare o uscire
+        bool continua = true;
+
+        // il ciclo while continua finché la variabile continua è true
+        while (continua)
+        {
+            Console.WriteLine("\nMenu:");
+            Console.WriteLine("1. Visualizza Dipendenti");
+            Console.WriteLine("2. Aggiungi Dipendente");
+            Console.WriteLine("3. Trova Dipendente per ID");
+            Console.WriteLine("4. Aggiorna Dipendente");
+            Console.WriteLine("5. Elimina Dipendente");
+            Console.WriteLine("6. Salva ed Esci");
+
+            // acquisire l'input dell'utente
+            // Console.Write("\nScelta: ");
+            // string scelta = Console.ReadLine();
+            // string scelta acquisita mediante il metodo LeggiInteri della classe InputManager
+            string scelta = InputManager.LeggiIntero("\nScelta", 1, 6).ToString();
+            // pulisco la console
+            Console.Clear();
+
+            // switch-case per gestire le scelte dell'utente che usa scelta come variabile di controllo
+            switch (scelta)
+            {
+                case "1":
+                    Console.WriteLine("\nProdotti:");
+                    manager.StampaDipendentiIncolonnati();
+                    break;
+                case "2":
+                    string username = InputManager.LeggiStringa("\nUsername: ");
+                    string ruolo = InputManager.LeggiStringa("\nRuolo: ");
+                    manager.AggiungiDipendente(new Dipendente { Username = username, Ruolo = ruolo});
+                    break;
+                case "3":
+                    int idDipendente = InputManager.LeggiIntero("\nID: ");
+                    Dipendente DipendenteTrovato = manager.TrovaDipendente(idDipendente);
+                    if (DipendenteTrovato != null)
+                    {
+                        Console.WriteLine($"\nDipendente trovato per ID {idDipendente}: {DipendenteTrovato.Username}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\nDipendente non trovato per ID {idDipendente}");
+                    }
+                    break;
+                case "4":
+                    int idDipendenteDaAggiornare = InputManager.LeggiIntero("\nID: ");
+                    string usernameNuovo = InputManager.LeggiStringa("\nUsername: ");
+                    string ruoloNuovo = InputManager.LeggiStringa("\nRuolo: ");
+                    manager.AggiornaDipendente(idDipendenteDaAggiornare, new Dipendente { Username = usernameNuovo, Ruolo = ruoloNuovo});
+                    break;
+                case "5":
+                    int idDipendenteDaEliminare = InputManager.LeggiIntero("\nID: ");
+                    manager.EliminaDipendente(idDipendenteDaEliminare);
+                    break;
+                case "6":
+                    repository.SalvaDipendenti(manager.OttieniDipendenti());
+                    continua = false; // imposto la variabile continua a false per uscire dal ciclo while
+                    break;
+                default:
+                    Console.WriteLine("Scelta non valida. Riprovare.");
+                    break;
+            }
+        }
+    }
+}
