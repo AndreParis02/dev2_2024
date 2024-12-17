@@ -53,7 +53,7 @@ public class ProdottoManager
     {
         // Intestazioni con larghezza fissa
         Console.WriteLine(
-            $"{"ID",-5} {"Nome",-20} {"Prezzo",-10} {"Giacenza",-10}"
+            $"{"ID",-5} {"Nome",-20} {"Prezzo",-10} {"Giacenza",-10} {"Categoria",-10}"
         );
         Console.WriteLine(new string('-', 50)); // Linea separatrice
 
@@ -61,7 +61,7 @@ public class ProdottoManager
         foreach (var prodotto in prodotti)
         {
             Console.WriteLine(
-                $"{prodotto.ID,-5} {prodotto.Nome,-20} {prodotto.Prezzo,-10:0.00} {prodotto.Giacenza,-10}"
+                $"{prodotto.ID,-5} {prodotto.Nome,-20} {prodotto.Prezzo,-10:0.00} {prodotto.Giacenza,-10} {prodotto.categoria,-10}"
             );
         }
     }
@@ -86,6 +86,7 @@ public class ProdottoManager
             prodotto.Nome = nuovoProdotto.Nome;
             prodotto.Prezzo = nuovoProdotto.Prezzo;
             prodotto.Giacenza = nuovoProdotto.Giacenza;
+            prodotto.categoria = nuovoProdotto.categoria;
         }
     }
 

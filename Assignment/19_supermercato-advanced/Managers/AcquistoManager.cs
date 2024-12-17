@@ -31,6 +31,9 @@ public class AcquistoManager
     {
         // Assegna automaticamente un ID univoco
         acquisto.ID = prossimoId;
+        acquisto.Data = DateTime.Now;
+        // Imposta lo stato di default dell'acquisto come 'in corso'
+        acquisto.Stato = false;
         // Incrementa il prossimo ID per il prossimo acquisto
         prossimoId++;
         acquisti.Add(acquisto);
@@ -54,7 +57,7 @@ public class AcquistoManager
         foreach (var acquisto in acquisti)
         {
             Console.WriteLine(
-                $"{acquisto.ID,-5} {acquisto.Cliente,-10} {acquisto.prodotti, -20} {acqusito.quantita, -5} {acquisto.data, -10} {acquisto.stato, -5}"
+                $"{acquisto.ID,-5} {acquisto.Cliente,-20} {acquisto.Prodotti,-20} {acquisto.Quantita,-10} {acquisto.Data,-20} {(acquisto.Stato ? "Completato" : "In corso"),-10}"
             );
         }
     }
@@ -77,7 +80,10 @@ public class AcquistoManager
         var acquisto = TrovaAcquisto(id);
         if (acquisto != null)
         {
-            acquisto.Nome = nuovoAcquisto.Nome;
+            acquisto.Cliente = nuovoAcquisto.Cliente;
+            acquisto.Prodotti = nuovoAcquisto.Prodotti;
+            acquisto.Quantita = nuovoAcquisto.Quantita;
+            acquisto.Stato = nuovoAcquisto.Stato;
         }
     }
 

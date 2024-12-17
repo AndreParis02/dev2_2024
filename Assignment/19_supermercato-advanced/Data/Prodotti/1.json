@@ -1,7 +1,10 @@
 {
   "ID": 1,
-  "Nome": "Penne",
-  "Prezzo": 1.25,
-  "Giacenza": 5,
-  "categoria": null
+  "Nome": "Pane",
+  "Prezzo": 12.0,
+  "Giacenza": 1,
+  "categoria": {
+    "ID": 1,
+    "Nome": "Alimentari"
+  }
 }

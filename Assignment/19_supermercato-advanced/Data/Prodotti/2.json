@@ -2,6 +2,9 @@
   "ID": 2,
   "Nome": "Bresaola",
   "Prezzo": 3.50,
-  "Giacenza": 50,
-  "categoria": null
+  "Giacenza": 10,
+  "categoria": {
+    "ID": 1,
+    "Nome": "Alimentari"
+  }
 }

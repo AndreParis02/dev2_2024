@@ -13,7 +13,7 @@ public class ClienteManager
     // Modifica il costruttore per inizializzare prossimoId con il valore piu alto di ID + 1:
     public ClienteManager(List<Cliente> Clienti)
     {
-        clienti= Clienti;
+        clienti = Clienti;
         repository = new ClienteRepository();
 
         prossimoId = 1; // ID iniziale di default
@@ -53,12 +53,12 @@ public class ClienteManager
         // Stampa ogni prodotto con larghezza fissa
         foreach (var cliente in clienti)
         {
-            Console.WriteLine(
-                $"{cliente.ID,-5} {cliente.Username,-20} {cliente.Credito,-10} {cliente.Carrello,-20} {cliente.StoricoAcquisti,-20}"
-            );
+            string carrello = cliente.Carrello.Count.ToString();
+            string storicoAcquisti = cliente.StoricoAcquisti.Count.ToString();
+
+            Console.WriteLine($"{cliente.ID,-5} {cliente.Username,-20} {cliente.Credito,-10} {carrello,-10} {storicoAcquisti,-15}");
         }
     }
-
 
     public Cliente TrovaCliente(int id)
     {
@@ -78,11 +78,11 @@ public class ClienteManager
         if (cliente != null)
         {
             cliente.Username = nuovoCliente.Username;
-            cliente.Credito = nuovoCliente.Credito;     
+            cliente.Credito = nuovoCliente.Credito;
             cliente.Carrello = nuovoCliente.Carrello;
             cliente.StoricoAcquisti = nuovoCliente.StoricoAcquisti;
 
-        
+
         }
     }
 
@@ -103,4 +103,60 @@ public class ClienteManager
     {
         repository.SalvaClienti(clienti);
     }
+
+    // Metodo per effettuare un acquisto, che aggiorna il carrello e lo storico acquisti
+    public void EffettuaAcquisto(int clienteId, List<Prodotto> prodottiAcquistati)
+    {
+        var cliente = TrovaCliente(clienteId);
+        if (cliente != null)
+        {
+            decimal totale = 0;
+
+            // Calcola il totale dell'acquisto
+            foreach (var prodotto in prodottiAcquistati)
+            {
+                totale += prodotto.Prezzo;
+            }
+
+            // Controlla se il cliente ha abbastanza credito
+            if (cliente.Credito >= totale)
+            {
+                // Dedurre il credito del cliente
+                cliente.Credito -= totale;
+
+                // Crea un oggetto Acquisto per lo storico
+                var acquisto = new Acquisto
+                {
+                    Cliente = cliente,
+                    Prodotti = prodottiAcquistati,
+                    Quantita = prodottiAcquistati.Count,
+                    Data = DateTime.Now,
+                    Stato = true
+                };
+
+                // Aggiungi l'acquisto allo storico del cliente
+                cliente.StoricoAcquisti.Add(acquisto);
+
+                // Rimuovi i prodotti acquistati dal carrello
+                foreach (var prodotto in prodottiAcquistati)
+                {
+                    cliente.Carrello.Remove(prodotto);
+                }
+
+                Console.WriteLine($"Acquisto effettuato con successo! Totale: {totale}.");
+            }
+            else
+            {
+                Console.WriteLine("Credito insufficiente per effettuare l'acquisto.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Cliente non trovato.");
+        }
+    }
+
 }
+
+
+

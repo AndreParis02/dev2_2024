@@ -10,6 +10,6 @@ public class Cassa
 {
     public int ID {get;set;}
     public Dipendente dipendente {get;set;}
-    public List<Purchases> acquisti {get;set;}
-    public bool scontrino_processato {get;set;}
+    public List<Acquisto> acquisti {get;set;}
+    public bool scontrinoProcessato {get;set;}
 }

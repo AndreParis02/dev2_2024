@@ -11,5 +11,5 @@ public class Dipendente
 {
     public int ID {get;set;}
     public String Username {get;set;}
-    public String Ruolo {get;set;}
+    public Ruolo Ruolo {get;set;}
 }

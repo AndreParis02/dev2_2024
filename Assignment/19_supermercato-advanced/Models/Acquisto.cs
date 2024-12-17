@@ -12,9 +12,9 @@
 public class Acquisto
 {
     public int ID {get;set;}
-    public Cliente cliente {get;set;}
-    public List<Prodotto> prodotti {get;set;}
-    public int quantita {get;set;}
-    public DateTime data {get;set;}
-    public bool stato {get;set;}
+    public Cliente Cliente {get;set;}
+    public List<Prodotto> Prodotti {get;set;}
+    public int Quantita {get;set;}
+    public DateTime Data {get;set;}
+    public bool Stato {get;set;}
 }

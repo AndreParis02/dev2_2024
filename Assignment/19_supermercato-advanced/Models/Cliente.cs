@@ -14,6 +14,6 @@ public class Cliente
     public int ID {get; set;}
     public String Username {get;set;}
     public List<Prodotto> Carrello {get;set;}
-    public List<Purchases> StoricoAcquisti {get;set;}
+    public List<Acquisto> StoricoAcquisti {get;set;}
     public decimal Credito {get;set;}
 }
