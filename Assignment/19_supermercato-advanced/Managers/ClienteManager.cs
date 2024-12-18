@@ -60,7 +60,7 @@ public class ClienteManager
         }
     }
 
-    public Cliente TrovaCliente(int id)
+    public Cliente TrovaClienteID(int id)
     {
         foreach (var cliente in clienti)
         {
@@ -72,9 +72,21 @@ public class ClienteManager
         return null;
     }
 
+    public Cliente TrovaClienteNome(string Username)
+    {
+        foreach (var cliente in clienti)
+        {
+            if (cliente.Username == Username)
+            {
+                return cliente;
+            }
+        }
+        return null;
+    }
+
     public void AggiornaCliente(int id, Cliente nuovoCliente)
     {
-        var cliente = TrovaCliente(id);
+        var cliente = TrovaClienteID(id);
         if (cliente != null)
         {
             cliente.Username = nuovoCliente.Username;
@@ -88,7 +100,7 @@ public class ClienteManager
 
     public void EliminaCliente(int id)
     {
-        var cliente = TrovaCliente(id);
+        var cliente = TrovaClienteID(id);
         if (cliente != null)
         {
             clienti.Remove(cliente);
@@ -102,60 +114,7 @@ public class ClienteManager
     public void SalvaCliente()
     {
         repository.SalvaClienti(clienti);
-    }
-
-    // Metodo per effettuare un acquisto, che aggiorna il carrello e lo storico acquisti
-    public void EffettuaAcquisto(int clienteId, List<Prodotto> prodottiAcquistati)
-    {
-        var cliente = TrovaCliente(clienteId);
-        if (cliente != null)
-        {
-            decimal totale = 0;
-
-            // Calcola il totale dell'acquisto
-            foreach (var prodotto in prodottiAcquistati)
-            {
-                totale += prodotto.Prezzo;
-            }
-
-            // Controlla se il cliente ha abbastanza credito
-            if (cliente.Credito >= totale)
-            {
-                // Dedurre il credito del cliente
-                cliente.Credito -= totale;
-
-                // Crea un oggetto Acquisto per lo storico
-                var acquisto = new Acquisto
-                {
-                    Cliente = cliente,
-                    Prodotti = prodottiAcquistati,
-                    Quantita = prodottiAcquistati.Count,
-                    Data = DateTime.Now,
-                    Stato = true
-                };
-
-                // Aggiungi l'acquisto allo storico del cliente
-                cliente.StoricoAcquisti.Add(acquisto);
-
-                // Rimuovi i prodotti acquistati dal carrello
-                foreach (var prodotto in prodottiAcquistati)
-                {
-                    cliente.Carrello.Remove(prodotto);
-                }
-
-                Console.WriteLine($"Acquisto effettuato con successo! Totale: {totale}.");
-            }
-            else
-            {
-                Console.WriteLine("Credito insufficiente per effettuare l'acquisto.");
-            }
-        }
-        else
-        {
-            Console.WriteLine("Cliente non trovato.");
-        }
-    }
-
+    }  
 }
 
 

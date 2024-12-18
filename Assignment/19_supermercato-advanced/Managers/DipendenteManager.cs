@@ -54,10 +54,11 @@ public class DipendenteManager
         foreach (var dipendente in dipendenti)
         {
             Console.WriteLine(
-                $"{dipendente.ID,-5} {dipendente.Username,-20} {dipendente.Ruolo,-10}"
+                $"{dipendente.ID,-5} {dipendente.Username,-20} {dipendente.Ruolo.ruoloNome,-10}"
             );
         }
     }
+
 
 
     public Dipendente TrovaDipendente(int id)

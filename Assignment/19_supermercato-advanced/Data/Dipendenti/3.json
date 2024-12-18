@@ -1,0 +1,8 @@
+{
+  "ID": 3,
+  "Username": "Paolo",
+  "Ruolo": {
+    "ID": 2,
+    "ruoloNome": "Magazziniere"
+  }
+}

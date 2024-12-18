@@ -61,7 +61,7 @@ public class ProdottoManager
         foreach (var prodotto in prodotti)
         {
             Console.WriteLine(
-                $"{prodotto.ID,-5} {prodotto.Nome,-20} {prodotto.Prezzo,-10:0.00} {prodotto.Giacenza,-10} {prodotto.categoria,-10}"
+                $"{prodotto.ID,-5} {prodotto.Nome,-20} {prodotto.Prezzo,-10:0.00} {prodotto.Giacenza,-10} {prodotto.categoria.Nome,-10}"
             );
         }
     }

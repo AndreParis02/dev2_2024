@@ -45,8 +45,7 @@ public class RuoloManager
     public void StampaRuoliIncolonnati()
     {
         // Intestazioni con larghezza fissa
-        Console.WriteLine(
-            $"{"ID",-5} {"Nome",-10}"
+        Console.WriteLine($"{"ID",-5} {"Nome",-10}"
         );
         Console.WriteLine(new string('-', 20)); // Linea separatrice
 
@@ -54,7 +53,7 @@ public class RuoloManager
         foreach (var ruolo in ruoli)
         {
             Console.WriteLine(
-                $"{ruolo.ID,-5} {ruolo.ruolo,-10}"
+                $"{ruolo.ID,-5} {ruolo.ruoloNome,-10}"
             );
         }
     }
@@ -77,7 +76,7 @@ public class RuoloManager
         var ruolo = TrovaRuolo(id);
         if (ruolo != null)
         {
-            ruolo.ruolo = nuovoRuolo.ruolo;
+            ruolo.ruoloNome = nuovoRuolo.ruoloNome;
         }
     }
 

@@ -53,15 +53,14 @@ class Program
                                 break;
 
                             case "2":
-                                GestioneMagazziniere(managerProdotto, repositoryProdotto, managerCategoria,repositoryCategoria);
+                                GestioneMagazziniere(managerProdotto, repositoryProdotto, managerCategoria, repositoryCategoria);
                                 break;
                         }
                         break;
-
                     }
                     break;
                 case "2":
-
+                    GestioneCliente(managerProdotto, repositoryProdotto, managerCliente, repositoryCliente);
                     break;
                 case "0":
                     continua = false;
@@ -135,170 +134,301 @@ class Program
 
     static void GestioneMagazziniere(ProdottoManager managerProdotto, ProdottoRepository repositoryProdotto, CategoriaManager managerCategoria, CategoriaRepository repositoryCategoria)
     {
-                                        Console.WriteLine("\nBenvenuto Dipendente!");
-                                bool temp2 = true;
-                                while (temp2)
-                                {
-                                    Console.WriteLine("\nCosa vuoi fare?");
-                                    Console.WriteLine("1. Visualizza Prodotti");
-                                    Console.WriteLine("2. Aggiungi Prodotto");
-                                    Console.WriteLine("3. Trova Prodotto per ID");
-                                    Console.WriteLine("4. Aggiorna Prodotto");
-                                    Console.WriteLine("5. Elimina Prodotto");
-                                    Console.WriteLine("6. Visualizza Categorie");
-                                    Console.WriteLine("7. Aggiungi Categoria");
-                                    Console.WriteLine("8. Trova Categoria per ID");
-                                    Console.WriteLine("9. Aggiorna Categoria");
-                                    Console.WriteLine("10. Elimina Categoria");
-                                    Console.WriteLine("0. Salva ed Esci");
+        Console.WriteLine("\nBenvenuto Dipendente!");
+        bool temp2 = true;
+        while (temp2)
+        {
+            Console.WriteLine("\nCosa vuoi fare?");
+            Console.WriteLine("1. Visualizza Prodotti");
+            Console.WriteLine("2. Aggiungi Prodotto");
+            Console.WriteLine("3. Trova Prodotto per ID");
+            Console.WriteLine("4. Aggiorna Prodotto");
+            Console.WriteLine("5. Elimina Prodotto");
+            Console.WriteLine("6. Visualizza Categorie");
+            Console.WriteLine("7. Aggiungi Categoria");
+            Console.WriteLine("8. Trova Categoria per ID");
+            Console.WriteLine("9. Aggiorna Categoria");
+            Console.WriteLine("10. Elimina Categoria");
+            Console.WriteLine("0. Salva ed Esci");
 
-                                    string dip = InputManager.LeggiIntero("\nScelta:", 0, 10).ToString();
-                                    Console.Clear();
-                                    switch (dip)
-                                    {
-                                        //stampa Prodotti
-                                        case "1":
-                                            Console.WriteLine("\nProdotti:");
-                                            managerProdotto.StampaProdottiIncolonnati();
-                                            break;
+            string dip = InputManager.LeggiIntero("\nScelta:", 0, 10).ToString();
+            Console.Clear();
+            switch (dip)
+            {
+                //stampa Prodotti
+                case "1":
+                    Console.WriteLine("\nProdotti:");
+                    managerProdotto.StampaProdottiIncolonnati();
+                    break;
 
-                                        //Aggiungi Prodotto
-                                        case "2":
-                                            string nomeProd = InputManager.LeggiStringa("\nNome: ");
-                                            decimal prezzoProd = InputManager.LeggiDecimale("\nPrezzo: ");
-                                            int giacenzaProd = InputManager.LeggiIntero("\nGiacenza: ");
-                                            managerProdotto.AggiungiProdotto(new Prodotto { Nome = nomeProd, Prezzo = prezzoProd, Giacenza = giacenzaProd, categoria = selezionaCategoria() });
-                                            break;
+                //Aggiungi Prodotto
+                case "2":
+                    string nomeProd = InputManager.LeggiStringa("\nNome: ");
+                    decimal prezzoProd = InputManager.LeggiDecimale("\nPrezzo: ");
+                    int giacenzaProd = InputManager.LeggiIntero("\nGiacenza: ");
+                    managerProdotto.AggiungiProdotto(new Prodotto { Nome = nomeProd, Prezzo = prezzoProd, Giacenza = giacenzaProd, categoria = selezionaCategoria() });
+                    break;
 
-                                        //Trova Prodotto
-                                        case "3":
-                                            int idProdotto = InputManager.LeggiIntero("\nID: ");
-                                            Prodotto prodottoTrovato = managerProdotto.TrovaProdotto(idProdotto);
-                                            if (prodottoTrovato != null)
-                                            {
-                                                Console.WriteLine($"\nProdotto trovato per ID {idProdotto}: {prodottoTrovato.Nome}");
-                                            }
-                                            else
-                                            {
-                                                Console.WriteLine($"\nProdotto non trovato per ID {idProdotto}");
-                                            }
-                                            break;
+                //Trova Prodotto
+                case "3":
+                    int idProdotto = InputManager.LeggiIntero("\nID: ");
+                    Prodotto prodottoTrovato = managerProdotto.TrovaProdotto(idProdotto);
+                    if (prodottoTrovato != null)
+                    {
+                        Console.WriteLine($"\nProdotto trovato per ID {idProdotto}: {prodottoTrovato.Nome}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\nProdotto non trovato per ID {idProdotto}");
+                    }
+                    break;
 
-                                        //Aggiorna Prodotto
-                                        case "4":
-                                            int idProdottoDaAggiornare = InputManager.LeggiIntero("\nID: ");
-                                            string nomeNuovo = InputManager.LeggiStringa("\nNome: ");
-                                            decimal prezzoNuovo = InputManager.LeggiDecimale("\nPrezzo: ");
-                                            int giacenzaNuova = InputManager.LeggiIntero("\nGiacenza: ");
-                                            managerProdotto.AggiornaProdotto(idProdottoDaAggiornare, new Prodotto { Nome = nomeNuovo, Prezzo = prezzoNuovo, Giacenza = giacenzaNuova, categoria = selezionaCategoria()});
-                                            break;
+                //Aggiorna Prodotto
+                case "4":
+                    int idProdottoDaAggiornare = InputManager.LeggiIntero("\nID: ");
+                    string nomeNuovo = InputManager.LeggiStringa("\nNome: ");
+                    decimal prezzoNuovo = InputManager.LeggiDecimale("\nPrezzo: ");
+                    int giacenzaNuova = InputManager.LeggiIntero("\nGiacenza: ");
+                    managerProdotto.AggiornaProdotto(idProdottoDaAggiornare, new Prodotto { Nome = nomeNuovo, Prezzo = prezzoNuovo, Giacenza = giacenzaNuova, categoria = selezionaCategoria() });
+                    break;
 
-                                        //Elimina Prodotto
-                                        case "5":
-                                            int idProdottoDaEliminare = InputManager.LeggiIntero("\nID: ");
-                                            managerProdotto.EliminaProdotto(idProdottoDaEliminare);
-                                            break;
+                //Elimina Prodotto
+                case "5":
+                    int idProdottoDaEliminare = InputManager.LeggiIntero("\nID: ");
+                    managerProdotto.EliminaProdotto(idProdottoDaEliminare);
+                    break;
 
-                                        //Visualizza categorie
-                                        case "6":
-                                            Console.WriteLine("\nCategorie:");
-                                            managerCategoria.StampaCategorieIncolonnati();
-                                            break;
+                //Visualizza categorie
+                case "6":
+                    Console.WriteLine("\nCategorie:");
+                    managerCategoria.StampaCategorieIncolonnati();
+                    break;
 
-                                        //Aggiungi Categoria
-                                        case "7":
-                                            string nomeCat = InputManager.LeggiStringa("\nNome: ");
-                                            managerCategoria.AggiungiCategoria(new Categoria { Nome = nomeCat });
-                                            break;
+                //Aggiungi Categoria
+                case "7":
+                    string nomeCat = InputManager.LeggiStringa("\nNome: ");
+                    managerCategoria.AggiungiCategoria(new Categoria { Nome = nomeCat });
+                    break;
 
-                                        //Trova Categoria
-                                        case "8":
-                                            int idCategoria = InputManager.LeggiIntero("\nID: ");
-                                            Categoria categoriaTrovata = managerCategoria.TrovaCategoria(idCategoria);
-                                            if (categoriaTrovata != null)
-                                            {
-                                                Console.WriteLine($"\nCategoria trovata per ID {idCategoria}: {categoriaTrovata.Nome}");
-                                            }
-                                            else
-                                            {
-                                                Console.WriteLine($"\nCategoria non trovata per ID {idCategoria}");
-                                            }
-                                            break;
+                //Trova Categoria
+                case "8":
+                    int idCategoria = InputManager.LeggiIntero("\nID: ");
+                    Categoria categoriaTrovata = managerCategoria.TrovaCategoria(idCategoria);
+                    if (categoriaTrovata != null)
+                    {
+                        Console.WriteLine($"\nCategoria trovata per ID {idCategoria}: {categoriaTrovata.Nome}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\nCategoria non trovata per ID {idCategoria}");
+                    }
+                    break;
 
-                                        //aggiorna Categoria:
-                                        case "9":
-                                            int idCategoriaDaAggiornare = InputManager.LeggiIntero("\nID: ");
-                                            string nomeCatNuovo = InputManager.LeggiStringa("\nNome: ");
-                                            managerCategoria.AggiornaCategoria(idCategoriaDaAggiornare, new Categoria { Nome = nomeCatNuovo });
-                                            break;
+                //aggiorna Categoria:
+                case "9":
+                    int idCategoriaDaAggiornare = InputManager.LeggiIntero("\nID: ");
+                    string nomeCatNuovo = InputManager.LeggiStringa("\nNome: ");
+                    managerCategoria.AggiornaCategoria(idCategoriaDaAggiornare, new Categoria { Nome = nomeCatNuovo });
+                    break;
 
-                                        //Elimina Prodotto
-                                        case "10":
-                                            int idCategoriaDaEliminare = InputManager.LeggiIntero("\nID: ");
-                                            managerCategoria.EliminaCategoria(idCategoriaDaEliminare);
-                                            break;
+                //Elimina Prodotto
+                case "10":
+                    int idCategoriaDaEliminare = InputManager.LeggiIntero("\nID: ");
+                    managerCategoria.EliminaCategoria(idCategoriaDaEliminare);
+                    break;
 
-                                        //Salva ed esci
-                                        case "0":
-                                            repositoryProdotto.SalvaProdotti(managerProdotto.OttieniProdotti());
-                                            repositoryCategoria.SalvaCategorie(managerCategoria.OttieniCategorie());
-                                            temp2 = false; // imposto la variabile continua a false per uscire dal ciclo while
-                                            break;
-                                        default:
-                                            Console.WriteLine("Scelta non valida. Riprovare.");
-                                            break;
-                                    }
-                                }
+                //Salva ed esci
+                case "0":
+                    repositoryProdotto.SalvaProdotti(managerProdotto.OttieniProdotti());
+                    repositoryCategoria.SalvaCategorie(managerCategoria.OttieniCategorie());
+                    temp2 = false; // imposto la variabile continua a false per uscire dal ciclo while
+                    break;
+                default:
+                    Console.WriteLine("Scelta non valida. Riprovare.");
+                    break;
+            }
+        }
     }
 
-    static Categoria selezionaCategoria()
+    static void GestioneCliente(ProdottoManager managerProdotto, ProdottoRepository repositoryProdotto, ClienteManager managerCliente, ClienteRepository repositoryCliente)
     {
-        // Carica le categorie dal repository
-        var categorie = new CategoriaManager(new CategoriaRepository().CaricaCategorie()).OttieniCategorie();
+        string NomeCliente = InputManager.LeggiStringa("\nLogin: \nUsername: ");
+        Cliente cliente = managerCliente.TrovaClienteNome(NomeCliente);
 
-        // Se la lista delle categorie è vuota
-        if (categorie.Count == 0)
+
+
+        if (cliente != null)
         {
-            Console.WriteLine("Non ci sono categorie disponibili.");
-            return null; // Oppure gestisci il caso come preferisci
-        }
+            Console.WriteLine($"\nBentornato {cliente.Username}!");
+            bool temp2 = true;
+            while (temp2)
+            {
+                Console.WriteLine("\nCosa vuoi fare?");
+                Console.WriteLine("1. Visualizza Prodotti");
+                Console.WriteLine("2. Aggiungi Prodotto al carrello");
+                Console.WriteLine("3. Visualizza il carrello");
+                Console.WriteLine("4. Aggiorna Prodotto nel carrello");
+                Console.WriteLine("5. Elimina Prodotto dal carrello");
+                Console.WriteLine("0. Salva ed Esci");
 
-        // Stampa la lista delle categorie
-        Console.WriteLine("Seleziona una categoria: ");
-        for (int i = 0; i < categorie.Count; i++)
+                string dip = InputManager.LeggiIntero("\nScelta:", 0, 10).ToString();
+                Console.Clear();
+
+                switch (dip)
+                {
+                    case "1":
+                        // Stampa Prodotti Disponibili
+                        Console.WriteLine("\nProdotti Disponibili:");
+                        managerProdotto.StampaProdottiIncolonnati();
+                        break;
+
+                    case "2":
+                        // Aggiungi Prodotto al carrello
+                        Console.WriteLine("\nProdotti Disponibili:");
+                        managerProdotto.StampaProdottiIncolonnati();
+ 
+                        break;
+
+                    case "3":
+                        // Visualizza il carrello
+
+                        break;
+
+                    case "4":
+                        // Aggiorna Prodotto nel carrello
+
+                        break;
+
+                    case "5":
+                        // Elimina Prodotto dal carrello
+                   
+                        break;
+
+                    case "0":
+                        // Salva ed Esci
+                        managerCliente.SalvaCliente();
+                        Console.WriteLine("Dati salvati. Arrivederci!");
+                        temp2 = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("Scelta non valida.");
+                        break;
+                }
+            }
+        }
+        else
         {
-            Console.WriteLine($"{i + 1}. {categorie[i].Nome}");
+            decimal credito = 100;
+            managerCliente.AggiungiCliente(new Cliente { Username = NomeCliente, Credito = credito });
+            Console.WriteLine($"Registrazione avvenuta con successo! \nBenvenuto {NomeCliente}");
+             bool temp2 = true;
+            while (temp2)
+            {
+                Console.WriteLine("\nCosa vuoi fare?");
+                Console.WriteLine("1. Visualizza Prodotti");
+                Console.WriteLine("2. Aggiungi Prodotto al carrello");
+                Console.WriteLine("3. Visualizza il carrello");
+                Console.WriteLine("4. Aggiorna Prodotto nel carrello");
+                Console.WriteLine("5. Elimina Prodotto dal carrello");
+                Console.WriteLine("0. Salva ed Esci");
+
+                string dip = InputManager.LeggiIntero("\nScelta:", 0, 10).ToString();
+                Console.Clear();
+
+                switch (dip)
+                {
+                    case "1":
+                        // Stampa Prodotti Disponibili
+                        Console.WriteLine("\nProdotti Disponibili:");
+                        managerProdotto.StampaProdottiIncolonnati();
+                        break;
+
+                    case "2":
+                        // Aggiungi Prodotto al carrello
+                        Console.WriteLine("\nProdotti Disponibili:");
+                        managerProdotto.StampaProdottiIncolonnati();
+
+                       
+                        break;
+
+                    case "3":
+                        // Visualizza il carrello
+                       
+                        break;
+
+                    case "4":
+                        // Aggiorna Prodotto nel carrello
+                       
+                        break;
+
+                    case "5":
+                        // Elimina Prodotto dal carrello
+                       
+                        break;
+
+                    case "0":
+                        // Salva ed Esci
+                        managerCliente.SalvaCliente();
+                        Console.WriteLine("Dati salvati. Arrivederci!");
+                        temp2 = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("Scelta non valida.");
+                        break;
+                }
+            }
         }
-
-        // Ottieni l'input dell'utente in un range valido
-        int sceltaCategoria = InputManager.LeggiIntero("Seleziona un'operazione", 1, categorie.Count);
-
-        // Restituisci la categoria selezionata
-        return categorie[sceltaCategoria - 1];
     }
 
-     static Ruolo selezionaRuolo()
-    {
-        var ruoli = new RuoloManager(new RuoloRepository().CaricaRuoli()).OttieniRuoli();
-
-        if (ruoli.Count == 0)
+        static Categoria selezionaCategoria()
         {
-            Console.WriteLine("Non ci sono ruoli disponibili.");
-            return null; 
+            // Carica le categorie dal repository
+            var categorie = new CategoriaManager(new CategoriaRepository().CaricaCategorie()).OttieniCategorie();
+
+            // Se la lista delle categorie è vuota
+            if (categorie.Count == 0)
+            {
+                Console.WriteLine("Non ci sono categorie disponibili.");
+                return null; // Oppure gestisci il caso come preferisci
+            }
+
+            // Stampa la lista delle categorie
+            Console.WriteLine("Seleziona una categoria: ");
+            for (int i = 0; i < categorie.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {categorie[i].Nome}");
+            }
+
+            // Ottieni l'input dell'utente in un range valido
+            int sceltaCategoria = InputManager.LeggiIntero("Seleziona un'operazione", 1, categorie.Count);
+
+            // Restituisci la categoria selezionata
+            return categorie[sceltaCategoria - 1];
         }
 
-        Console.WriteLine("Seleziona un ruolo: ");
-        for (int i = 0; i < ruoli.Count; i++)
+        static Ruolo selezionaRuolo()
         {
-            Console.WriteLine($"{i + 1}. {ruoli[i].ruolo}");
+            var ruoli = new RuoloManager(new RuoloRepository().CaricaRuoli()).OttieniRuoli();
+
+            if (ruoli.Count == 0)
+            {
+                Console.WriteLine("Non ci sono ruoli disponibili.");
+                return null;
+            }
+
+            Console.WriteLine("Seleziona un ruolo: ");
+            for (int i = 0; i < ruoli.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {ruoli[i].ruoloNome}");
+            }
+
+            // Ottieni l'input dell'utente in un range valido
+            int sceltaRuolo = InputManager.LeggiIntero("Seleziona un'operazione", 1, ruoli.Count);
+
+            // Restituisci la categoria selezionata
+            return ruoli[sceltaRuolo - 1];
         }
-
-        // Ottieni l'input dell'utente in un range valido
-        int sceltaRuolo = InputManager.LeggiIntero("Seleziona un'operazione", 1, ruoli.Count);
-
-        // Restituisci la categoria selezionata
-        return ruoli[sceltaRuolo - 1];
-    }
 
 }
-
