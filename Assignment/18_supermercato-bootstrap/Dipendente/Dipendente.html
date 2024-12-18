@@ -13,11 +13,11 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Link al file CSS -->
-    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="Dipendente.css">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <title>Pagina Admin Supermercato</title>
+    <title>Pagina Dipendente Supermercato</title>
 </head>
 
 <body>
@@ -79,16 +79,17 @@
     <br>
 
     <span class="logo">
-      <center><img class="logo__type lazyloaded" width="300" height="38"
-          src="https://dummyimage.com/300x38/1d93e7/ffffff&text=Supermercato"></center>
+        <center><img class="logo__type lazyloaded" width="300" height="38"
+                src="https://dummyimage.com/300x38/1d93e7/ffffff&text=Supermercato"></center>
     </span>
-  
+
     <br>
     <!-- Contenuto principale -->
     <div class="container mt-5">
-        <center><h2>Prodotti in vendita</h2></center>
+        <center>
+            <h2>Prodotti in vendita</h2>
+        </center>
         <br>
-        <!-- Tabella dei prodotti nel carrello -->
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -159,123 +160,66 @@
         </table>
     </div>
 
- 
-        <center><a class="add_prod" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAdd"
+
+    <center><a class="add_prod" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAdd"
             aria-controls="offcanvasAdd"><button class="btn_add btn-sm">Aggiungi un Prodotto</button></a></center>
 
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasAdd" aria-labelledby="offcanvasAddLabel">
-                <div class="offcanvas-header">
-                    <h5 id="offcanvasAddLabel">Aggiungi un prodotto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasAdd" aria-labelledby="offcanvasAddLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasAddLabel">Aggiungi un prodotto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Form di Login -->
+            <form>
+                <div class="mb-3">
+                    <label for="nome prodotto" class="form-label">Nome Prodotto</label>
+                    <input type="text" class="form-control" id="name" placeholder="Inserisci il nome del prodotto"
+                        required>
+                    <br>
+                    <label for="prezzo" class="form-label">Prezzo</label>
+                    <input type="text" class="form-control" id="prezzo" placeholder="Inserisci prezzo del prodotto"
+                        required>
+                    <br>
+                    <label for="Quantità" class="form-label">Quantità</label>
+                    <input type="text" class="form-control" id="Quantità"
+                        placeholder="Inserisci la quantità del prodotto" required>
                 </div>
-                <div class="offcanvas-body">
-                    <!-- Form di Login -->
-                    <form>
-                        <div class="mb-3">
-                            <label for="nome prodotto" class="form-label">Nome Prodotto</label>
-                            <input type="text" class="form-control" id="name" placeholder="Inserisci il nome del prodotto" required>
-                            <br>
-                            <label for="prezzo" class="form-label">Prezzo</label>
-                            <input type="text" class="form-control" id="prezzo" placeholder="Inserisci prezzo del prodotto"required>
-                            <br>
-                            <label for="Quantità" class="form-label">Quantità</label>
-                            <input type="text" class="form-control" id="Quantità" placeholder="Inserisci la quantità del prodotto"required>
-                        </div>
-        
-                        <button type="submit" class="btn btn-primary">Aggiungi</button>
-                    </form>
-                </div>
-            </div>
 
-    <div class="container mt-5">
-        <center><h2>Utenti Registrati</h2></center>
-        <br>
-        <!-- Tabella dei prodotti nel carrello -->
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Nome e Cognome</th>
-                    <th scope="col">Numero Tessera</th>
-                    <th scope="col">Azione</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Andrea Paris</td>
-                    <td>12345678</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm">Elimina</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Luca Verdi</td>
-                    <td>24681012</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm">Elimina</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Mario Rossi</td>
-                    <td>36912151</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm">Elimina</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Paolo Blu</td>
-                    <td>48121620</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm">Elimina</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                <button type="submit" class="btn btn-primary">Aggiungi</button>
+            </form>
+        </div>
     </div>
 
-    <center><a class="add_user" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddU"
-        aria-controls="offcanvasAddU"><button class="btn_add btn-sm">Aggiungi un Utente</button></a></center>
 
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasAddU" aria-labelledby="offcanvasAddULabel">
-            <div class="offcanvas-header">
-                <h5 id="offcanvasAddULabel">Aggiungi un prodotto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <!-- Form di Login -->
-                <form>
-                    <div class="mb-3">
-                        <label for="nome e cognome" class="form-label">Nome e cognome</label>
-                        <input type="text" class="form-control" id="name" placeholder="Inserisci il nome dell'utente" required>
-                        <br>
-                        <label for="nTessera" class="form-label">Numero Tessera</label>
-                        <input type="text" class="form-control" id="nTessera" placeholder="Inserisci in numero della tessera"
-                        required>
-                    </div>
-   
-                    <button type="submit" class="btn btn-primary">Aggiungi</button>
-                </form>
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasAddU" aria-labelledby="offcanvasAddULabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasAddULabel">Aggiungi un prodotto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <!-- Footer -->
+    <footer>
+
+        <div class="social">
+
+            <div class="social-icons">
+                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+
+                <p>
+                <h5>&copy; 2024 Supermercato</h5>
+                </p>
             </div>
         </div>
-
-    <br>
-    <br>
-    <br>
-   <!-- Footer -->
-   <footer>
-
-    <div class="social">
-
-      <div class="social-icons">
-        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-
-        <p>
-        <h5>&copy; 2024 Supermercato</h5>
-        </p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

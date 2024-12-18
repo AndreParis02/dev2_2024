@@ -5,29 +5,29 @@
 Realizzare dei layout html di varie pagine generiche di un sito di supermercato utilizzando il framework Bootstrap.
 
 ## Dettagli
-- Creare un layout per la homepage del supermercato. L'homepage deve contenere una barra di navigazione, un intestazione, una sezione prodotti in evidenza (con un carousel o simili) e una sezione di prodotti in offerta oltre ad una selezione di prodotti generici in vetrina. (FATTO)
+- [x] Creare un layout per la homepage del supermercato. L'homepage deve contenere una barra di navigazione, un intestazione, una sezione prodotti in evidenza (con un carousel o simili) e una sezione di prodotti in offerta oltre ad una selezione di prodotti generici in vetrina. (FATTO)
 
-- Creare un layout per la pagina di dettaglio di un prodotto. La pagina deve contenere una barra di navigazione, un'intestazione, una sezione con le informazioni del prodotto alcune immagini e una sezione con prodotti correlati.(FATTO)
+- [x] Creare un layout per la pagina di dettaglio di un prodotto. La pagina deve contenere una barra di navigazione, un'intestazione, una sezione con le informazioni del prodotto alcune immagini e una sezione con prodotti correlati.(FATTO)
 
-- Creare un layout con la pagina di contatti del supermercato. La pagina deve contenere una barra di navigazione, un intestazione, un modulo di contatto (potrebbe essere il form dove gli utenti richiedono un servizio). (FATTO)
+- [x] Creare un layout con la pagina di contatti del supermercato. La pagina deve contenere una barra di navigazione, un intestazione, un modulo di contatto (potrebbe essere il form dove gli utenti richiedono un servizio). (FATTO)
 
-- Creare un layout di registrazione del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione un modulo di registrazione nel quale l'utente possa inserire i propri dati personali con la possibilità di scegliere il suo ruolo (cliente, dipendente, amministatore) (FATTO)
+- [x] Creare un layout di registrazione del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione un modulo di registrazione nel quale l'utente possa inserire i propri dati personali con la possibilità di scegliere il suo ruolo (cliente, dipendente, amministatore) (FATTO)
 
-- Creare un layout per la pagina di login del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione, un modulo di login nel quale l'utente possa inserire le proprie credenziali. (FATTO)
+- [x] Creare un layout per la pagina di login del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione, un modulo di login nel quale l'utente possa inserire le proprie credenziali. (FATTO)
 
-- Creare un layout per la pagina del carrello del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione una tabella con i prodotti selezionati dall'utente e un pulsante per procedere all'acquisto e i pulsanti per modificare le quantità o eliminare un prodotto. (FATTO)
+- [x] Creare un layout per la pagina del carrello del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione una tabella con i prodotti selezionati dall'utente e un pulsante per procedere all'acquisto e i pulsanti per modificare le quantità o eliminare un prodotto. (FATTO)
 
-- Creare un layout per la pagina riservata agli amministratori del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una tabella con i prodotti in vendita e un pulsante per aggiugere, eliminare o modificare un prodotto o un utente. (FATTO)
+- [x] Creare un layout per la pagina riservata agli amministratori del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una tabella con i prodotti in vendita e un pulsante per aggiugere, eliminare o modificare un prodotto o un utente. (FATTO)
 
-- Creare un layout per la pagina riserevata ai dipendenti del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una tabella con i prodotti in vendita e le azione che il dipendente può compiere su di essi.
+- [X] Creare un layout per la pagina riserevata ai dipendenti del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una tabella con i prodotti in vendita e le azione che il dipendente può compiere su di essi.
 
-- Creare un layout per la pagina riserevata ai clienti del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una sezione con lo storico degli acquisti e una sezione dove può controllare  lo stato dei suoi ordini e dove può modificare i propri dati.
+- [ ] Creare un layout per la pagina riserevata ai clienti del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una sezione con lo storico degli acquisti e una sezione dove può controllare  lo stato dei suoi ordini e dove può modificare i propri dati.
 
-- Creare un layout per la pagina di errore 404 del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione e un messaggio di errore.
+- [ ] Creare un layout per la pagina di errore 404 del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione e un messaggio di errore.
 
-- La barra di navigazione deve contenere i vari link alle varie pagine del sito web e un pulsante per effetuare il login ed un anteprima del carrello con il numero dei prodotti selezionati.
+- [ ] La barra di navigazione deve contenere i vari link alle varie pagine del sito web e un pulsante per effetuare il login ed un anteprima del carrello con il numero dei prodotti selezionati.
 
-- Ogni pagina deve avere un footer con informazioni di contatto del supermercato e le icone dei social network.
+- [X] Ogni pagina deve avere un footer con informazioni di contatto del supermercato e le icone dei social network.
 
 ## Note
 - Utilizzare il framework Bootstrap per realizzare i layout delle pagine.
@@ -50,18 +50,18 @@ Realizzare dei layout html di varie pagine generiche di un sito di supermercato 
 
 # CHECK DEI REQUISITI
 
-[] Utilizzo delle variabili CSS attraverso il selettore :root
-[] Sovrascrittura delle classi di Bootstrap con !important
-[] Personalizzazione dei colori principali
-[] Supporto a temi dinamici (stile dark e light che abbiano una serie di attributi che stanno bene con il tema)
-[] Modifica dei font e dei titoli
-[] Personalizzazione della griglia e dei layout
-[] Personalizzazione della navbar e pulsanti
-[] Typography con google font
-[] Personalizzazione icone
-[] Utilizzo dei mixin responsivi
-[] Creazione di layout complessi con griglie nidificate
-[] Utilizzo delle classi di visibilità
-[] Allineamento e spaziature responsivi
-[] Utilizzo di font responsiva
-[] Personalizzazione dei modali e di altri componenti
+- [ ] Utilizzo delle variabili CSS attraverso il selettore :root
+- [ ] Sovrascrittura delle classi di Bootstrap con !important
+- [ ] Personalizzazione dei colori principali
+- [ ] Supporto a temi dinamici (stile dark e light che abbiano una serie di attributi che stanno bene con il tema)
+- [ ] Modifica dei font e dei titoli
+- [ ] Personalizzazione della griglia e dei layout
+- [ ] Personalizzazione della navbar e pulsanti
+- [ ] Typography con google font
+- [ ] Personalizzazione icone
+- [ ] Utilizzo dei mixin responsivi
+- [ ] Creazione di layout complessi con griglie nidificate
+- [ ] Utilizzo delle classi di visibilità
+- [ ] Allineamento e spaziature responsivi
+- [ ] Utilizzo di font responsiva
+- [ ] Personalizzazione dei modali e di altri componenti

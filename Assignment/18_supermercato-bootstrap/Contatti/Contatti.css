@@ -55,15 +55,17 @@ footer .social-icons a:hover {
     color: #4174ff;
 }
 
-.card {
-    border: none;
-    margin:0 auto;
+ /* Centrare le card */
+ .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Occupare tutta l'altezza della finestra */
+    flex-wrap: wrap;
 }
 
-.container{
-    min-height: 100vh; 
-    min-width: 100vh;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+.card {
+    width: 300px;
+    margin: 10px;
+    border: none;
 }
