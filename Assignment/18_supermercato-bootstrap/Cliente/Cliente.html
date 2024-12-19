@@ -19,6 +19,7 @@
 
     <title>Pagina Cliente Supermercato</title>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #1d93e7;">
@@ -36,21 +37,31 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa-solid fa-envelope"></i> Contatti</a>
                     </li>
-                    <!-- Aggiungi l'attributo data-bs-toggle e data-bs-target per aprire l'offcanvas -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
+                        <a class="nav-link active" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
                             aria-controls="offcanvasLogin"><i class="fa-solid fa-user"></i> Account</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#card"><i class="fa-solid fa-barcode"></i> Storico acquisti</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#card-tracking"><i class="fa-solid fa-truck"></i> Tracking
+                            ordine </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fa fa-shopping-cart"><span
+                                    class="position-relative translate-middle badge rounded-pill bg-danger">
+                                    3
+                            </i> Carrello</a>
+                    </li>
                 </ul>
-                <!-- Form di ricerca, allineato a destra con ms-auto -->
-                <form class="d-flex ms-auto" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn" type="submit">Search</button>
-                </form>
             </div>
+
+            <!-- Form di ricerca, allineato a destra con ms-auto -->
+            <form class="d-flex ms-auto" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn" type="submit">Search</button>
+            </form>
         </div>
     </nav>
 
@@ -96,51 +107,63 @@
                 <div class="card-body">
                     <form action="#" method="post">
                         <label for="nome">Nome:</label><br>
-                        <input type="text" id="nome" name="nome" value="Cliente 1" class="campo-solo-lettura" readonly><br><br>
-    
+                        <input type="text" id="nome" name="nome" value="Cliente 1" class="campo-solo-lettura"
+                            readonly><br><br>
+
                         <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" value="cliente.1@gmail.com" class="campo-solo-lettura" readonly><br><br>
-    
+                        <input type="email" id="email" name="email" value="cliente.1@gmail.com"
+                            class="campo-solo-lettura" readonly><br><br>
+
                         <label for="telefono">Telefono:</label><br>
-                        <input type="tel" id="telefono" name="telefono" value="3331234567" class="campo-solo-lettura" readonly><br><br>
-    
+                        <input type="tel" id="telefono" name="telefono" value="3331234567" class="campo-solo-lettura"
+                            readonly><br><br>
+
                         <label for="data_nascita">Data di Nascita:</label><br>
-                        <input type="date" id="data_nascita" name="data_nascita" value="1990-05-15" class="campo-solo-lettura" readonly><br><br>
-    
+                        <input type="date" id="data_nascita" name="data_nascita" value="1990-05-15"
+                            class="campo-solo-lettura" readonly><br><br>
+
                         <label for="indirizzo">Indirizzo:</label><br>
-                        <input type="text" id="indirizzo" name="indirizzo" value="Via XX Settembre 1" class="campo-solo-lettura" readonly><br><br>
-    
+                        <input type="text" id="indirizzo" name="indirizzo" value="Via XX Settembre 1"
+                            class="campo-solo-lettura" readonly><br><br>
+
                         <label for="n_carta">Numero Carta Fedeltà:</label><br>
-                        <input type="text" id="carta" name="n_carta" value="123456789" class="campo-solo-lettura" readonly><br><br>
-    
+                        <input type="text" id="carta" name="n_carta" value="123456789" class="campo-solo-lettura"
+                            readonly><br><br>
+
                         <!-- Bottone per aprire l'Offcanvas -->
-                        <center><button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAdd" aria-controls="offcanvasAdd">
-                            Modifica Dati
-                        </button></center>
-    
+                        <center><button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasAdd" aria-controls="offcanvasAdd">
+                                Modifica Dati
+                            </button></center>
+
                         <!-- Offcanvas centrato -->
-                        <div class="offcanvas offcanvas-start offcanvas-center" tabindex="-1" id="offcanvasAdd" aria-labelledby="offcanvasAddLabel">
+                        <div class="offcanvas offcanvas-start offcanvas-center" tabindex="-1" id="offcanvasAdd"
+                            aria-labelledby="offcanvasAddLabel">
                             <div class="offcanvas-header">
                                 <h5 id="offcanvasAddLabel">Modifica Dati</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body">
                                 <form>
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email:</label>
-                                        <input type="text" class="form-control" id="prezzo" placeholder="Email modificata" required><br>
-    
+                                        <input type="text" class="form-control" id="prezzo"
+                                            placeholder="Email modificata" required><br>
+
                                         <label for="telefono" class="form-label">Telefono:</label>
-                                        <input type="text" class="form-control" id="telefono" placeholder="Numero di telefono modificato" required><br>
-    
+                                        <input type="text" class="form-control" id="telefono"
+                                            placeholder="Numero di telefono modificato" required><br>
+
                                         <label for="indirizzo" class="form-label">Indirizzo:</label>
-                                        <input type="text" class="form-control" id="indirizzo" placeholder="Indirizzo modificato" required>
+                                        <input type="text" class="form-control" id="indirizzo"
+                                            placeholder="Indirizzo modificato" required>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Aggiungi</button>
                                 </form>
                             </div>
                         </div>
-    
+
                     </form>
                 </div>
             </div>
@@ -160,27 +183,66 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>#123456</td>
+                    <td><a href="">#123456</a></td>
                     <td>18/12/2024</td>
                     <td>150,25 € </td>
                 </tr>
                 <tr>
-                    <td>#246810</td>
+                    <td><a href="">#246810</a></td>
                     <td>10/11/2024</td>
                     <td>75,50 € </td>
                 </tr>
                 <tr>
-                    <td>#369121</td>
+                    <td><a href="">#369121</a></td>
                     <td>9/10/2024</td>
                     <td>50,00 € </td>
                 </tr>
                 <tr>
-                    <td>#481216</td>
+                    <td><a href="">#481216</a></td>
                     <td>24/09/2024</td>
                     <td>95,00 € </td>
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div>
+        <br><br>
+        <center>
+            <h2>Tracking Ordine</h2>
+        </center>
+
+        <div class="card-container-tracking" id="card-tracking">
+            <div class="card-tracking">
+                <div class="card-body">
+                    <center>
+                        <h4>Stato Spedizione:</h4>
+                    </center>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">N° Ordine</th>
+                                <th scope="col">Data Ordine</th>
+                                <th scope="col">Data Consegna</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="">#123456</a></td>
+                                <td>18/12/2024</td>
+                                <td>20/12/2024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="progress" role="progressbar" aria-label="Tracking" aria-valuenow="70" aria-valuemin="0"
+                        aria-valuemax="100">
+                        <div class="progress-bar progress-bar-striped bg-info" style="width: 70%"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <br>
@@ -202,6 +264,7 @@
             </div>
         </div>
     </footer>
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

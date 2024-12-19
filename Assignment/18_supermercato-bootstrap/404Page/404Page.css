@@ -1,0 +1,35 @@
+:root {  
+    --bs-primary: #008cff;   /* Colore principale */  
+    --bs-secondary: #33c1ff; /* Colore secondario */  
+    --bs-success: #28a745;   /* Colore per il successo */  
+    --bs-info: #17a2b8;      /* Colore per informazioni */  
+    --bs-warning: #ffc107;   /* Colore di avviso */  
+    --bs-danger: #dc3545;    /* Colore per errori */  
+    --bs-light: #f8f9fa;     /* Colore chiaro */  
+    --bs-dark: #343a40;      /* Colore scuro */  
+  }
+ 
+  
+  footer {
+    background-color: #1d93e7;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    margin-top: auto; /* Garantisce che il footer vada sempre in fondo */
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  footer p {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  

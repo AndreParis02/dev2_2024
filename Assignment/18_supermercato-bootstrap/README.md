@@ -21,7 +21,7 @@ Realizzare dei layout html di varie pagine generiche di un sito di supermercato 
 
 - [X] Creare un layout per la pagina riserevata ai dipendenti del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una tabella con i prodotti in vendita e le azione che il dipendente può compiere su di essi.
 
-- [ ] Creare un layout per la pagina riserevata ai clienti del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una sezione con lo storico degli acquisti e una sezione dove può controllare  lo stato dei suoi ordini e dove può modificare i propri dati.
+- [X] Creare un layout per la pagina riserevata ai clienti del supermercato. La pagina deve deve contenere una barra di navigazione, un'intestazione, una sezione con lo storico degli acquisti e una sezione dove può controllare  lo stato dei suoi ordini e dove può modificare i propri dati.
 
 - [ ] Creare un layout per la pagina di errore 404 del supermercato. La pagina deve contenere una barra di navigazione, un'intestazione e un messaggio di errore.
 
@@ -50,18 +50,20 @@ Realizzare dei layout html di varie pagine generiche di un sito di supermercato 
 
 # CHECK DEI REQUISITI
 
-- [ ] Utilizzo delle variabili CSS attraverso il selettore :root
-- [ ] Sovrascrittura delle classi di Bootstrap con !important
-- [ ] Personalizzazione dei colori principali
-- [ ] Supporto a temi dinamici (stile dark e light che abbiano una serie di attributi che stanno bene con il tema)
-- [ ] Modifica dei font e dei titoli
-- [ ] Personalizzazione della griglia e dei layout
-- [ ] Personalizzazione della navbar e pulsanti
-- [ ] Typography con google font
-- [ ] Personalizzazione icone
-- [ ] Utilizzo dei mixin responsivi
-- [ ] Creazione di layout complessi con griglie nidificate
-- [ ] Utilizzo delle classi di visibilità
-- [ ] Allineamento e spaziature responsivi
-- [ ] Utilizzo di font responsiva
-- [ ] Personalizzazione dei modali e di altri componenti
+## Homepage: 
+
+- [x] 1. Utilizzo delle variabili CSS attraverso il selettore :root
+- [x] 2. Sovrascrittura delle classi di Bootstrap con !important
+- [x] 3. Personalizzazione dei colori principali
+- [x] 4. Supporto a temi dinamici (stile dark e light che abbiano una serie di attributi che stanno bene con il tema)
+- [x] 5. Modifica dei font e dei titoli
+- [x] 6. Personalizzazione della griglia e dei layout
+- [x] 7. Personalizzazione della navbar e pulsanti
+- [x] 8. Typography con google font
+- [x] 9. Personalizzazione icone
+- [ ] 10. Utilizzo dei mixin responsivi
+- [ ] 11. Creazione di layout complessi con griglie nidificate
+- [ ] 12. Utilizzo delle classi di visibilità
+- [x] 13. Allineamento e spaziature responsivi
+- [x] 14. Utilizzo di font responsiva
+- [ ] 15. Personalizzazione dei modali e di altri componenti

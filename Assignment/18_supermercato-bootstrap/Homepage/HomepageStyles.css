@@ -1,23 +1,40 @@
-:root {  
-    --bs-primary: #008cff;   /* Colore principale */  
-    --bs-secondary: #33c1ff; /* Colore secondario */  
-    --bs-success: #28a745;   /* Colore per il successo */  
-    --bs-info: #17a2b8;      /* Colore per informazioni */  
-    --bs-warning: #ffc107;   /* Colore di avviso */  
-    --bs-danger: #dc3545;    /* Colore per errori */  
-    --bs-light: #f8f9fa;     /* Colore chiaro */  
-    --bs-dark: #343a40;      /* Colore scuro */  
-  }
-  
-  .btn {  
-    background-color: var(--bs-primary);  
+:root {
+    --bs-primary: #05365f;
+    --bs-secondary: #1d93e7;
+    --bs-success: #28a745;
+    --bs-info: #17a2b8;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #343a40;
+    --font-family: 'Roboto', sans-serif;
+    --bg-light: #f8f9fa;
+    --bg-dark: #343a40;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme {
+    background-color: var(--bg-dark);
+    color: white;
+}
+
+.btn {
+    background-color: var(--bs-primary) !important;
     border: 1px solid #333333;
-    color: white;  
-  }
+    color: white;
+}
+
 
 .carousel {
     width: 70%;
     margin: auto;
+    max-width: 150 px;
+    max-height: 100 px;
 }
 
 .carousel-control-prev-icon,
@@ -31,43 +48,44 @@
 
 .carousel-item img {
     width: 85%;
-    /* Adatta l'immagine alla larghezza del carosello */
     height: auto;
     border: 2px solid #333333;
 }
 
-
 footer {
-    background-color: #41aaff;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #1d93e7;
+    color: white;
     text-align: center;
-}
-
-footer .social-icons a {
-    color: #fff;
-    font-size: 1.5rem;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    margin-top: auto; /* Garantisce che il footer vada sempre in fondo */
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 24px;
     margin: 0 10px;
     text-decoration: none;
-}
-
-footer .social-icons a:hover {
-    color: #4174ff;
-}
+  }
+  
+  footer p {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+  }
 
 .card {
     border: 2px solid #333333;
 }
 
-
 /* Griglia */
-
 #griglia {
     padding: 0;
     margin: 0;
 }
 
-#griglia>li {
+#griglia > li {
     border: 2px solid #333333;
     display: inline-block;
     width: 160px;
@@ -82,4 +100,25 @@ footer .social-icons a:hover {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+}
+
+/* Media queries per layout responsivo */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;
+    }
+
+    .navbar {
+        background-color: var(--bs-dark);
+    }
+
+    .btn {
+        background-color: var(--bs-primary) !important;
+    }
+}
+
+/* Tema scuro */
+body.dark-theme {
+    background-color: var(--bg-dark);
+    color: white;
 }
