@@ -68,6 +68,9 @@ Realizzare dei layout html di varie pagine generiche di un sito di supermercato 
 
 Completamento Pagine: 
 
+sistemare centratura pagine
+
+
 - [X] 404Page;
 - [X] Admin;
 - [X] Carrello;
