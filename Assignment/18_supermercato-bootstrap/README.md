@@ -50,8 +50,6 @@ Realizzare dei layout html di varie pagine generiche di un sito di supermercato 
 
 # CHECK DEI REQUISITI
 
-## Homepage: 
-
 - [x] 1. Utilizzo delle variabili CSS attraverso il selettore :root
 - [x] 2. Sovrascrittura delle classi di Bootstrap con !important
 - [x] 3. Personalizzazione dei colori principali
@@ -67,3 +65,15 @@ Realizzare dei layout html di varie pagine generiche di un sito di supermercato 
 - [x] 13. Allineamento e spaziature responsivi
 - [x] 14. Utilizzo di font responsiva
 - [ ] 15. Personalizzazione dei modali e di altri componenti
+
+Completamento Pagine: 
+
+- [X] 404Page;
+- [X] Admin;
+- [X] Carrello;
+- [X] Cliente; (da finire il carrello)
+- [X] Contatti;
+- [X] Dettagli prodotto;
+- [X] Dipendente;
+- [x] Homepage;
+- [ ] Registrazione;
