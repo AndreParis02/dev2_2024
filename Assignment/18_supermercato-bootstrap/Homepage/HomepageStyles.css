@@ -120,6 +120,9 @@ footer {
     .btn_procedi{
         background-color: var(--bs-success) !important;
     }
+    .card   {
+        width: 100%;
+    }
 }
 
 /* Tema scuro */
@@ -128,16 +131,15 @@ body.dark-theme {
     color: white;
 }
 
-/* Imposta il corpo della pagina come un contenitore flex */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Imposta l'altezza minima della pagina al 100% della finestra */
+    min-height: 100vh; 
 }
 
-/* Imposta il contenuto principale per espandersi */
+
 .container {
-    flex: 1; /* Fai sì che il contenuto principale occupi tutto lo spazio disponibile */
+    flex: 1; 
 }
 
 /* Stile per il footer */
@@ -204,3 +206,47 @@ footer .social-icons a:hover {
 }
 
 
+#container_table {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  #griglia {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Griglia responsiva */
+    gap: 10px; /* Distanza tra le immagini */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #griglia li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #griglia img {
+    max-width: 100%; /* Immagine fluida */
+    height: auto;
+  }
+  
+  /* Media query per dispositivi con schermo più grande */
+  @media (min-width: 576px) {
+    #griglia {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  
+  @media (min-width: 768px) {
+    #griglia {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  
+  @media (min-width: 992px) {
+    #griglia {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
