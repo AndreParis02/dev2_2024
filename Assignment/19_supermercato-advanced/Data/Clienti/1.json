@@ -2,6 +2,6 @@
   "ID": 1,
   "Username": "Andrea",
   "Carrello": null,
-  "StoricoAcquisti": null,
+  "StoricoAcquisti": [],
   "Credito": 100.0
 }

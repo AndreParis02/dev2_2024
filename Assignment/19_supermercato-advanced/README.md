@@ -450,6 +450,11 @@ static Ruolo selezionaRuolo()
 ---
 ## Elementi Mancanti:
 
-- [ ] Gestione Cliente (in Lavorazione);
+- [ ] Gestione Cliente, login e operazioni varie(in Lavorazione);
 - [ ] Gestione Casse e Cassiere;
 - [ ] Repository e Manager Cassa;
+
+---
+## Requisiti:
+- Inizializzazione vari manager (prodotto manager, cliente manager, ecc...);
+- Inizializzazione vari repository (prodotto repository, cliente repository, ecc...)
