@@ -13,11 +13,13 @@ class View
         Console.WriteLine("3. Esci");
     }
 
-    public void ShowUsers(List<string> users) //Metodo per visualizzare gli utenti
+    //public void ShowUsers(List<string> users) //Metodo per visualizzare gli utenti
+    public void ShowUsers(List<User> users)
     {
         foreach(var user in users)
         {
-            Console.WriteLine(user); //Visualizzazione dei nomi degli utenti
+            //Console.WriteLine(user); //Visualizzazione dei nomi degli utenti
+            Console.WriteLine($"{user.Id} - {user.Name}"); //Visualizzazione utenti
         }
     }
 

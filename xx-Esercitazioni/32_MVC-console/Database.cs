@@ -1,4 +1,6 @@
+using System.Data.Common;
 using System.Data.SQLite;
+using System.Reflection.Metadata.Ecma335;
 
 class Database
 {
@@ -18,15 +20,21 @@ class Database
         command.ExecuteNonQuery(); //esecuzione del comando
     }
 
-    public List<string> GetUsers() //metodo GetUsers che serve per ottenere la lista degli utenti
+    public List<User> GetUsers() //metodo GetUsers che serve per ottenere la lista degli utenti
     {
         var command = new SQLiteCommand("SELECT name FROM users", _connection); // Creazione di un oggetto per leggere i risultati
         var reader = command.ExecuteReader(); // Esecuzione del comando e creazione di un oggetto per leggere i risultati cosi abbiamo caricato i dati nel reader
-        var users = new List<string>(); //Creazione di una lista per memorizzaree i nomi degli utenti
+        var users = new List<User>();
         while (reader.Read())
         {
-            users.Add(reader.GetString(0)); // Aggiunta del nome dell'utente alla lista
+            //users.Add(reader.GetString(0)); // Aggiunta del nome dell'utente alla lista
                                             //utilizzo (0) perchè il nome è il primo campo 
+            users.Add(new User
+            {
+                Id = reader.GetInt32(0),
+                Name = reader.GetString(1)
+            }
+            );
         }
         return users; //Restituzione della lista degli utenti
     }

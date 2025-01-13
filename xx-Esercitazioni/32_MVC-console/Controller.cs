@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 class Controller
 {
     private Database _db; //Riferimento al modello di db
@@ -36,7 +38,6 @@ class Controller
         var name = _view.GetUserName();
         _db.AddUser(name); //Aggiunta dell'utente al db con metodo servito da db
     }
-
     private void ShowUsers()
     {
         var users = _db.GetUsers(); //Lettura degli utenti dal db
