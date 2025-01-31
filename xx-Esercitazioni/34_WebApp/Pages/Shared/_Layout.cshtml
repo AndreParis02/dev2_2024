@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SupermercatoWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="styleheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="~/_34_WebApp.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 sticky-top"
+            style="background-color: #1d93e7;">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">SupermercatoWeb</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index"><i
+                                    class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy"><i
+                                    class="fa-solid fa-shield"></i> Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Prodotti"><i
+                                    class="fa-solid fa-cart-shopping"></i> Prodotti</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-3 col-lg-3 text-center">
+                    <i class="fa-solid fa-star"></i>
+                    <h6 class="my-1">Trustpilot</h6>
+                    <div class="position-relative">
+                    </div>
+                </div>
+                <div class="col-3 col-lg-3 text-center">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h6 class="my-1">Consegna veloce</h6>
+                </div>
+                <div class="col-3 col-lg-3 text-center">
+                    <i class="fa-solid fa-shield"></i>
+                    <h6 class="my-1">Transazioni sicure</h6>
+                </div>
+                <div class="col-3 col-lg-3 text-center">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                    <h6 class="my-1">Reso sicuro</h6>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-hidden mb-3">
+            <hr class="bg-dark opacity-1 my-0">
+        </div>
+        <center><div class="social">
+            <div class="social-icons">
+                <h3><I>I nostri Social:</I></h3>
+                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook" style="font-size: 2;"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube" style="font-size: 2;"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram" style="font-size: 2;"></i></a>
+            </div>
+        </div>
+         &copy; 2025 - SupermercatoWeb - <a asp-area="" asp-page="/Privacy">Privacy</a></center>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

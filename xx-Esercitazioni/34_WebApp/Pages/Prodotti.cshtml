@@ -1,0 +1,12 @@
+@page //direttiva che indica che il file .cshtml è un pagina Razor
+@model ProdottiModel //direttiva specifica il modello associato alla pagina
+@{
+    ViewData["Title"] = "Prodotti";// @{} blocco di codice C# che viene eseguito quando la pagina viene visualizzata
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Questa è la pagina dei prodotti.</p>
+
+<p>@ViewData["Message"]</p>
+
+@Html.Partial("_Partial")
