@@ -16,13 +16,14 @@ public class ProdottiModel : PageModel
                                                            //che non supporta la modifica
 
     public string Ricerca { get; set; }
-    public void OnGet(string Ricerca)
+    public void OnGet(string ricerca)
     {
+        Ricerca = ricerca;
         Prodotti = new List<Prodotto>
         {
-            new Prodotto {Nome = "Cotechino", Prezzo = 100, Dettaglio = "Dettaglio1"},
-            new Prodotto {Nome = "Coca Cola", Prezzo = 200, Dettaglio = "Dettaglio2"},
-            new Prodotto {Nome = "Gatti", Prezzo = 300, Dettaglio = "Dettaglio3"}
+            new Prodotto {Nome = "Cotechino", Prezzo = 1.50m, Dettaglio = "Dettaglio1"},
+            new Prodotto {Nome = "Coca Cola", Prezzo = 2.55m, Dettaglio = "Dettaglio2"},
+            new Prodotto {Nome = "Gatti", Prezzo = 3.00m, Dettaglio = "Dettaglio3"}
         };
 
         //creo una lista di prodotti filtrati
@@ -30,9 +31,9 @@ public class ProdottiModel : PageModel
         //aggiungo alla lista prodottiFiltrati solo i prodotti che contengono la stringa ricerca
         if (!string.IsNullOrEmpty(Ricerca))
         {
-            foreach (var prodotto in Prodotti)
+            foreach (Prodotto prodotto in Prodotti)
             {
-                if (prodotto.Nome.Contains(Ricerca))
+                if (prodotto.Nome.Contains(Ricerca, StringComparison.OrdinalIgnoreCase))
                 {
                     prodottiFiltrati.Add(prodotto);
                 }
