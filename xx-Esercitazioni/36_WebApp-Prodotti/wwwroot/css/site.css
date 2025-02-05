@@ -1,5 +1,7 @@
 html {
   font-size: 14px;
+  background-color: #121212; /* Sfondo scuro */
+  color: #e0e0e0; /* Testo chiaro */
 }
 
 @media (min-width: 768px) {
@@ -9,7 +11,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem #bbb, 0 0 0 0.25rem #258cfb;
 }
 
 html {
@@ -19,4 +21,42 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #1e1e1e; /* Sfondo scuro per il corpo */
+  color: #e0e0e0; /* Testo chiaro */
 }
+
+.btn {
+  background-color: #333; /* Bottone scuro */
+  color: #fff; /* Testo chiaro */
+  border: 1px solid #444; /* Bordo leggermente più chiaro */
+}
+
+.btn:hover, .btn:active {
+  background-color: #555; /* Bottone scuro in hover */
+  border-color: #666; /* Bordo in hover */
+}
+
+.nav-link, .form-control, .form-check-input {
+  background-color: #333; /* Sfondo scuro per input e link */
+  color: #e0e0e0; /* Testo chiaro */
+  border-color: #444; /* Bordo scuro */
+}
+
+.nav-link:hover, .form-control:hover, .form-check-input:hover {
+  background-color: #444; /* Sfondo leggermente più chiaro in hover */
+}
+
+.card {
+  background-color: #1f1f1f; /* Sfondo card scuro */
+  border-color: #444; /* Bordo leggermente più chiaro */
+}
+
+.card-title, .card-text {
+  color: #e0e0e0; /* Testo chiaro per il titolo e il testo della card */
+}
+
+.card-footer {
+  background-color: #121212; /* Sfondo del footer più scuro */
+}
+
+
