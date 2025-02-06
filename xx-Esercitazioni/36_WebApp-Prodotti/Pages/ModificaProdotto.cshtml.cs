@@ -59,7 +59,7 @@ public class ModificaProdottoModel : PageModel
         prodotto.Quantita = quantita;
         prodotto.Immagine = immagine;
 
-        System.IO.File.WriteAllText("wwwroot/json/prodotti.json", JsonConvert.SerializeObject(prodotti,Formatting.Indented));
+        System.IO.File.WriteAllText("wwwroot/json/prodotti.json", JsonConvert.SerializeObject(prodotti, Formatting.Indented));
         return RedirectToPage("Prodotti");
     }
 }
