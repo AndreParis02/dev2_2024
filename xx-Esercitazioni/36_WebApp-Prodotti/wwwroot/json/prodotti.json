@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "Nome": "Vinile dei Linkin Park",
+    "Prezzo": 21.00,
+    "Dettaglio": "Dettaglio Linkin Park",
+    "Quantita": 15,
+    "Categoria": "Vinile",
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Linkin Park"
+  },
+  {
+    "Id": 2,
+    "Nome": "Vinile dei Nirvana",
+    "Prezzo": 30.00,
+    "Dettaglio": "Dettaglio dei Nirvana",
+    "Quantita": 10,
+    "Categoria": "Vinili",
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Nirvana"
+  },
+  {
+    "Id": 3,
+    "Nome": "Vinile dei The Doors",
+    "Prezzo": 20.00,
+    "Dettaglio": "Dettaglio Doors",
+    "Quantita": 10,
+    "Categoria": "Vinili",
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Doors"
+  },
+  {
+    "Id": 4,
+    "Nome": "Vinile dei Pink Floyd",
+    "Prezzo": 30.00,
+    "Dettaglio": "Dettaglio dei Pink Floyd",
+    "Quantita": 10,
+    "Categoria": "Vinili",
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Pink Floyd"
+  },
+  {
+    "Id": 5,
+    "Nome": "Vinile dei Gorillaz",
+    "Prezzo": 15.00,
+    "Dettaglio": "Dettaglio dei Gorillaz",
+    "Quantita": 15,
+    "Categoria": "Vinili",
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Gorillaz"
+  },
+  {
+    "Id": 6,
+    "Nome": "Vinile dei Guns N' Roses",
+    "Prezzo": 25.00,
+    "Dettaglio": "Dettaglio dei Guns N' Roses",
+    "Quantita": 25,
+    "Categoria": "Vinili",
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Guns N' Roses"
+  },
+  {
+    "Id": 7,
+    "Nome": "Vinile dei Deep Purple",
+    "Prezzo": 22.50,
+    "Dettaglio": "Dettaglio dei dei Deep Purple",
+    "Quantita": 12,
+    "Categoria": "Vinili",
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei dei Deep Purple"
+  },
+  {
+    "Id": 8,
+    "Nome": "Vinile degli Arctic Monkeys",
+    "Prezzo": 17.00,
+    "Dettaglio": "Dettaglio degli Arctic Monkeys",
+    "Quantita": 17,
+    "Categoria": "Vinili",
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile degli Arctic Monkeys"
+  }
+]

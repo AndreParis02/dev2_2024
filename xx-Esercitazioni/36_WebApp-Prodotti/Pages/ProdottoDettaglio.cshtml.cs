@@ -1,20 +1,34 @@
-using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.RazorPages; 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
-public class ProdottoDettaglioModel :PageModel
+public class ProdottoDettaglioModel : PageModel
 {
     private readonly ILogger<ProdottoDettaglioModel> _logger;
-
+    
     public ProdottoDettaglioModel(ILogger<ProdottoDettaglioModel> logger)
     {
         _logger = logger;
+        logger.LogInformation("Pagina del prodotto Dettaglio Caricata");
     }
-    public Prodotto Prodotto {get;set;}
-    public void OnGet(int id, string nome, decimal prezzo, string descrizione, string dettaglio, string immagine)
+    
+    public Prodotto Prodotto { get; set; }
+    
+    public void OnGet(int id, string nome, decimal prezzo, int quantita, string categoria, string immagine)
     {
-        Prodotto = new Prodotto{Id = id, Nome = nome, Prezzo = prezzo, Descrizione = descrizione, Dettaglio = dettaglio, Immagine = immagine};
-         _logger.LogInformation($"Dettaglio {Prodotto.Nome} Caricato");
-       //non è necessario mettere var perchè il tipo à gia predefinito in prodotto
+        Prodotto = new Prodotto{Id = id, Nome = nome, Prezzo = prezzo, Quantita = quantita, Categoria = categoria, Immagine = immagine};
+        
+        var json = System.IO.File.ReadAllText("wwwroot/json/prodotti.json");
+        var prodotti = JsonConvert.DeserializeObject<List<Prodotto>>(json); // deserializza il file
+        foreach(var prodotto in prodotti)
+        {
+            if (prodotto.Id == id)
+            {
+                Prodotto = prodotto;
+                break;
+                // Log o azioni da prendere se il prodotto non viene trovato (ad esempio, impostare un messaggio di errore)
+            }
+        }
     }
 }

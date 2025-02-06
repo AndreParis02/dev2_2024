@@ -36,9 +36,8 @@
                     <td>@prodotto.Id</td>
                     <td>@prodotto.Nome</td>
                     <td>@prodotto.Prezzo</td>
-                    <td>@prodotto.Descrizione</td>
                     <td><a asp-page="/ProdottoDettaglio" asp-route-id="@prodotto.Id" asp-route-nome="@prodotto.Nome"
-                            asp-route-prezzo="@prodotto.Prezzo" asp-route-descrizione="@prodotto.Descrizione"
+                            asp-route-prezzo="@prodotto.Prezzo" 
                             asp-route-dettaglio="@prodotto.Dettaglio" asp-route-immagine="@prodotto.Immagine">Dettaglio</a>
                     </td>
                     <td><img src="@prodotto.Immagine" alt="@prodotto.Nome" width="300" height="200" /></td>

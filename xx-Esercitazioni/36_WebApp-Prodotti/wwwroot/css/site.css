@@ -17,33 +17,29 @@ html {
 html {
   position: relative;
   min-height: 100%;
+  height: 100%;
+    margin: 0;
 }
 
 body {
   margin-bottom: 60px;
   background-color: #1e1e1e; /* Sfondo scuro per il corpo */
   color: #e0e0e0; /* Testo chiaro */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
 }
 
 .btn {
-  background-color: #333; /* Bottone scuro */
+  background-color: #3333; /* Bottone scuro */
   color: #fff; /* Testo chiaro */
   border: 1px solid #444; /* Bordo leggermente più chiaro */
 }
 
 .btn:hover, .btn:active {
-  background-color: #555; /* Bottone scuro in hover */
-  border-color: #666; /* Bordo in hover */
-}
-
-.nav-link, .form-control, .form-check-input {
-  background-color: #333; /* Sfondo scuro per input e link */
-  color: #e0e0e0; /* Testo chiaro */
-  border-color: #444; /* Bordo scuro */
-}
-
-.nav-link:hover, .form-control:hover, .form-check-input:hover {
-  background-color: #444; /* Sfondo leggermente più chiaro in hover */
+  background-color: #3333; /* Bottone scuro in hover */
+  border-color: #3333; /* Bordo in hover */
 }
 
 .card {
@@ -60,3 +56,6 @@ body {
 }
 
 
+footer {
+  margin-top: auto; /* Spinge il footer sempre in fondo */
+}
