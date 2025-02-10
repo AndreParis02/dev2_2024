@@ -1,20 +1,12 @@
 [
   {
-    "Id": 1,
-    "Nome": "Vinile dei Linkin Park",
-    "Prezzo": 21.00,
-    "Dettaglio": "Dettaglio Linkin Park",
-    "Quantita": 15,
-    "Categoria": "Vinile",
-    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Linkin Park"
-  },
-  {
     "Id": 2,
     "Nome": "Vinile dei Nirvana",
     "Prezzo": 30.00,
     "Dettaglio": "Dettaglio dei Nirvana",
     "Quantita": 10,
-    "Categoria": "Vinili",
+    "Data": "2025-02-10T10:52:08.721609+01:00",
+    "Categoria": "Musica",
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Nirvana"
   },
   {
@@ -23,7 +15,8 @@
     "Prezzo": 20.00,
     "Dettaglio": "Dettaglio Doors",
     "Quantita": 10,
-    "Categoria": "Vinili",
+    "Data": "2025-02-10T10:52:08.721609+01:00",
+    "Categoria": "Musica",
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Doors"
   },
   {
@@ -32,7 +25,8 @@
     "Prezzo": 30.00,
     "Dettaglio": "Dettaglio dei Pink Floyd",
     "Quantita": 10,
-    "Categoria": "Vinili",
+    "Data": "2025-02-10T10:52:08.721609+01:00",
+    "Categoria": "Musica",
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Pink Floyd"
   },
   {
@@ -41,7 +35,8 @@
     "Prezzo": 15.00,
     "Dettaglio": "Dettaglio dei Gorillaz",
     "Quantita": 15,
-    "Categoria": "Vinili",
+    "Data": "2025-02-10T10:52:08.721609+01:00",
+    "Categoria": "Musica",
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Gorillaz"
   },
   {
@@ -50,7 +45,8 @@
     "Prezzo": 25.00,
     "Dettaglio": "Dettaglio dei Guns N' Roses",
     "Quantita": 25,
-    "Categoria": "Vinili",
+    "Data": "2025-02-10T10:52:08.721609+01:00",
+    "Categoria": "Musica",
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Guns N' Roses"
   },
   {
@@ -59,7 +55,8 @@
     "Prezzo": 22.50,
     "Dettaglio": "Dettaglio dei dei Deep Purple",
     "Quantita": 12,
-    "Categoria": "Vinili",
+    "Data": "2025-02-10T10:52:08.721609+01:00",
+    "Categoria": "Musica",
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei dei Deep Purple"
   },
   {
@@ -68,7 +65,38 @@
     "Prezzo": 17.00,
     "Dettaglio": "Dettaglio degli Arctic Monkeys",
     "Quantita": 17,
-    "Categoria": "Vinili",
+    "Data": "2025-02-10T10:52:08.721609+01:00",
+    "Categoria": "Musica",
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile degli Arctic Monkeys"
+  },
+  {
+    "Id": 9,
+    "Nome": "Vinile dei Linkin Park",
+    "Prezzo": 30.00,
+    "Dettaglio": "Dettaglio dei Linkin Park",
+    "Quantita": 15,
+    "Data": "2025-02-10T10:52:08.721609+01:00",
+    "Categoria": "Musica",
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Linkin Park"
+  },
+  {
+    "Id": 10,
+    "Nome": "The Doors",
+    "Prezzo": 17.0,
+    "Dettaglio": "Film The Doors",
+    "Quantita": 12,
+    "Data": "2025-02-10T10:52:08.721609+01:00",
+    "Categoria": "Film",
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Film The Doors"
+  },
+  {
+    "Id": 12,
+    "Nome": "Ritorno al Futuro 2",
+    "Prezzo": 15.00,
+    "Dettaglio": "Sequel di Ritorno al Futuro",
+    "Quantita": 20,
+    "Data": "2025-02-10T10:52:08.721609+01:00",
+    "Categoria": "Film",
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Ritorno al futuro 2"
   }
 ]

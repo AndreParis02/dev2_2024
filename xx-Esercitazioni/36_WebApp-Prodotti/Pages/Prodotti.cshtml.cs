@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using _36_WebApp_Prodotti.Pages;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 public class ProdottiModel : PageModel
@@ -15,7 +16,8 @@ public class ProdottiModel : PageModel
     }
     public IEnumerable<Prodotto> Prodotti { get; set; }
 
-      public int numeroPagine {get;set;} 
+    public int numeroPagine {get;set;} 
+
     public void OnGet(decimal? minPrezzo, decimal? maxPrezzo, int? pageIndex) //aggiunda di parametri per i filtri
     {
         //Lista iniziale di tutti i prodotti
@@ -63,8 +65,4 @@ public class ProdottiModel : PageModel
  
     Prodotti = Prodotti.Skip(((pageIndex ?? 1) - 1) * 6).Take(6);
     }
-
- 
-
-
 }

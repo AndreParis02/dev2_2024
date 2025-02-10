@@ -15,10 +15,14 @@ public class ModificaProdottoModel : PageModel
     }
     public Prodotto Prodotto {get; set;}
 
+    public List<string> Categorie {get;set;}
     public void OnGet(int id)
     {
         var json = System.IO.File.ReadAllText("wwwroot/json/prodotti.json");
         var prodotti = JsonConvert.DeserializeObject<List<Prodotto>>(json);
+
+        var json2 = System.IO.File.ReadAllText("wwwroot/json/categorie.json");
+        Categorie = JsonConvert.DeserializeObject<List<string>>(json2);
 
         foreach(var prodotto in prodotti)
         {

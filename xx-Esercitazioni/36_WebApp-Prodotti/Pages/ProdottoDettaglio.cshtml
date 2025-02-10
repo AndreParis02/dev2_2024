@@ -16,7 +16,9 @@
                 <th>Prezzo</th>
                 <th>Quantità</th>
                 <th>Categoria</th>
+                <th>Data Inserimento</th>
                 <th>Immagine</th>
+
             </tr>
         </thred>
         <tbody>
@@ -26,7 +28,9 @@
                     <td>@Model.Prodotto.Prezzo</td>
                     <td>@Model.Prodotto.Quantita</td>
                     <td>@Model.Prodotto.Categoria</td>
+                    <td>@Model.Prodotto.Data</td>
                     <td><img src="@Model.Prodotto.Immagine" alt="@Model.Prodotto.Nome" width="200" height="100" /></td>
+
                 </tr>   
         </tbody>
     </table>

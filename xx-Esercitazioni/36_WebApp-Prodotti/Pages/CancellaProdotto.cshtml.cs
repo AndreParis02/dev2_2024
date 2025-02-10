@@ -14,6 +14,9 @@ public class CancellaProdottoModel : PageModel
     }
     public Prodotto Prodotto { get; set; }
 
+    [TempData]
+    public string messaggio {get;set;}
+
     public void OnGet(int id)
     {
         var json = System.IO.File.ReadAllText("wwwroot/json/prodotti.json");
@@ -26,6 +29,8 @@ public class CancellaProdottoModel : PageModel
                 break;
             }
         }
+        messaggio = "Prodotto Elimnato con successo";
+        TempData.Keep(messaggio);
     }
 
     public IActionResult OnPost(int id)
