@@ -1,0 +1,30 @@
+@page
+@model FornitoreDettaglioModel
+@{
+    ViewData["Title"] = "FornitoreDettaglio";
+}
+
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <table class="table text-white">
+        <thred>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>               
+                <th>Categoria</th>
+
+
+            </tr>
+        </thred>
+        <tbody>
+                <tr>
+                    <td>@Model.Fornitore.Id</td>
+                    <td>@Model.Fornitore.Nome</td> 
+                    <td>@Model.Fornitore.Categoria</td>
+                </tr>   
+        </tbody>
+    </table>
+    <a asp-page="/Fornitori"> Torna a Fornitori</a>
+</div>

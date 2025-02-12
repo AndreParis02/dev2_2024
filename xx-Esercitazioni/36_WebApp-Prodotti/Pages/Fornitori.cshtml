@@ -1,0 +1,53 @@
+@page
+@model FornitoriModel
+@{
+    ViewData["Title"] = "Fornitori";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<center><p>@TempData["messaggio"]</p></center>
+<br>
+<!-- Sezione dei fornitori con if -->
+<div class="row text-center d-flex align-items-stretch">
+    @foreach (var item in Model.Fornitori)
+    {
+        <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex">
+            <div class="card h-100 w-100">
+                <div class="card-body">
+                    <h5 class="card-title text-white">@item.Nome</h5>
+                    <h5 class="card-text text-white">@item.Categoria</h5>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group mt-auto">
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                            <a asp-page="FornitoreDettaglio" asp-route-id="@item.Id">Dettaglio</a>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                            <a asp-page="ModificaFornitore" asp-route-id="@item.Id">Edit</a>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                            <a asp-page="CancellaFornitore" asp-route-id="@item.Id">Elimina</a>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>
+
+
+<!-- Paginazione -->
+<form method="get">
+    <div class="d-flex flex-wrap justify-content-center">
+        @for (int i = 1; i <= Model.numeroPagine; i++)
+        {
+            <button type="submit" class="btn btn-primary rounded-pill mx-1" name="pageIndex" value="@i">@i</button>
+        }
+    </div>
+</form>
+
+
+

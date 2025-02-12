@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.SignalR;
-
 public class Prodotto
 {
     public int Id {get;set;}
@@ -9,5 +7,6 @@ public class Prodotto
     public int Quantita {get;set;}
     public DateTime Data{get;set;}
     public string Categoria {get;set;}
+    public string NomeFornitore {get;set;}
     public string Immagine {get;set;}
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "Id": 1,
+    "Nome": "Fornitore 1",
+    "Categoria": "Film"
+  },
+  {
+    "Id": 2,
+    "Nome": "Fornitore 2",
+    "Categoria": "Giochi"
+  },
+  {
+    "Id": 4,
+    "Nome": "Fornitore 3",
+    "Categoria": "Abbigliamento"
+  }
+]

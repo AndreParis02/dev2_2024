@@ -7,6 +7,7 @@
     "Quantita": 10,
     "Data": "2025-02-10T10:52:08.721609+01:00",
     "Categoria": "Musica",
+    "NomeFornitore": null,
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Nirvana"
   },
   {
@@ -17,6 +18,7 @@
     "Quantita": 10,
     "Data": "2025-02-10T10:52:08.721609+01:00",
     "Categoria": "Musica",
+    "NomeFornitore": null,
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Doors"
   },
   {
@@ -27,6 +29,7 @@
     "Quantita": 10,
     "Data": "2025-02-10T10:52:08.721609+01:00",
     "Categoria": "Musica",
+    "NomeFornitore": null,
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Pink Floyd"
   },
   {
@@ -37,6 +40,7 @@
     "Quantita": 15,
     "Data": "2025-02-10T10:52:08.721609+01:00",
     "Categoria": "Musica",
+    "NomeFornitore": null,
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Gorillaz"
   },
   {
@@ -47,6 +51,7 @@
     "Quantita": 25,
     "Data": "2025-02-10T10:52:08.721609+01:00",
     "Categoria": "Musica",
+    "NomeFornitore": null,
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Guns N' Roses"
   },
   {
@@ -57,6 +62,7 @@
     "Quantita": 12,
     "Data": "2025-02-10T10:52:08.721609+01:00",
     "Categoria": "Musica",
+    "NomeFornitore": null,
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei dei Deep Purple"
   },
   {
@@ -67,6 +73,7 @@
     "Quantita": 17,
     "Data": "2025-02-10T10:52:08.721609+01:00",
     "Categoria": "Musica",
+    "NomeFornitore": null,
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile degli Arctic Monkeys"
   },
   {
@@ -77,6 +84,7 @@
     "Quantita": 15,
     "Data": "2025-02-10T10:52:08.721609+01:00",
     "Categoria": "Musica",
+    "NomeFornitore": null,
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Vinile dei Linkin Park"
   },
   {
@@ -87,6 +95,7 @@
     "Quantita": 12,
     "Data": "2025-02-10T10:52:08.721609+01:00",
     "Categoria": "Film",
+    "NomeFornitore": null,
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Film The Doors"
   },
   {
@@ -97,6 +106,40 @@
     "Quantita": 20,
     "Data": "2025-02-10T10:52:08.721609+01:00",
     "Categoria": "Film",
+    "NomeFornitore": null,
     "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Ritorno al futuro 2"
+  },
+  {
+    "Id": 13,
+    "Nome": "Forrest Gump",
+    "Prezzo": 12.50,
+    "Dettaglio": "Film Forrest Gump",
+    "Quantita": 1,
+    "Data": "2025-02-10T12:05:00.1768941+01:00",
+    "Categoria": "Film",
+    "NomeFornitore": null,
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Forrest Gump"
+  },
+  {
+    "Id": 14,
+    "Nome": "Prova1",
+    "Prezzo": 25.00,
+    "Dettaglio": "Dettaglio Prova1",
+    "Quantita": 1,
+    "Data": "2025-02-10T15:17:41.0547746+01:00",
+    "Categoria": "Musica",
+    "NomeFornitore": null,
+    "Immagine": "https://dummyimage.com/300x38/1d93e7/ffffff&text=Prova1"
+  },
+  {
+    "Id": 15,
+    "Nome": "prova 404",
+    "Prezzo": 30.00,
+    "Dettaglio": "404",
+    "Quantita": 12,
+    "Data": "2025-02-10T15:47:05.6772859+01:00",
+    "Categoria": "Film",
+    "NomeFornitore": null,
+    "Immagine": null
   }
 ]

@@ -14,11 +14,13 @@ public class ProdottoDettaglioModel : PageModel
     }
     
     public Prodotto Prodotto { get; set; }
-    
+  
     public void OnGet(int id)
     {    
         var json = System.IO.File.ReadAllText("wwwroot/json/prodotti.json");
         var prodotti = JsonConvert.DeserializeObject<List<Prodotto>>(json); // deserializza il file
+
+
         foreach(var prodotto in prodotti)
         {
             if (prodotto.Id == id)

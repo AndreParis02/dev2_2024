@@ -1,0 +1,26 @@
+@page
+@model AggiungiFornitoreModel
+@{
+    ViewData["Title"] = "Aggiungi Fornitore";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group mb-3">
+        <label for="nome">Nome
+            <input type="text" class="form-control" name="nome" /></label>
+    </div>
+    <div class="form-group mb-3">
+        <label for="categoria">Categoria
+            <select class="form-control" name="categoria">
+                <option value="">--- Seleziona Categoria ---</option>
+                @foreach (var categoria in Model.Categorie)
+                {
+                    <option value="@categoria">@categoria</option>
+                }
+            </select>
+        </label>
+    </div>
+    <button type="submit" class="btn btn-dark">Aggiungi</button>
+</form>

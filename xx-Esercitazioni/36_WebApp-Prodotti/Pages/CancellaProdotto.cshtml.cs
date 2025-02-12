@@ -28,9 +28,7 @@ public class CancellaProdottoModel : PageModel
                 Prodotto = prodotto;
                 break;
             }
-        }
-        messaggio = "Prodotto Elimnato con successo";
-        TempData.Keep(messaggio);
+        }  
     }
 
     public IActionResult OnPost(int id)
@@ -46,6 +44,8 @@ public class CancellaProdottoModel : PageModel
             }
         }
         System.IO.File.WriteAllText("wwwroot/json/prodotti.json", JsonConvert.SerializeObject(prodotti, Formatting.Indented));
+        messaggio = "Prodotto Eliminato con successo";
+        TempData.Keep(messaggio);
         return RedirectToPage("/Prodotti");
     }
 }
