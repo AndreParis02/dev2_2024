@@ -1,0 +1,34 @@
+@page
+@model ModificaModel
+
+@using _37_WebApp_SQLite.Pages.Prodotti;
+
+@{
+    ViewData["Title"] = "Modifica Prodotto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Prodotto.Id" />
+
+    <div class="form-group">
+        <label asp-for="Prodotto.Nome" ></label>
+        <input asp-for="Prodotto.Nome" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Prodotto.Prezzo" ></label>
+        <input asp-for="Prodotto.Prezzo" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Prodotto.IdCategoria"></label>
+        <select asp-for="Prodotto.IdCategoria" asp-items="Model.CategorieSelectList" class="form-control">
+            <option value="">--- Seleziona una categoria ---</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary my-3">Modifica Prodotto</button>
+    <a asp-page="Index" class="btn btn-secondary">Annulla</a>
+</form>
