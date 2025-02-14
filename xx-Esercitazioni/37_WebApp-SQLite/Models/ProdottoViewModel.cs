@@ -1,3 +1,4 @@
+namespace _37_WebApp_SQLite.Models;
 public class ProdottoViewModel
 {
     public int Id {get;set;}

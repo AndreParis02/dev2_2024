@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data.SQLite;
+using _37_WebApp_SQLite.Models;
 
 namespace _37_WebApp_SQLite.Pages.Prodotti;
 

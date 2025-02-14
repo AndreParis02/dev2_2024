@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering; //in modo da usare SelectListItem
 using System.Data.SQLite;
 
 namespace _37_WebApp_SQLite.Pages.Prodotti;
+using _37_WebApp_SQLite.Models;
 public class ModificaModel : PageModel
 {
     [BindProperty]

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Data.SQLite;
+using _37_WebApp_SQLite.Models;
 
 namespace _37_WebApp_SQLite.Pages.Categorie;
 

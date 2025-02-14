@@ -2,8 +2,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering; //in modo da usare SelectListItem
 using System.Data.SQLite;
+using _37_WebApp_SQLite.Models;
 
 namespace _37_WebApp_SQLite.Pages.Prodotti;
+
 public class AggiungiProdottoModel : PageModel
 {
 

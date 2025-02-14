@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages; //pagine che contengono codice html e codice c#
 using Microsoft.AspNetCore.Mvc.Rendering; //per utilizzare il SelectListItem ---> che mi serve per visualizzare il menu a tendina
 using System.Data.SQLite;
-
+using _37_WebApp_SQLite.Models;
 namespace _37_WebApp_SQLite.Pages.Prodotti;
 
 public class SearchModel : PageModel
@@ -14,6 +14,7 @@ public class SearchModel : PageModel
     {
         //assegno la stringa di ricerca alla proprieta pubblica
         SearchTerm = q;
+
         //se la stringa di ricerca non è vuota
         if (!string.IsNullOrWhiteSpace(q))
         {
@@ -47,10 +48,7 @@ public class SearchModel : PageModel
                     Prezzo= reader.GetDouble(2),
                     CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
                 });
-
             }
         }
     }
-
-
 }
