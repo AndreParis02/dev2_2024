@@ -1,0 +1,35 @@
+@page "{id:int}" //metto il parametro id come Nome della pagina uso il modello EditModel ed uso : int per specificare che il parametro id è un intero
+@model ModificaModel
+
+@using _37_WebApp_SQLite.Pages.Prodotti;
+
+@{
+    ViewData["Title"] = "Modifica Prodotto";
+}
+
+<h2>Modifica Prodotto</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Prodotto.Id"/>
+
+    <div class="form-group">
+        <label asp-for="Prodotto.Nome"></label>
+        <input asp-for="Prodotto.Nome" class="form-control" />
+    </div>
+
+     <div class="form-group">
+        <label asp-for="Prodotto.Prezzo"></label>
+        <input asp-for="Prodotto.Prezzo" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Prodotto.IdCategoria"></label>
+        <select asp-for="Prodotto.IdCategoria" class="form-control" asp-items="Model.CategorieSelectList">
+        <option value="">-- Seleziona Categoria --</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary my-3">Modifica Prodotto</button>
+    <a asp-page="Index" class="btn btn-secondary">Annulla</a>
+</form>
+

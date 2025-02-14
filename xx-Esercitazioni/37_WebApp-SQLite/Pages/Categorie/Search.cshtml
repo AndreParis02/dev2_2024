@@ -1,0 +1,43 @@
+@page 
+@model SearchModel
+
+@using _37_WebApp_SQLite.Pages.Categorie;
+
+@{
+    ViewData["Title"] = "Cerca Categorie";
+}
+<h1>Cerca Categorie</h1>
+
+<form method="get" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="q" value="@Model.SearchTerm" placeholder="Inserisci il nome della categoria..." class="form-control"/>
+        <button type="submit" class="btn btn-outline-primary">Cerca</button>
+    </div>
+</form>
+@if (Model.Categorie?.Any() == true)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+             @foreach (var categoria in Model.Categorie)
+        {
+            <tr>
+                <td>@categoria.Id</td>
+                <td>@categoria.Nome</td>
+                <td>
+                     <a asp-page="Dettaglio" asp-route-id="@categoria.Id" class="btn btn-outline-info">Dettagli</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Nessuna categoria trovata</p>
+}

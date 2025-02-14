@@ -1,0 +1,50 @@
+@page
+@model CategorieModel
+
+@using _37_WebApp_SQLite.Pages.Categorie;
+
+@{
+    ViewData["Title"] = "Categorie";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h1>Elenco Categorie</h1>
+    @*inseriamo la partial view per la ricerca delle categorie*@
+                    <div class="d-flex">
+                        @await Html.PartialAsync("CategoriaSearch")
+                    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var categoria in Model.Categorie)
+            {
+                <tr>
+                    <td>@categoria.Id</td>
+                    <td>@categoria.Nome</td>
+                    <td>
+                        <div class="btn-group mt-auto">
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                                <a asp-page="Dettaglio" asp-route-id="@categoria.Id">Details</a>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                                <a asp-page="Modifica" asp-route-id="@categoria.Id">Edit</a>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                                <a asp-page="Elimina" asp-route-id="@categoria.Id">Delete</a>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

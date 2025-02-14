@@ -11,9 +11,14 @@
 
 <div>
     <h1>Elenco Prodotti</h1>
+    @*inseriamo la partial view per la ricerca dei prodotti*@
+                    <div class="d-flex">
+                        @await Html.PartialAsync("ProductSearch")
+                    </div>
     <table class="table table-bordered">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Nome</th>
                 <th>Prezzo</th>
                 <th>Categoria</th>
@@ -24,18 +29,19 @@
             @foreach (var prodotto in Model.Prodotti)
             {
                 <tr>
+                    <td>@prodotto.Id</td>
                     <td>@prodotto.Nome</td>
                     <td>@prodotto.Prezzo €</td>
                     <td>@prodotto.CategoriaNome</td>
                     <td><div class="btn-group mt-auto">
                         <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
-                            <a asp-page="ProdottoDettaglio" asp-route-id="@prodotto.Id">Dettaglio</a>
+                            <a asp-page="Dettaglio" asp-route-id="@prodotto.Id">Details</a>
                         </button>
                         <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
-                            <a asp-page="ModificaProdotto" asp-route-id="@prodotto.Id">Edit</a>
+                            <a asp-page="Modifica" asp-route-id="@prodotto.Id">Edit</a>
                         </button>
                         <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
-                            <a asp-page="CancellaProdotto" asp-route-id="@prodotto.Id">Elimina</a>
+                            <a asp-page="Elimina" asp-route-id="@prodotto.Id">Delete</a>
                         </button>
                     </div></td>
                 </tr>
