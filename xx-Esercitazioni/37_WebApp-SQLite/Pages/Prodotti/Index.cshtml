@@ -4,13 +4,12 @@
 @using _37_WebApp_SQLite.Pages.Prodotti;
 
 @{
-    ViewData["Title"] = "Prodotti";
+    ViewData["Title"] = "Elenco Prodotti";
 }
 
 <h1>@ViewData["Title"]</h1>
 
 <div>
-    <h1>Elenco Prodotti</h1>
     @*inseriamo la partial view per la ricerca dei prodotti*@
                     <div class="d-flex">
                         @await Html.PartialAsync("ProductSearch")

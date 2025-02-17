@@ -4,17 +4,17 @@
 @using _37_WebApp_SQLite.Pages.Categorie;
 
 @{
-    ViewData["Title"] = "Categorie";
+    ViewData["Title"] = "Elenco Categorie";
 }
 
 <h1>@ViewData["Title"]</h1>
 
 <div>
-    <h1>Elenco Categorie</h1>
     @*inseriamo la partial view per la ricerca delle categorie*@
                     <div class="d-flex">
                         @await Html.PartialAsync("CategoriaSearch")
                     </div>
+                    <br>
     <table class="table table-bordered">
         <thead>
             <tr>

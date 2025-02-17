@@ -18,7 +18,7 @@ public class DettaglioModel : PageModel
         {
             //Utilizzo di DbUtils per leggere la lista dei prodotti
             var Categorie = DbUtils.ExecuteReader(
-                "SELECT Id, Nome FROM  Categorie WHERE Id = @id",
+                "SELECT Id, Nome FROM Categorie WHERE Id = @id",
 
                         reader => new Categoria
                         {
