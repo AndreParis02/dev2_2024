@@ -1,6 +1,6 @@
 @using _37_WebApp_SQLite.Models
 @model List<ProdottoViewModel>
-    <h3>Prodotti Per Categoria</h3>
+    <h3>Prodotti nella Categoria: @Model.FirstOrDefault()?.CategoriaNome</h3>
     @if (Model != null && Model.Any())
     {
         <ul class="list-group">

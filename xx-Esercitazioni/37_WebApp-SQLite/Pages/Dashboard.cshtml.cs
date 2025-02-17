@@ -78,7 +78,7 @@ public class DashboardModel : PageModel
                         SELECT p.Id, p.Nome, p.Prezzo, c.Nome AS CategoriaNome 
                         FROM Prodotti p
                         LEFT JOIN Categorie c ON p.CategoriaId = c.Id
-                        WHERE c.Nome = 'Giochi'
+                        WHERE c.Nome = 'Film'
                         LIMIT 5
                     ";
 
