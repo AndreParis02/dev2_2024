@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages; //pagine che contengono codice html e
 using Microsoft.AspNetCore.Mvc.Rendering; //per utilizzare il SelectListItem ---> che mi serve per visualizzare il menu a tendina
 using System.Data.SQLite;
 using _37_WebApp_SQLite.Models;
+using _37_WebApp_SQLite.Utilities;
 namespace _37_WebApp_SQLite.Pages.Categorie;
 public class SearchModel : PageModel
 {
@@ -14,26 +15,18 @@ public class SearchModel : PageModel
         SearchTerm = q;
         if (!string.IsNullOrWhiteSpace(q))
         {
-            using var connection = DatabaseInitializer.GetConnection();
-            connection.Open();
-
-            var sql= @"SELECT Id, Nome FROM Categorie WHERE Nome LIKE @searchTerm";
-
-           
-            using var command = new SQLiteCommand(sql, connection);
-            command.Parameters.AddWithValue("@searchTerm", $"%{q}%");
-            using var reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                Categorie.Add(new Categoria
+            Categorie = DbUtils.ExecuteReader(
+                "SELECT Id, Nome FROM Categorie WHERE Nome LIKE @searchTerm",
+                reader => new Categoria
                 {
-                    //faccio il get dei campi del record restituito dalla query
                     Id= reader.GetInt32(0),
                     Nome= reader.GetString(1)
-                });
-            }
+                },
+                cmd =>
+                {
+                    cmd.Parameters.AddWithValue("@searchTerm", $"%{q}%");
+                }
+            );
         }
     }
-
-
 }

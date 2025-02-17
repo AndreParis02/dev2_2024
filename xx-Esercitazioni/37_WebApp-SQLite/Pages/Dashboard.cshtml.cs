@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data.SQLite;
 using _37_WebApp_SQLite.Models;
+using _37_WebApp_SQLite.Utilities;
 
 public class DashboardModel : PageModel
 {
@@ -11,91 +12,82 @@ public class DashboardModel : PageModel
 
     public void OnGet()
     {
-        using (var connection = DatabaseInitializer.GetConnection())
-        {
-            connection.Open();
 
-            var sqlPiuCostosi = @"
+
+        try
+        {
+            //Utilizzo di DbUtils per leggere la lista dei prodotti
+            ProdottiPiuCostosi = DbUtils.ExecuteReader(
+                @"
                         SELECT p.Id, p.Nome, p.Prezzo, c.Nome AS CategoriaNome 
                         FROM Prodotti p
                         LEFT JOIN Categorie c ON p.CategoriaId = c.Id
                         ORDER BY p.Prezzo DESC
                         LIMIT 5
-                    ";
-
-            using (var command = new SQLiteCommand(sqlPiuCostosi, connection))
-            {
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
+                    ",
+                    reader => new ProdottoViewModel
                     {
-                        ProdottiPiuCostosi.Add(new ProdottoViewModel
-                        {
-                            Id = reader.GetInt32(0),
-                            Nome = reader.GetString(1),
-                            Prezzo = reader.GetDouble(2),
-                            CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
-                        });
+                        Id = reader.GetInt32(0),
+                        Nome = reader.GetString(1),
+                        Prezzo = reader.GetDouble(2),
+                        CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
                     }
-                }
-            }
+            );
         }
-        using (var connection = DatabaseInitializer.GetConnection())
+        catch (Exception ex)
         {
-            connection.Open();
+            SimpleLogger.Log(ex);
+        }
 
-            var sqlRecenti = @"
+        try
+        {
+            //Utilizzo di DbUtils per leggere la lista dei prodotti
+            ProdottiRecenti = DbUtils.ExecuteReader(
+                @"
+                        
                         SELECT p.Id, p.Nome, p.Prezzo, c.Nome AS CategoriaNome 
                         FROM Prodotti p
                         LEFT JOIN Categorie c ON p.CategoriaId = c.Id
                         ORDER BY p.Id DESC
                         LIMIT 5
-                    ";
-
-
-            using (var command = new SQLiteCommand(sqlRecenti, connection))
-            {
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
+                    ",
+                    reader => new ProdottoViewModel
                     {
-                        ProdottiRecenti.Add(new ProdottoViewModel
-                        {
-                            Id = reader.GetInt32(0),
-                            Nome = reader.GetString(1),
-                            Prezzo = reader.GetDouble(2),
-                            CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
-                        });
+                        Id = reader.GetInt32(0),
+                        Nome = reader.GetString(1),
+                        Prezzo = reader.GetDouble(2),
+                        CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
                     }
-                }
-            }
+            );
         }
-        using (var connection = DatabaseInitializer.GetConnection())
+        catch (Exception ex)
         {
-            connection.Open();
+            SimpleLogger.Log(ex);
+        }
 
-            var sqlPerCategoria = @"
+        try
+        {
+            //Utilizzo di DbUtils per leggere la lista dei prodotti
+            ProdottiPerCategoria = DbUtils.ExecuteReader(
+                @"
                         SELECT p.Id, p.Nome, p.Prezzo, c.Nome AS CategoriaNome 
                         FROM Prodotti p
                         LEFT JOIN Categorie c ON p.CategoriaId = c.Id
                         WHERE c.Nome = 'Film'
                         LIMIT 5
-                    ";
-
-            using var command = new SQLiteCommand(sqlPerCategoria, connection);
-            using var reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                ProdottiPerCategoria.Add(new ProdottoViewModel
-                {
-                    Id = reader.GetInt32(0),
-                    Nome = reader.GetString(1),
-                    Prezzo = reader.GetDouble(2),
-                    CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
-                });
-            }
+                    ",
+                    reader => new ProdottoViewModel
+                    {
+                        Id = reader.GetInt32(0),
+                        Nome = reader.GetString(1),
+                        Prezzo = reader.GetDouble(2),
+                        CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
+                    }
+            );
         }
-
+        catch (Exception ex)
+        {
+            SimpleLogger.Log(ex);
+        }
     }
 }

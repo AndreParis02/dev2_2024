@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data.SQLite;
 using _37_WebApp_SQLite.Models;
+using _37_WebApp_SQLite.Utilities;
 
 namespace _37_WebApp_SQLite.Pages.Categorie;
 
@@ -12,30 +13,22 @@ public class CategorieModel : PageModel
     public void OnGet()
     {
 
-        using var connection = DatabaseInitializer.GetConnection();
-
-
-        connection.Open();
-
-        var sql = @"
-                        SELECT Id, Nome
-                        FROM Categorie
-                    ";
-
-
-        using var command = new SQLiteCommand(sql, connection);
-
-
-        using var reader = command.ExecuteReader();
-
-        while (reader.Read())
+        try
         {
-            Categorie.Add(new Categoria
-            {
-                Id = reader.GetInt32(0),
-                Nome = reader.GetString(1)
-            });
-
+            //Utilizzo di DbUtils per leggere la lista dei prodotti
+            Categorie = DbUtils.ExecuteReader(
+                "SELECT Id, Nome FROM Categorie",
+                reader => new Categoria
+                {
+                    Id = reader.GetInt32(0),
+                    Nome = reader.GetString(1)
+                }
+            );
         }
+        catch (Exception ex)
+        {
+            SimpleLogger.Log(ex);
+        }
+
     }
 }

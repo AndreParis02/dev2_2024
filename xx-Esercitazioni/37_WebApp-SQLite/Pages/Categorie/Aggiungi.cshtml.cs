@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering; //in modo da usare SelectListItem
 using System.Data.SQLite;
 using _37_WebApp_SQLite.Models;
+using _37_WebApp_SQLite.Utilities;
 
 namespace _37_WebApp_SQLite.Pages.Categorie;
 public class AggiungiModel : PageModel
@@ -18,19 +19,22 @@ public class AggiungiModel : PageModel
     public IActionResult OnPost()
     {
     
-        using var connection = DatabaseInitializer.GetConnection();
-        connection.Open();
+     try
+        {
+            DbUtils.ExecuteNonQuery(
+                "INSERT INTO Categorie (Nome) VALUES ( @nome)",
+                cmd =>
+                {
+                    cmd.Parameters.AddWithValue("@nome", Categoria.Nome);
 
-       
-        var sql = "INSERT INTO Categorie (Nome) VALUES ( @nome)";
-       
-
-        using var command = new SQLiteCommand(sql,connection);
-        command.Parameters.AddWithValue("@nome",Categoria.Nome);
-
-
-        command.ExecuteNonQuery();
-
+                }
+            );
+        }
+        catch(Exception ex)
+        {
+            SimpleLogger.Log(ex);
+            return Page();
+        }
         return RedirectToPage("Index");
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering; //in modo da usare SelectListItem
 using System.Data.SQLite;
 using _37_WebApp_SQLite.Models;
+using _37_WebApp_SQLite.Utilities;
 
 namespace _37_WebApp_SQLite.Pages.Prodotti;
 
@@ -22,7 +23,7 @@ public class AggiungiProdottoModel : PageModel
     }
 
     public IActionResult OnPost()
-    {
+    {   
         //Controlliamo se il modello è valid cioè se o dato inseriti dall'utente rispettano le regole di validazione
         //se il modello non è valido ritorno la pagina con gli errori
         if (!ModelState.IsValid)
@@ -31,52 +32,46 @@ public class AggiungiProdottoModel : PageModel
             //page è un metodo di page model che restituisce un oggetto page result che rappresenta la pagina nella quale siamo
             return Page();//se il modello non è valido ritorno la pagina
         }
-        //invoco il metodo GetConnection per ottenere la connesione del db
-        using var connection = DatabaseInitializer.GetConnection();
-        //apro la connessione
-        connection.Open();
 
-        //creo la query sql per inserire un nuovo prodotto usando i parametri
-        //i parametri servono in modo da evitare sql injection
-        //la sql injection è un attacco informatico che sfrutta la query sql per inserire codice
-        //in pratica dobbiamo separare i dati dalla query sql
-        //si mette davanti al valore del parametro la @
-        var sql = "INSERT INTO Prodotti (Nome, Prezzo, CategoriaId) VALUES ( @nome, @prezzo, @categoriaId )";
-
-        //creo un comando sql per eseguire la query
-        using var command = new SQLiteCommand(sql, connection);
-
-        //aggiungo i parametri al comando e lo faccio con il metodo add with values che prende il nome del parametro e il valore
-        command.Parameters.AddWithValue("@nome", Prodotto.Nome);
-        command.Parameters.AddWithValue("@prezzo", Prodotto.Prezzo);
-        command.Parameters.AddWithValue("@categoriaId", Prodotto.IdCategoria);
-
-        command.ExecuteNonQuery();
-
+        try
+        {
+            DbUtils.ExecuteNonQuery(
+                "INSERT INTO Prodotti (Nome, Prezzo, CategoriaId) VALUES (@nome, @prezzo, @categoriaId)",
+                cmd =>
+                {
+                    cmd.Parameters.AddWithValue("@nome", Prodotto.Nome);
+                    cmd.Parameters.AddWithValue("@prezzo", Prodotto.Prezzo);
+                    cmd.Parameters.AddWithValue("@categoriaId", Prodotto.IdCategoria);
+                }
+            );
+        }
+        catch(Exception ex)
+        {
+            SimpleLogger.Log(ex);
+            CaricaCategorie();
+            return Page();
+        }
         return RedirectToPage("Index");
     }
 
     //metodo per caricare le categorie
     private void CaricaCategorie()
     {
-        using var connection = DatabaseInitializer.GetConnection();
-        connection.Open();
-
-        //creo la query sql per ottenre i dati dalle categorie
-        var sql = "SELECT Id, Nome FROM Categorie";
-
-        //creo un comando per eseguire la query
-        using var command = new SQLiteCommand(sql, connection);
-        //eseguo il comando e ottengo un reader che è un oggetto che mi permette di leggere i dati
-        using var reader = command.ExecuteReader();
-        //finche il reader ha dati
-        while (reader.Read())
+        try
         {
-            CategorieSelectList.Add(new SelectListItem
-            {
-                Value = reader.GetInt32(0).ToString(),  //converto in stringa l'id così da poterlo usare come valore
-                Text = reader.GetString(1)
-            });
+            //Utilizzo di DbUtils per leggere la lista dei prodotti
+            CategorieSelectList = DbUtils.ExecuteReader(
+                "SELECT Id, Nome FROM Categorie",
+                reader => new SelectListItem
+                {
+                    Value = reader.GetInt32(0).ToString(), 
+                    Text = reader.GetString(1)
+                }
+            );
+        }
+        catch (Exception ex)
+        {
+            SimpleLogger.Log(ex);
         }
     }
 }
