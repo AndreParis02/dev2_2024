@@ -2,6 +2,8 @@
 @model EliminaModel
 
 @using _37_WebApp_SQLite.Pages.Prodotti;
+@using _37_WebApp_SQLite.Models;
+@using _37_WebApp_SQLite.Utilities;
 
 @{
     ViewData["Title"] = "Elimina Prodotto";
@@ -26,7 +28,7 @@
             <tr>
                 <td>@Model.Prodotto.Id</td>
                 <td>@Model.Prodotto.Nome</td>
-                <td>@Model.Prodotto.Prezzo</td>
+                <td>@PriceFormatter.Format(@Model.Prodotto.Prezzo)</td>
                 <td>@Model.Prodotto.CategoriaNome</td>
             </tr>
         </tbody>

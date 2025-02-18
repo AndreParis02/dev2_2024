@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data.SQLite;
 using _37_WebApp_SQLite.Models;
 using _37_WebApp_SQLite.Utilities;
+using System.ComponentModel.Design;
 
 public class DashboardModel : PageModel
 {
@@ -9,6 +10,7 @@ public class DashboardModel : PageModel
     public List<ProdottoViewModel> ProdottiPiuCostosi { get; set; } = new List<ProdottoViewModel>();
     public List<ProdottoViewModel> ProdottiRecenti { get; set; } = new List<ProdottoViewModel>();
     public List<ProdottoViewModel> ProdottiPerCategoria { get; set; } = new List<ProdottoViewModel>();
+    public int TotProd;
 
     public void OnGet()
     {
@@ -67,6 +69,17 @@ public class DashboardModel : PageModel
 
         try
         {
+            TotProd = DbUtils.ExecuteScalar<int>("SELECT COUNT (*) FROM Prodotti p LEFT JOIN Categorie c ON p.CategoriaId = c.Id WHERE c.Nome = 'Film'");
+            
+        }
+        catch(Exception ex)
+        {
+            SimpleLogger.Log(ex);
+        }
+
+
+        try
+        {
             //Utilizzo di DbUtils per leggere la lista dei prodotti
             ProdottiPerCategoria = DbUtils.ExecuteReader(
                 @"
@@ -74,7 +87,7 @@ public class DashboardModel : PageModel
                         FROM Prodotti p
                         LEFT JOIN Categorie c ON p.CategoriaId = c.Id
                         WHERE c.Nome = 'Film'
-                        LIMIT 5
+                        LIMIT @TotProd
                     ",
                     reader => new ProdottoViewModel
                     {
@@ -82,6 +95,10 @@ public class DashboardModel : PageModel
                         Nome = reader.GetString(1),
                         Prezzo = reader.GetDouble(2),
                         CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
+                    },
+                    cmd=>
+                    {
+                        cmd.Parameters.AddWithValue("@TotProd",TotProd);
                     }
             );
         }

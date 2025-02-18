@@ -12,6 +12,7 @@ public class ProdottiModel : PageModel
     //creo una proprietà pubblica di tipo lista di prodotti view model
 
     public List<ProdottoViewModel> Prodotti { get; set; } = new List<ProdottoViewModel>();
+    public int TotaleProdotti {get;set;}
 
     public void OnGet()
     {
@@ -30,6 +31,15 @@ public class ProdottiModel : PageModel
             );
         }
         catch (Exception ex)
+        {
+            SimpleLogger.Log(ex);
+        }
+
+        try
+        {
+            TotaleProdotti = DbUtils.ExecuteScalar<int>("SELECT COUNT (*) FROM Prodotti");
+        }
+        catch(Exception ex)
         {
             SimpleLogger.Log(ex);
         }

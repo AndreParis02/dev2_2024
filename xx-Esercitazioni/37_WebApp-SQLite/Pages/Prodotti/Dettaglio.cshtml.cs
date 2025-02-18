@@ -18,19 +18,19 @@ public class DettaglioModel : PageModel
             var Prodotti = DbUtils.ExecuteReader(
                 "Select p.Id, p.Nome, p.Prezzo, c.Nome as CategoriaNome FROM Prodotti p LEFT JOIN Categorie c ON p.CategoriaId = c.Id WHERE p.Id = @id",
 
-                        reader => new ProdottoViewModel
+                        reader => new ProdottoViewModel //lettura risultato query
                         {
                             Id = reader.GetInt32(0),
                             Nome = reader.GetString(1),
                             Prezzo = reader.GetDouble(2),
-                            CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
+                            CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)  
                         },
                          cmd =>
                          {
-                            cmd.Parameters.AddWithValue("@id",id);
+                            cmd.Parameters.AddWithValue("@id",id); //assegnazione parametro passato dall'OnGet e non conosciuto dal reader (per questo separiamo il reader dal cmd)
                          }
             );
-            Prodotto = Prodotti.First();
+            Prodotto = Prodotti.First(); 
         }
         catch (Exception ex)
         {

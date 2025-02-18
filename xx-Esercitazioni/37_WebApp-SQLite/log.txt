@@ -535,3 +535,156 @@ Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLi
    at System.Data.SQLite.SQLiteCommand.ExecuteReader()
    at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 62
    at _37_WebApp_SQLite.Pages.Categorie.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Dettaglio.cshtml.cs:line 20
+2025-02-18 10:13:54 - Exception: SQL logic error
+no such column: p.Id
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 62
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-18 10:27:51 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 62
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 75
+2025-02-18 10:39:43 - Exception: SQL logic error
+no such function: CONT
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteScalar(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteScalar()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteScalar[T](String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 37
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 72
+2025-02-18 11:44:29 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 11:44:33 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 21
+2025-02-18 11:44:39 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 11:44:42 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:25:09 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 12:25:11 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:25:17 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 12:25:18 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:38:09 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 12:38:11 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:38:12 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 12:38:13 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:38:15 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 12:38:16 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:38:19 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:54:37 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:54:38 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 13:00:17 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 13:00:18 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 13:13:19 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Categorie.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Elimina.cshtml.cs:line 62
