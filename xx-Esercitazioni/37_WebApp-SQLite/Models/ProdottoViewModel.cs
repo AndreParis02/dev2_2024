@@ -5,4 +5,5 @@ public class ProdottoViewModel
     public string Nome {get;set;}
     public double Prezzo {get;set;}
     public string CategoriaNome {get;set;}
+    public string FornitoreNome {get;set;}
 }

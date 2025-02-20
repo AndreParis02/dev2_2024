@@ -25,13 +25,24 @@ public static class DatabaseInitializer
             command.ExecuteNonQuery();
         }
 
+        var createFornitoriTable = "CREATE TABLE IF NOT EXISTS Fornitori (Id INTEGER PRIMARY KEY AUTOINCREMENT, Nome TEXT NOT NULL);";
+
+        //Lancio il comando sulla connessione che ho creato
+        using (var command = new SQLiteCommand(createFornitoriTable, connection))
+        {
+            command.ExecuteNonQuery();
+        }
+
         var createProdottiTable = @"CREATE TABLE IF NOT EXISTS Prodotti 
-                                        (
-                                            Id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                                            Nome TEXT NOT NULL, 
-                                            Prezzo REAL NOT NULL,
-                                            CategoriaId INTEGER, FOREIGN KEY(CategoriaId) REFERENCES Categorie(Id)
-                                        );
+                                    (
+                                        Id INTEGER PRIMARY KEY AUTOINCREMENT, 
+                                        Nome TEXT NOT NULL, 
+                                        Prezzo REAL NOT NULL,
+                                        CategoriaId INTEGER,
+                                        FornitoreId INTEGER,
+                                        FOREIGN KEY(CategoriaId) REFERENCES Categorie(Id),
+                                        FOREIGN KEY(FornitoreId) REFERENCES Fornitori(Id)
+                                    );
                                     ";
 
         //Lancio il comando sulla connessione che ho creato
@@ -62,6 +73,25 @@ public static class DatabaseInitializer
             }
         }
 
+        var countCommandFornitori = new SQLiteCommand("SELECT COUNT(*) FROM Fornitori", connection);
+
+        //Dato che count di sql è un valore numerico, posso usare execute scalar per ottenere il valore
+        //execute scalar ritorna un oggetto quindi faccio il casting a long per ottenere il valore numerico
+        var countFornitori = (long)countCommand.ExecuteScalar();
+
+        //se il count è uguale a zero, allora non ci sono categorie nel db e posso fare il seed dei dati
+        if (count == 0)
+        {
+            //sto inserendo più valori in una sola query quindi devo mettere le parentesi tonde intorno ai valori
+            var insertFornitori = "INSERT INTO Fornitori (Nome) VALUES('Rossi'), ('Bianchi'), ('Verdi');";
+
+            //Lancio il comando sulla connessione che ho creato
+            using (var command = new SQLiteCommand(insertFornitori, connection))
+            {
+                command.ExecuteNonQuery();
+            }
+        }
+
         var countCommand2 = new SQLiteCommand("SELECT COUNT(*) FROM Prodotti", connection);
 
         //Dato che count di sql è un valore numerico, posso usare execute scalar per ottenere il valore
@@ -74,10 +104,10 @@ public static class DatabaseInitializer
             //per ottenere direttamente il nome dell'Id categoria che passiamo, nel campo Id categoria
             //ci mettiamo un altra query ovvero: (SELECT Id FROM Categorie WHERE Nome = 'Casa')
             var insertProdotti = @"INSERT INTO Prodotti 
-            (Nome, Prezzo, CategoriaId) VALUES
-            ('Prodotto1', 10.10, (SELECT Id FROM Categorie WHERE Nome = 'Casa')), 
-            ('Prodotto2', 20.20, (SELECT Id FROM Categorie WHERE Nome = 'Giochi')), 
-            ('Prodotto3', 30.30, (SELECT Id FROM Categorie WHERE Nome = 'Abbigliamento'))
+            (Nome, Prezzo, CategoriaId, FornitoreId) VALUES
+            ('Prodotto1', 10.10, (SELECT Id FROM Categorie WHERE Nome = 'Casa'), (SELECT Id FROM Fornitori WHERE Nome = 'Rossi')), 
+            ('Prodotto2', 20.20, (SELECT Id FROM Categorie WHERE Nome = 'Giochi'), (SELECT Id FROM Fornitori WHERE Nome = 'Bianchi')), 
+            ('Prodotto3', 30.30, (SELECT Id FROM Categorie WHERE Nome = 'Abbigliamento'), (SELECT Id FROM Fornitori WHERE Nome = 'Verdi'))
             ;";
 
             //Lancio il comando sulla connessione che ho creato

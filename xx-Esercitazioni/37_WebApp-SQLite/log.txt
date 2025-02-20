@@ -688,3 +688,265 @@ Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbTyp
 Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
    at _37_WebApp_SQLite.Pages.Categorie.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Elimina.cshtml.cs:line 62
+2025-02-20 10:08:08 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:10:27 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:11:20 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:02 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:06 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:08 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:09 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:11 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:13 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:21:52 - Exception: SQL logic error
+near "LEFT": syntax error
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-20 10:22:14 - Exception: SQL logic error
+near "LEFT": syntax error
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-20 10:26:28 - Exception: SQL logic error
+near "LEFT": syntax error
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-20 10:27:24 - Exception: SQL logic error
+near "LEFT": syntax error
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-20 10:32:07 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 66
+2025-02-20 10:33:31 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 68
+2025-02-20 10:47:35 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 68
+2025-02-20 10:49:38 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Categorie.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Elimina.cshtml.cs:line 62
+2025-02-20 10:50:16 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 11:15:08 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 11:26:26 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 23
+2025-02-20 11:26:26 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 50
+2025-02-20 11:26:26 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 89
+2025-02-20 11:26:26 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 131
+2025-02-20 11:28:27 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 23
+2025-02-20 11:28:27 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 50
+2025-02-20 11:28:27 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 89
+2025-02-20 11:28:27 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 131
+2025-02-20 11:33:27 - Exception: SQL logic error
+no such column: f.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 89
+2025-02-20 11:33:27 - Exception: SQL logic error
+no such column: c.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 130
+2025-02-20 11:33:57 - Exception: SQL logic error
+no such column: f.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 89
+2025-02-20 11:33:57 - Exception: SQL logic error
+no such column: c.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 130
+2025-02-20 11:34:39 - Exception: SQL logic error
+no such column: f.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 89
+2025-02-20 11:34:39 - Exception: SQL logic error
+no such column: c.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 130
+2025-02-20 11:43:11 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 68

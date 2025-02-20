@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages; //pagine che contengono codice html e codice c#
 using _37_WebApp_SQLite.Models;
 using _37_WebApp_SQLite.Utilities;
+using System.IO.Pipelines;
 namespace _37_WebApp_SQLite.Pages.Prodotti;
 
 
@@ -38,7 +39,10 @@ public class SearchModel : PageModel
         if (!string.IsNullOrWhiteSpace(q))
         {
             string sql = $@"
-            SELECT p.Id, p.Nome, p.Prezzo, c.Nome as CategoriaNome FROM Prodotti p LEFT JOIN Categorie c ON p.CategoriaId = c.Id WHERE p.Nome LIKE @searchTerm
+            SELECT p.Id, p.Nome, p.Prezzo, c.Nome, f.Nome FROM Prodotti p 
+            LEFT JOIN Categorie c ON p.CategoriaId = c.Id 
+            LEFT JOIN Fornitori f ON p.FornitoreId = f.Id
+            WHERE p.Nome LIKE @searchTerm
             ORDER BY p.Id
             LIMIT {PageSize} OFFSET {offset}";
 
@@ -49,7 +53,8 @@ public class SearchModel : PageModel
                 Id = reader.GetInt32(0),
                 Nome = reader.GetString(1),
                 Prezzo = reader.GetDouble(2),
-                CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
+                CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3),
+                FornitoreNome = reader.IsDBNull(4) ? "Nessuno" : reader.GetString(4)
             },
             cmd =>
         {

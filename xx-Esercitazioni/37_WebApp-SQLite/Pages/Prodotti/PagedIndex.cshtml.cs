@@ -20,9 +20,10 @@ public class PagedIndexModel : PageModel
         //offset = (pagina corrente -1)* elementi per pagina
         //LIMIT 5 OFFSET 0 -> 5 elementi a partire dall'elemento 0
         string sql = $@"
-            SELECT p.Id, p.Nome, p.Prezzo, c.Nome as CategoriaNome
+            SELECT p.Id, p.Nome, p.Prezzo, c.Nome, f.Nome
             FROM Prodotti p
             LEFT JOIN Categorie c ON p.CategoriaId = c.Id
+            LEFT JOIN Fornitori f ON p.FornitoreId = f.Id
             ORDER BY p.Id
             LIMIT {PageSize} OFFSET {offset}";
 
@@ -33,7 +34,8 @@ public class PagedIndexModel : PageModel
                 Id = reader.GetInt32(0),
                 Nome = reader.GetString(1),
                 Prezzo = reader.GetDouble(2),
-                CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
+                CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3),
+                FornitoreNome = reader.IsDBNull(4) ? "Nessuno" : reader.GetString(4)
             }
         );
         //Crea l'oggetto paginato

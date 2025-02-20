@@ -12,6 +12,7 @@ public class ModificaModel : PageModel
     [BindProperty]
     public Prodotto Prodotto { get; set; }
     public List<SelectListItem> CategorieSelectList { get; set; } = new List<SelectListItem>();
+    public List<SelectListItem> FornitoriSelectList {get; set;} = new List<SelectListItem>();
     //passo l'id come parametro perchè voglio modificare un prodotto esistente sul quale ho cliccato in precedenza
     public IActionResult OnGet(int id)
     {
@@ -19,14 +20,15 @@ public class ModificaModel : PageModel
         {
             //Utilizzo di DbUtils per leggere la lista dei prodotti
             var Prodotti = DbUtils.ExecuteReader(
-                "SELECT Id, Nome, Prezzo, CategoriaId FROM Prodotti WHERE Id = @id",
+                "SELECT Id, Nome, Prezzo, CategoriaId, FornitoreId FROM Prodotti WHERE Id = @id",
 
                         reader => new Prodotto
                         {
                             Id = reader.GetInt32(0),
                             Nome = reader.GetString(1),
                             Prezzo = reader.GetDouble(2),
-                            IdCategoria = reader.GetInt32(3)
+                            IdCategoria = reader.GetInt32(3),
+                            IdFornitore = reader.GetInt32(4)
                         },
                          cmd =>
                          {
@@ -42,6 +44,7 @@ public class ModificaModel : PageModel
 
         //carico le categorie in modo da poterle visualizzare nella select list
         CaricaCategorie();
+        CaricaFornitori();
         //restituisco la pagina con i dati del prodotto da modificare
 
         return Page();
@@ -53,17 +56,19 @@ public class ModificaModel : PageModel
         {
             //se il modello non è valido carico le categorie e restituisco la pagina
             CaricaCategorie();
+            CaricaFornitori();
             return Page();
         }
         try
         {
             DbUtils.ExecuteNonQuery(
-                "UPDATE Prodotti SET Nome = @nome, Prezzo = @prezzo, CategoriaId = @categoria WHERE Id = @id",
+                "UPDATE Prodotti SET Nome = @nome, Prezzo = @prezzo, CategoriaId = @categoria, FornitoreId = @fornitore WHERE Id = @id",
                 cmd =>
                 {
                     cmd.Parameters.AddWithValue("@nome", Prodotto.Nome);
                     cmd.Parameters.AddWithValue("@prezzo", Prodotto.Prezzo);
                     cmd.Parameters.AddWithValue("@categoria", Prodotto.IdCategoria);
+                    cmd.Parameters.AddWithValue("@fornitore", Prodotto.IdFornitore);
                     cmd.Parameters.AddWithValue("@id", Prodotto.Id);
                 }
             );
@@ -72,6 +77,7 @@ public class ModificaModel : PageModel
         {
             SimpleLogger.Log(ex);
             CaricaCategorie();
+            CaricaFornitori();
             return Page();
         }
         return RedirectToPage("PagedIndex");
@@ -85,6 +91,25 @@ public class ModificaModel : PageModel
             //Utilizzo di DbUtils per leggere la lista dei prodotti
             CategorieSelectList = DbUtils.ExecuteReader(
                 "SELECT Id, Nome FROM Categorie",
+                reader => new SelectListItem
+                {
+                    Value = reader.GetInt32(0).ToString(),
+                    Text = reader.GetString(1)
+                }
+            );
+        }
+        catch (Exception ex)
+        {
+            SimpleLogger.Log(ex);
+        }
+    }
+
+    private void CaricaFornitori()
+    {
+        try
+        {
+            FornitoriSelectList = DbUtils.ExecuteReader(
+                "SELECT Id, Nome FROM Fornitori",
                 reader => new SelectListItem
                 {
                     Value = reader.GetInt32(0).ToString(),

@@ -27,6 +27,13 @@
         </select>
     </div>
 
+    <div class="form-group">
+        <label asp-for="Prodotto.IdFornitore"></label>
+        <select asp-for="Prodotto.IdFornitore" class="form-control" asp-items="Model.FornitoriSelectList">
+        <option value="">-- Seleziona Fornitore --</option>
+        </select>
+    </div>
+
     <button type="submit" class="btn btn-primary my-3">Aggiungi Prodotto</button>
     <a asp-page="PagedIndex" class="btn btn-secondary">Annulla</a>
 </form>

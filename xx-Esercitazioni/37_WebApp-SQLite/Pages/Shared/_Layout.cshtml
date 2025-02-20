@@ -22,20 +22,26 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Dashboard">Dashboard</a>
+                            <a class="nav-link @FrontendUtil.ActiveClass(ViewContext.RouteData.Values["page"]?.ToString() ?? "", "/Dashboard")" asp-area="" asp-page="/Dashboard">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Prodotti/PagedIndex">Prodotti</a>
+                            <a class="nav-link @FrontendUtil.ActiveClass(ViewContext.RouteData.Values["page"]?.ToString() ?? "", "/Prodotti/PagedIndex")" asp-area="" asp-page="/Prodotti/PagedIndex">Prodotti</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Prodotti/AggiungiProdotto">Aggiungi
+                            <a class="nav-link @FrontendUtil.ActiveClass(ViewContext.RouteData.Values["page"]?.ToString() ?? "", "/Prodotti/AggiungiProdotto")" asp-area="" asp-page="/Prodotti/AggiungiProdotto">Aggiungi
                                 Prodotto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Categorie/Index">Categorie</a>
+                             <a class="nav-link @FrontendUtil.ActiveClass(ViewContext.RouteData.Values["page"]?.ToString() ?? "", "/Categorie/Index")" asp-area="" asp-page="/Categorie/Index">Categorie</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Categorie/Aggiungi">Aggiungi Categoria</a>
+                            <a class="nav-link @FrontendUtil.ActiveClass(ViewContext.RouteData.Values["page"]?.ToString() ?? "", "/Categorie/Aggiungi")" asp-area="" asp-page="/Categorie/Aggiungi">Aggiungi Categoria</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link @FrontendUtil.ActiveClass(ViewContext.RouteData.Values["page"]?.ToString() ?? "", "/Fornitori/Index")" asp-area="" asp-page="/Fornitori/Index">Fornitori</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link @FrontendUtil.ActiveClass(ViewContext.RouteData.Values["page"]?.ToString() ?? "", "/Fornitori/Aggiungi")" asp-area="" asp-page="/Fornitori/Aggiungi">Aggiungi Fornitore</a>
                         </li>
                     </ul>
                 </div>

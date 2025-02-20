@@ -16,10 +16,12 @@ public class AggiungiProdottoModel : PageModel
     //creo una lista di select list item per contenere le categorie
     //select list item è un oggetto che rappresenta un elemento di una select list
     public List<SelectListItem> CategorieSelectList { get; set; } = new List<SelectListItem>();
+    public List<SelectListItem> FornitoriSelectList {get; set;} = new List<SelectListItem>();
 
     public void OnGet()
     {
         CaricaCategorie();
+        CaricaFornitori();
     }
 
     public IActionResult OnPost()
@@ -29,6 +31,7 @@ public class AggiungiProdottoModel : PageModel
         if (!ModelState.IsValid)
         {
             CaricaCategorie(); //carico le categorie se no quando si carica viene caricato senza categorie
+            CaricaFornitori();
             //page è un metodo di page model che restituisce un oggetto page result che rappresenta la pagina nella quale siamo
             return Page();//se il modello non è valido ritorno la pagina
         }
@@ -36,12 +39,13 @@ public class AggiungiProdottoModel : PageModel
         try
         {
             DbUtils.ExecuteNonQuery(
-                "INSERT INTO Prodotti (Nome, Prezzo, CategoriaId) VALUES (@nome, @prezzo, @categoriaId)",
+                "INSERT INTO Prodotti (Nome, Prezzo, CategoriaId, FornitoreId) VALUES (@nome, @prezzo, @categoriaId, @fornitore)",
                 cmd =>
                 {
                     cmd.Parameters.AddWithValue("@nome", Prodotto.Nome);
                     cmd.Parameters.AddWithValue("@prezzo", Prodotto.Prezzo);
                     cmd.Parameters.AddWithValue("@categoriaId", Prodotto.IdCategoria);
+                    cmd.Parameters.AddWithValue("@fornitore", Prodotto.IdFornitore);
                 }
             );
         }
@@ -65,6 +69,25 @@ public class AggiungiProdottoModel : PageModel
                 reader => new SelectListItem
                 {
                     Value = reader.GetInt32(0).ToString(), 
+                    Text = reader.GetString(1)
+                }
+            );
+        }
+        catch (Exception ex)
+        {
+            SimpleLogger.Log(ex);
+        }
+    }
+
+     private void CaricaFornitori()
+    {
+        try
+        {
+            FornitoriSelectList = DbUtils.ExecuteReader(
+                "SELECT Id, Nome FROM Fornitori",
+                reader => new SelectListItem
+                {
+                    Value = reader.GetInt32(0).ToString(),
                     Text = reader.GetString(1)
                 }
             );

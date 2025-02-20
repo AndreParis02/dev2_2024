@@ -1,4 +1,4 @@
-@page 
+@page
 @model DashboardModel
 
 @{
@@ -7,14 +7,28 @@
 
 <h1>@ViewData["Title"]</h1>
 <hr>
+
+<!-- Prima riga di tabelle -->
 <div class="row">
-        <div class="col-md-4">
-            @await Html.PartialAsync("ProdottiPiuCostosi",Model.ProdottiPiuCostosi)
-        </div>
-        <div class="col-md-4">
-            @await Html.PartialAsync("ProdottiRecenti",Model.ProdottiRecenti)
-        </div>
-        <div class="col-md-4">
-            @await Html.PartialAsync("ProdottiPerCategoria",Model.ProdottiPerCategoria)
-        </div>
+    <div class="col-md-6">
+        @await Html.PartialAsync("ProdottiPiuCostosi", Model.ProdottiPiuCostosi)
+    </div>
+
+    <div class="col-md-6">
+        @await Html.PartialAsync("ProdottiRecenti", Model.ProdottiRecenti)
+    </div>
+</div>
+
+<!-- Spazio verticale tra le righe -->
+<div class="mb-4"></div>
+
+<!-- Seconda riga di tabelle -->
+<div class="row">
+    <div class="col-md-6">
+        @await Html.PartialAsync("ProdottiPerCategoria", Model.ProdottiPerCategoria)
+    </div>
+
+    <div class="col-md-6">
+        @await Html.PartialAsync("ProdottiPerFornitore", Model.ProdottiPerFornitore)
+    </div>
 </div>

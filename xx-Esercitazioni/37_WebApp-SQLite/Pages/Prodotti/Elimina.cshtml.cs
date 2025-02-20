@@ -16,14 +16,17 @@ public class EliminaModel : PageModel
         {
             //Utilizzo di DbUtils per leggere la lista dei prodotti
             var Prodotti = DbUtils.ExecuteReader(
-                "SELECT p.Id, p.Nome, p.Prezzo, c.Nome as CategoriaNome FROM Prodotti p LEFT JOIN Categorie c ON p.CategoriaId = c.Id WHERE p.Id = @id",
+                @"SELECT p.Id, p.Nome, p.Prezzo, c.Nome, f.Nome FROM Prodotti p 
+                LEFT JOIN Categorie c ON p.CategoriaId = c.Id 
+                LEFT JOIN Fornitori f ON p.FornitoreId = f.Id WHERE p.Id = @id",
 
                         reader => new ProdottoViewModel
                         {
                             Id = reader.GetInt32(0),
                             Nome = reader.GetString(1),
                             Prezzo = reader.GetDouble(2),
-                            CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
+                            CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3),
+                            FornitoreNome = reader.IsDBNull(4) ? "Nessuno" : reader.GetString(4)
                         },
                          cmd =>
                          {
@@ -54,7 +57,8 @@ public class EliminaModel : PageModel
                             Id = reader.GetInt32(0),
                             Nome = reader.GetString(1),
                             Prezzo = reader.GetDouble(2),
-                            CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
+                            CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3),
+                             FornitoreNome = reader.IsDBNull(4) ? "Nessuno" : reader.GetString(4)
                         },
                          cmd =>
                          {
