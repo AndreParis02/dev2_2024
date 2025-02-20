@@ -51,7 +51,7 @@ public class AggiungiProdottoModel : PageModel
             CaricaCategorie();
             return Page();
         }
-        return RedirectToPage("Index");
+        return RedirectToPage("PagedIndex");
     }
 
     //metodo per caricare le categorie

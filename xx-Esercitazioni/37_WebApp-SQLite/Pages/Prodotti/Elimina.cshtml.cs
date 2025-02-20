@@ -67,6 +67,6 @@ public class EliminaModel : PageModel
         {
             SimpleLogger.Log(ex);
         }
-        return RedirectToPage("Index");
+        return RedirectToPage("PagedIndex");
     }
 }

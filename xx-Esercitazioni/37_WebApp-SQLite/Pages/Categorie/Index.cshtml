@@ -1,50 +1,60 @@
-@page
+@page "PagedIndex"
 @model CategorieModel
-
+@using _37_WebApp_SQLite.Models
+@using _37_WebApp_SQLite.Utilities
 @using _37_WebApp_SQLite.Pages.Categorie;
 
+
 @{
-    ViewData["Title"] = "Elenco Categorie";
+    ViewData["Title"] = "Categorie Paginate";
+    //configuriamo il modello per la paginazione.
+
+
+    var paginationModel = new PaginationModel
+    {
+        PageIndex = Model.Categorie.PageIndex,
+        TotalPages = Model.Categorie.TotalPages,
+        PageUrl = page => Url.Page("Index", new { pageIndex = page })
+    };
 }
 
-<h1>@ViewData["Title"]</h1>
 
-<div>
-    @*inseriamo la partial view per la ricerca delle categorie*@
+<h1>Categorie Paginate</h1>
+ @*inseriamo la partial view per la ricerca delle categorie*@
                     <div class="d-flex">
                         @await Html.PartialAsync("CategoriaSearch")
                     </div>
                     <br>
-    <table class="table table-bordered">
-        <thead>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var categoria in Model.Categorie)
+        {
             <tr>
-                <th>Id</th>
-                <th>Nome</th>
-                <th>Azioni</th>
+                <td>@categoria.Id</td>
+                <td>@categoria.Nome</td>
+                <td><div class="btn-group mt-auto">
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                            <a asp-page="Dettaglio" asp-route-id="@categoria.Id">Details</a>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                            <a asp-page="Modifica" asp-route-id="@categoria.Id">Edit</a>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                            <a asp-page="Elimina" asp-route-id="@categoria.Id">Delete</a>
+                        </button>
+                    </div></td>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var categoria in Model.Categorie)
-            {
-                <tr>
-                    <td>@categoria.Id</td>
-                    <td>@categoria.Nome</td>
-                    <td>
-                        <div class="btn-group mt-auto">
-                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
-                                <a asp-page="Dettaglio" asp-route-id="@categoria.Id">Details</a>
-                            </button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
-                                <a asp-page="Modifica" asp-route-id="@categoria.Id">Edit</a>
-                            </button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
-                                <a asp-page="Elimina" asp-route-id="@categoria.Id">Delete</a>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
+@await Html.PartialAsync("_Pagination", paginationModel)
+
 
 </div>

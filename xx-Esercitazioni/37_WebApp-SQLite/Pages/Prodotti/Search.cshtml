@@ -1,13 +1,24 @@
-@page 
+@page  "Search"
 @model SearchModel
-
+@using _37_WebApp_SQLite.Models;
 @using _37_WebApp_SQLite.Pages.Prodotti;
 @using _37_WebApp_SQLite.Utilities;
 
+
 @{
-    ViewData["Title"] = "Cerca Prodotti";
+    ViewData["Title"] = "Cerca Prodotti Paginati";
+    //configuriamo il modello per la paginazione.
+
+
+    var paginationModel = new PaginationModel
+    {
+        PageIndex = Model.Prodotti.PageIndex,
+        TotalPages = Model.Prodotti.TotalPages,
+        PageUrl = page => Url.Page("Search", new { q = Model.SearchTerm, pageIndex = page })
+    };
 }
 <h1>Cerca Prodotti</h1>
+
 
 <form method="get" class="mb-3">
     <div class="input-group">
@@ -47,3 +58,4 @@ else
 {
     <p>Nessun prodotto trovato</p>
 }
+@await Html.PartialAsync("_Pagination", paginationModel)

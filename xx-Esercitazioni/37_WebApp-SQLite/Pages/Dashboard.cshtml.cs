@@ -69,7 +69,7 @@ public class DashboardModel : PageModel
 
         try
         {
-            TotProd = DbUtils.ExecuteScalar<int>("SELECT COUNT (*) FROM Prodotti p LEFT JOIN Categorie c ON p.CategoriaId = c.Id WHERE c.Nome = 'Film'");
+            TotProd = DbUtils.ExecuteScalar<int>("SELECT COUNT (*) FROM Prodotti p LEFT JOIN Categorie c ON p.CategoriaId = c.Id WHERE c.Nome = 'Giochi'");
             
         }
         catch(Exception ex)
@@ -86,7 +86,7 @@ public class DashboardModel : PageModel
                         SELECT p.Id, p.Nome, p.Prezzo, c.Nome AS CategoriaNome 
                         FROM Prodotti p
                         LEFT JOIN Categorie c ON p.CategoriaId = c.Id
-                        WHERE c.Nome = 'Film'
+                        WHERE c.Nome = 'Giochi'
                         LIMIT @TotProd
                     ",
                     reader => new ProdottoViewModel

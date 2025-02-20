@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using _37_WebApp_SQLite.Models;
 using _37_WebApp_SQLite.Utilities;
+namespace _37_WebApp_SQLite.Pages.Prodotti;
 public class PagedIndexModel : PageModel
 {
     public PaginatedList<ProdottoViewModel> Prodotti{ get; set; }
@@ -12,7 +13,6 @@ public class PagedIndexModel : PageModel
         int totalCount = DbUtils.ExecuteScalar<int>("SELECT COUNT (*) FROM Prodotti");
         //calcola l'offset per la query
         int offset = (currentPage - 1) * PageSize;
-
         //Recupera i prodotti per la pagina corrente
         //in SQLite si usa LIMIT e OFFSET per la paginazione
         //limit = quanti elementi voglio
@@ -21,10 +21,11 @@ public class PagedIndexModel : PageModel
         //LIMIT 5 OFFSET 0 -> 5 elementi a partire dall'elemento 0
         string sql = $@"
             SELECT p.Id, p.Nome, p.Prezzo, c.Nome as CategoriaNome
-            FROM Prodotti p 
-            LEFT JOIN Categorie c ON p.CategoriaId = c.Id 
-            ORDER BY p.Id 
+            FROM Prodotti p
+            LEFT JOIN Categorie c ON p.CategoriaId = c.Id
+            ORDER BY p.Id
             LIMIT {PageSize} OFFSET {offset}";
+
 
         List<ProdottoViewModel> items = DbUtils.ExecuteReader(sql,
         reader => new ProdottoViewModel
@@ -35,7 +36,6 @@ public class PagedIndexModel : PageModel
                 CategoriaNome = reader.IsDBNull(3) ? "Nessuna" : reader.GetString(3)
             }
         );
-
         //Crea l'oggetto paginato
         Prodotti = new PaginatedList<ProdottoViewModel>(items, totalCount, currentPage, PageSize);
     }
