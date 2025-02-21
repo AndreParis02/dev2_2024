@@ -950,3 +950,15 @@ Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLi
 Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
    at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 68
+2025-02-20 14:12:21 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 68
+2025-02-20 14:14:02 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Categorie.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Elimina.cshtml.cs:line 62
+2025-02-20 14:14:30 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
