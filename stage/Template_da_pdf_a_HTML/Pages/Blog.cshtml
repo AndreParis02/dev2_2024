@@ -1,0 +1,90 @@
+@page
+@model BlogModel
+@{
+    ViewData["Title"] = "Blog";
+}
+<div class="d-flex justify-content-center" id="container-main-Portfolio">
+    <div class="d-flex flex-column">
+        <div class="d-flex flex-row justify-content-center">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 g-4"
+                style="width: 100%;">
+                <div class="d-flex justify-content-start">
+                    <div class="card" id="card_services_we_offer">
+
+                        <div class="card-body" style="border-color: cornflowerblue;">
+
+                            <p class="card-title" style="color: cornflowerblue;"> <b>•BLOG•</b></p>
+                            <h1 class="card-text" style="color: white;"><b>
+                                    <p>Latest News</p>
+                                </b>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end" id="d-flex-btn-services">
+                    <button id="button-services">See All Post <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center" id="contanier-card-news-blog">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-5" style="width: 100%;">
+                <div class="d-flex flex-wrap">
+                    <div class="card" id="card-news-blog">
+                        <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill"
+                            id="badge-card-blog">
+                            05 oct 2022
+                        </span>
+                        <img src="/Image/Image_1_Blog.jpg" class="card-img-top" id="image-blog">
+                        <div class="card-body" id="textbox-card">
+                            <p><i class="fa-solid fa-bookmark fa-2xs" id="card-title-services"></i> Hosting | <i
+                                    class="fa-solid fa-user fa-2xs" id="card-title-services"></i> Allan Moore</p>
+                            <h5 class="card-title fs-4"><b>How Litespeed Technology Works To Speed up Your Site </b>
+                            </h5>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. lure nulla
+                                dolorem, voluptates molestiae</p>
+                            <a href="#" class="card-link" id="card-read-more">Read more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-wrap">
+                    <div class="card" id="card-news-blog">
+                        <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill"
+                            id="badge-card-blog">
+                            15 sep 2022
+                        </span>
+                        <img src="/Image/Image_2_Blog.jpg" class="card-img-top" id="image-blog">
+                        <div class="card-body" id="textbox-card">
+                            <p><i class="fa-solid fa-bookmark fa-2xs" id="card-title-services"></i> Web Dev | <i
+                                    class="fa-solid fa-user fa-2xs" id="card-title-services"></i> Mhmd Admin</p>
+                            <h5 class="card-title fs-4"><b>Give Your Website A New Look And Feel With Themes</b></h5>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. lure nulla
+                                dolorem, voluptates molestiae</p>
+                            <a href="#" class="card-link" id="card-read-more">Read more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-wrap">
+                    <div class="card" id="card-news-blog">
+                        <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill"
+                            id="badge-card-blog">
+                            27 aug 2022
+                        </span>
+                        <img src="/Image/Image_3_Blog.jpg" class="card-img-top" id="image-blog">
+                        <div class="card-body" id="textbox-card">
+                            <p><i class="fa-solid fa-bookmark fa-2xs" id="card-title-services"></i> SEO | <i
+                                    class="fa-solid fa-user fa-2xs" id="card-title-services"></i> Yusuf Amin</p>
+                            <h5 class="card-title fs-4"><b>The role Of Domain Names In SEO World Explained</b></h5>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. lure nulla
+                                dolorem, voluptates molestiae</p>
+                            <a href="#" class="card-link" id="card-read-more">Read more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

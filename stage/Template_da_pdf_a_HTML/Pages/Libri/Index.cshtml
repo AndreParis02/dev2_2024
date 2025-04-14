@@ -1,0 +1,116 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.Libri.IndexModel
+
+@{
+    ViewData["Title"] = "Lista Libri";
+}
+
+<center>
+    <h1 style="margin-top: 5%;">@ViewData["Title"]</h1>
+</center>
+
+<div class="main-container" style="border-radius: 10%;">
+
+
+@if (@Model.Libro.Any() == true)
+{
+        <div class="table-container" style="border:none; margin-bottom: 70px;">
+            <p>
+                <a asp-page="Create">Aggiungi Libro</a>
+            </p>
+
+            <!-- 
+                <form>
+                <p>
+                    <label><input type="text" class="Search" asp-for="SearchString" style="border-radius: 5%;"/></label>
+                    <input type="submit" value="Search" style="color: white; background-color: cornflowerblue; border-radius: 10%;"/>
+                </p>
+            </form>
+            -->
+            <div class="table-row heading">
+                <div class="row-item">@Html.DisplayNameFor(model => model.Libro[0].Titolo)</div>
+                <div class="row-item">Autore</div>
+                <div class="row-item">Genere</div>
+                <div class="row-item">Anno Uscita</div>
+                <div class="row-item">@Html.DisplayNameFor(model => model.Libro[0].Disponibile)</div>               
+                <div class="row-item">Actions</div>
+            </div>
+            @foreach (var item in Model.Libro)
+            {
+                <div class="table-row">
+                    <div class="row-item">@Html.DisplayFor(modelItem => item.Titolo)</div>
+                     @if (item.idAutore == null)
+                    {
+                        <div class="row-item">(Autore non impostato)</div>
+                    }
+                    else
+                    {
+                        <div class="row-item">@Html.DisplayFor(modelItem => item.Autore.Cognome)</div>
+                    }
+                    
+                    @if (item.idGenere == null)
+                    {
+                        <div class="row-item">(Genere non impostato)</div>
+                    }
+                    else
+                    {
+                        <div class="row-item">@Html.DisplayFor(modelItem => item.Genere.Nome)</div>
+                    }
+
+                    
+                    <div class="row-item">@item.AnnoUscita.ToString("yyyy")</div>
+                    @if (item.Disponibile == true)
+                    {
+                        <div class="row-item">Disponibile</div>
+                    }
+                    else
+                    {
+                        <div class="row-item">Non disponibile</div>
+                    }
+                    
+
+                    <div class="row-item">
+                        <div class="btn-group mt-auto">
+                            <button type="button" class="btn" id="btn-details">
+                                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+}
+else
+    {
+                <div class="table-container" style="border:none;">
+            <p>
+                <a asp-page="Create">Aggiungi Libro</a>
+            </p>
+
+           <!-- <form>
+                <p>
+                    <label><input type="text" class="Search" asp-for="SearchString" style="border-radius: 5%;"/></label>
+                    <input type="submit" value="Search" style="color: white; background-color: cornflowerblue; border-radius: 10%;"/>
+                </p>
+            </form>
+            -->
+            <div class="table-row heading">
+                <div class="row-item">@Html.DisplayNameFor(model => model.Libro[0].Titolo)</div>
+                <div class="row-item">Autore</div>
+                <div class="row-item">Genere</div>
+                <div class="row-item">Anno Uscita</div>
+                <div class="row-item">@Html.DisplayNameFor(model => model.Libro[0].Disponibile)</div>               
+                <div class="row-item">Actions</div>
+            </div> 
+            <div class="table-row">
+                <div class="row-item">
+                    <h4>Nessun Libro disponibile</h4>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+    <a href="/Library" class="btn btn-secondary">Torna indietro</a>

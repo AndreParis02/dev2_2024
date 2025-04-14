@@ -1,0 +1,62 @@
+@page
+@model EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Richiesta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Richiesta.Id" />
+            <div class="form-group">
+                
+                <b style="color: red;">* </b><label asp-for="Richiesta.Nome" class="control-label"></label>
+                <input asp-for="Richiesta.Nome" class="form-control" />
+                <span asp-validation-for="Richiesta.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+               <b style="color: red;">* </b> <label asp-for="Richiesta.Cognome" class="control-label"></label>
+                <input asp-for="Richiesta.Cognome" class="form-control" />
+                <span asp-validation-for="Richiesta.Cognome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <b style="color: red;">* </b><label asp-for="Richiesta.Email" class="control-label"></label>
+                <input asp-for="Richiesta.Email" class="form-control" />
+                <span asp-validation-for="Richiesta.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <b style="color: red;">* </b><label asp-for="Richiesta.Oggetto" class="control-label"></label>
+                <input asp-for="Richiesta.Oggetto" class="form-control" />
+                <span asp-validation-for="Richiesta.Oggetto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <b style="color: red;">* </b><label asp-for="Richiesta.Messaggio" class="control-label"></label>
+                <input asp-for="Richiesta.Messaggio" class="form-control" />
+                <span asp-validation-for="Richiesta.Messaggio" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                
+                <input type="submit" value="Save" class="btn btn-primary" /> |
+                <a asp-page="./Index" class="btn btn-secondary">Torna indietro</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

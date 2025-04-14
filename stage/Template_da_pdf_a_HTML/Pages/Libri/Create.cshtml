@@ -1,0 +1,53 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.Libri.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<center>
+    <h1>Aggiungi Libro</h1>
+</center>
+
+<hr />
+<div class="row" id="inserimento-genere">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Libro.Titolo" class="control-label"></label>
+                <input asp-for="Libro.Titolo" class="form-control" />
+                <span asp-validation-for="Libro.Titolo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Genere</label>
+                <select asp-for="Libro.idGenere" class="form-control" asp-items="ViewBag.idGenere">
+                    <option value="">-- Seleziona Genere --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Autore</label>
+                <select asp-for="Libro.idAutore" class="form-control" asp-items="ViewBag.idAutore">
+                    <option value="">-- Seleziona Autore --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                Anno Uscita
+                <input type="date" asp-for="Libro.AnnoUscita" class="form-control" />
+                <span asp-validation-for="Libro.AnnoUscita" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" /> |
+                <a asp-page="./Index" class="btn btn-secondary">Torna indietro</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

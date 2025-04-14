@@ -1,0 +1,27 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.Generi.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<center>
+    <h1>Dettagli Genere</h1>
+</center>
+<div class="table-container" style="border:none; margin-top: 100px; margin-bottom: 100px;">
+    <div class="table-row heading">
+        <div class="row-item"> @Html.DisplayNameFor(model => model.Genere.Nome)</div>
+        <div class="row-item">Actions</div>
+    </div>
+    <div class="table-row">
+        <div class="row-item">@Html.DisplayFor(model => model.Genere.Nome)</div>
+        <div class="row-item">
+            <div class="btn-group mt-auto">
+                <button type="button" class="btn" id="btn-details">
+                    <a asp-page="./Edit" asp-route-id="@Model.Genere.Id">Edit</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a asp-page="./Index" class="btn btn-secondary">Torna indietro</a>

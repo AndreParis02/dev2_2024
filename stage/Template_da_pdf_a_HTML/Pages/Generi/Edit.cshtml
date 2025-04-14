@@ -1,0 +1,34 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.Generi.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Genere</h4>
+<hr />
+<div class="row" id="inserimento-genere">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Genere.Id" />
+            <div class="form-group">
+                
+                <label asp-for="Genere.Nome" class="control-label"></label>
+                <input asp-for="Genere.Nome" class="form-control" />
+                <span asp-validation-for="Genere.Nome" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" /> |
+                <a asp-page="./Index" class="btn btn-secondary">Torna indietro</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

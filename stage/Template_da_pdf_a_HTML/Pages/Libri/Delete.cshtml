@@ -1,0 +1,61 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.Libri.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+
+</div>
+<div class="table-container" style="border:none; margin-top: 100px; margin-bottom: 100px;">
+    <div class="table-row heading">
+        <div class="row-item">@Html.DisplayNameFor(model => model.Libro.Titolo)</div>
+        <div class="row-item">Autore</div>
+        <div class="row-item">Genere</div>
+        <div class="row-item">Anno Uscita</div>
+        <div class="row-item"> Data Inserimento</div>
+        <div class="row-item">Data Modifica</div>
+        <div class="row-item">@Html.DisplayNameFor(model => model.Libro.Disponibile)</div>
+    </div>
+    <div class="table-row">
+        <div class="row-item">@Html.DisplayFor(model => model.Libro.Titolo)</div>
+        @if (@Model.Libro.idAutore == null)
+        {
+            <div class="row-item">(Autore non impostato)</div>
+        }
+        else
+        {
+            <div class="row-item">@Html.DisplayFor(model => model.Libro.Autore.Cognome)</div>
+        }
+        @if (@Model.Libro.idGenere == null)
+        {
+            <div class="row-item">(Genere non impostato)</div>
+        }
+        else
+        {
+            <div class="row-item">@Html.DisplayFor(model => model.Libro.Genere.Nome)</div>
+        }
+        <div class="row-item">@Html.DisplayFor(model => model.Libro.AnnoUscita)</div>
+        <div class="row-item">@Html.DisplayFor(model => model.Libro.DataInserimento)</div>
+        <div class="row-item">@Html.DisplayFor(model => model.Libro.DataModifica)</div>
+        @if (Model.Libro.Disponibile == true)
+        {
+            <div class="row-item">Disponibile</div>
+        }
+        else
+        {
+            <div class="row-item">Non disponibile</div>
+        }
+    </div>
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Libro.Id" />
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+    <a asp-page="./Index" class="btn btn-secondary">Torna indietro</a>
+</form>

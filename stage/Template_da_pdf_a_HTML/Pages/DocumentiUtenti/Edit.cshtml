@@ -1,0 +1,55 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.DocumentiUtenti.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>DocumentoUtente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DocumentoUtente.Id" />
+            <input type="hidden" asp-for="DocumentoUtente.idUtente" />
+            <div class="form-group">
+
+                <label asp-for="DocumentoUtente.Numero" class="control-label"></label>
+                <input asp-for="DocumentoUtente.Numero" class="form-control" />
+                <span asp-validation-for="DocumentoUtente.Numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Tipo</label>
+                <select asp-for="DocumentoUtente.idTipo" class="form-control" asp-items="ViewBag.idTipo">
+                    <option value="">-- Seleziona Tipo --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Utente</label>
+                <select asp-for="DocumentoUtente.idUtente" class="form-control" asp-items="ViewBag.idUtente" disabled>
+                    <option value="">-- Seleziona Utente --</option>
+                </select>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="DocumentoUtente.Scadenza" class="control-label"></label>
+                <input type="date" asp-for="DocumentoUtente.Scadenza" class="form-control" />
+                <span asp-validation-for="DocumentoUtente.Scadenza" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

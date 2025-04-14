@@ -1,0 +1,61 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.Richieste.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<center>
+    <h1>@ViewData["Title"]</h1>
+    <h3>Are you sure you want to delete this?</h3>
+</center>
+</br>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Richiesta.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Richiesta.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Richiesta.Cognome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Richiesta.Cognome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Richiesta.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Richiesta.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Richiesta.Oggetto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Richiesta.Oggetto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Richiesta.Messaggio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Richiesta.Messaggio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Richiesta.Data_inserimento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Richiesta.Data_inserimento)
+        </dd>
+    </dl>
+    <center>
+        <form method="post">
+            <input type="hidden" asp-for="Richiesta.Id" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> 
+            <a asp-page="./Index" class="btn btn-primary">Torna indietro</a>
+        </form>
+    </center>
+</div>

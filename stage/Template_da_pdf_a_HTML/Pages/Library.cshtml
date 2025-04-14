@@ -1,0 +1,112 @@
+@page
+@model LibraryModel
+@{
+    ViewData["Title"] = "Library";
+}
+
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column">
+        <div class="d-flex flex-row justify-content-center">
+
+            <div class="d-flex justify-content-start">
+                <div class="card" id="card_services_we_offer">
+
+                    <div class="card-body" style="border-color: cornflowerblue; text-align: center;">
+
+                        <p class="card-title" style="color: cornflowerblue;"> <b>•LIBRARY•</b></p>
+                        <h1 class="card-text" style="color: white;"><b>
+                                <p>Services We Offer</p>
+                            </b>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-5"
+                style="width: 100%;">
+
+                <div class="d-flex flex-wrap">
+                    <div class="card" id="card-services" style="text-align: center; ">
+                        <div class="card-body">
+                            <p class="card-title fs-3"><i class="fa-solid fa-bookmark fa-xl"
+                                    id="card-title-services"></i>
+                            </p>
+                            <p class="card-title fs-3"><b>Generi</b></p>
+                            <p class="card-text">Lista completa di tutti i Generi disponibili in negozio</p>
+                            <a href="/Generi" class="card-link" id="card-read-more">Visualizza la Lista completa <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div class="card" id="card-services" style="text-align: center; ">
+                        <div class="card-body">
+                            <p class="card-title fs-3"><i class="fa-solid fa-book fa-xl" id="card-title-services"></i>
+                            </p>
+                            <p class="card-title fs-3"><b>Libri</b></p>
+                            <p class="card-text">Lista completa di tutti i Libri disponibili in negozio</p>
+                            <a href="/Libri" class="card-link" id="card-read-more">Visualizza la Lista completa <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div class="card" id="card-services" style="text-align: center; ">
+                        <div class="card-body">
+                            <p class="card-title fs-3"><i class="fa-solid fa-shop fa-xl" id="card-title-services"></i>
+                            </p>
+                            <p class="card-title fs-3"><b>Prestiti</b></p>
+                            <p class="card-text">Lista completa di tutti i Prestiti effettuati in negozio</p>
+                            <a href="/Prestiti" class="card-link" id="card-read-more">Visualizza la Lista completa <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div class="card" id="card-services" style="text-align: center; ">
+                        <div class="card-body">
+                            <p class="card-title fs-3"><i class="fa-solid fa-user fa-xl" id="card-title-services"></i>
+                            </p>
+                            <p class="card-title fs-3"><b>Utente</b></p>
+                            <p class="card-text"> Visualizza/Modifica tutti i tuoi dati e visualizza tutti prestiti
+                                attivi/archiviati</p>
+                            <a href="/Utenti" class="card-link" id="card-read-more">Vai alla pagina <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div class="card" id="card-services" style="text-align: center; ">
+                        <div class="card-body">
+                            <p class="card-title fs-3"><i class="fa-solid fa-address-card fa-xl"
+                                    id="card-title-services"></i>
+                            </p>
+                            <p class="card-title fs-3"><b>Documenti</b></p>
+                            <p class="card-text">Lista completa di tutti <i> Documenti degli Utenti registrati in negozio</i></p>
+                            <a href="/DocumentiUtenti" class="card-link" id="card-read-more">Vai alla pagina <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div class="card" id="card-services" style="text-align: center; ">
+                        <div class="card-body">
+                            <p class="card-title fs-3"><i class="fa-solid fa-book-open-reader fa-xl"
+                                    id="card-title-services"></i>
+                            </p>
+                            <p class="card-title fs-3"><b>Autori</b></p>
+                            <p class="card-text">Lista completa di tutti gli Autori dei Libri disponibili in negozio</p>
+                            <a href="/Autori" class="card-link" id="card-read-more">Vai alla pagina <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- d-flex justify-content-start-->

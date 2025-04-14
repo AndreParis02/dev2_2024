@@ -1,0 +1,208 @@
+2025-03-20 16:47:46 - Exception: SQLite Error 1: 'near "AND": syntax error'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters)
+   at SearchModel.OnGet(String q)
+2025-03-20 16:56:46 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at DetailsModel.OnPost(Int32 id)
+2025-03-21 09:04:01 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at DetailsModel.OnPost(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Details.cshtml.cs:line 64
+2025-03-21 11:08:55 - Exception: SQLite Error 1: 'near "*": syntax error'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Utilities\DbUtils.cs:line 63
+   at ModificaModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 17
+2025-03-21 11:13:24 - Exception: SQLite Error 1: 'near "*": syntax error'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Utilities\DbUtils.cs:line 63
+   at ModificaModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 46
+2025-03-21 11:14:41 - Exception: SQLite Error 1: 'near "*": syntax error'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Utilities\DbUtils.cs:line 63
+   at ModificaModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 46
+2025-03-21 11:15:21 - Exception: SQLite Error 1: 'near "*": syntax error'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters)
+   at ModificaModel.OnGet(Int32 id)
+2025-03-21 11:21:46 - Exception: SQLite Error 1: 'near "*": syntax error'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Utilities\DbUtils.cs:line 63
+   at ModificaModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 46
+2025-03-21 11:23:42 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at ModificaModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 64
+2025-03-21 11:42:52 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at ModificaModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 36
+2025-03-21 11:45:57 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at ModificaModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 36
+2025-03-21 11:47:47 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at ModificaModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 36
+2025-03-21 11:58:32 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at ModificaModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 35
+2025-03-21 11:59:33 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at ModificaModel.OnGet(Int32 id)
+2025-03-21 11:59:34 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at ModificaModel.OnGet(Int32 id)
+2025-03-21 11:59:35 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at ModificaModel.OnGet(Int32 id)
+2025-03-21 11:59:37 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at ModificaModel.OnGet(Int32 id)
+2025-03-21 12:14:42 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at EditModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 65
+2025-03-21 12:14:49 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at EditModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 65
+2025-03-21 12:17:22 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at EditModel.OnGet(Int32 id)
+2025-03-21 12:27:16 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at EditModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 35
+2025-03-21 12:27:19 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at EditModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 35
+2025-03-21 13:34:59 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at EditModel.OnGet(Int32 id) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Edit.cshtml.cs:line 35
+2025-03-26 14:54:24 - Exception: SQLite Error 1: 'no such table: Richieste'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Utilities\DbUtils.cs:line 63
+   at SearchModel.OnGet(String q) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Richieste\Search.cshtml.cs:line 34
+2025-03-26 14:54:24 - Exception: SQLite Error 1: 'no such table: Richieste'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteScalar[T](String sql, Action`1 setupParameters) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Utilities\DbUtils.cs:line 38
+   at SearchModel.OnGet(String q) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Richieste\Search.cshtml.cs:line 55
+2025-03-26 14:54:29 - Exception: SQLite Error 1: 'no such table: Richieste'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Utilities\DbUtils.cs:line 63
+   at SearchModel.OnGet(String q) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Richieste\Search.cshtml.cs:line 34
+2025-03-26 14:54:29 - Exception: SQLite Error 1: 'no such table: Richieste'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteScalar[T](String sql, Action`1 setupParameters) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Utilities\DbUtils.cs:line 38
+   at SearchModel.OnGet(String q) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Richieste\Search.cshtml.cs:line 55
+2025-03-26 14:54:34 - Exception: SQLite Error 1: 'no such table: Richieste'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Utilities\DbUtils.cs:line 63
+   at SearchModel.OnGet(String q) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Richieste\Search.cshtml.cs:line 34
+2025-03-26 14:54:34 - Exception: SQLite Error 1: 'no such table: Richieste'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteScalar[T](String sql, Action`1 setupParameters) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Utilities\DbUtils.cs:line 38
+   at SearchModel.OnGet(String q) in C:\Users\AndreaParis(Stage)\Documents\Andrea_Paris\Template_da_pdf_a_HTML\Pages\Richieste\Search.cshtml.cs:line 55
+2025-03-26 14:57:47 - Exception: SQLite Error 1: 'no such table: Richieste'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters)
+   at SearchModel.OnGet(String q)
+2025-03-26 14:57:47 - Exception: SQLite Error 1: 'no such table: Richieste'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteScalar[T](String sql, Action`1 setupParameters)
+   at SearchModel.OnGet(String q)
+2025-03-26 15:40:52 - Exception: SQLite Error 1: 'no such table: Richieste'.
+Stack Trace:    at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at Template_da_pdf_a_HTML.Utilities.DbUtils.ExecuteScalar[T](String sql, Action`1 setupParameters)
+   at SearchModel.OnGet(String q)

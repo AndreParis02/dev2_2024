@@ -1,0 +1,63 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.Generi.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+
+    <div class="table-container" style="border:none; margin-top: 100px; margin-bottom: 100px;">
+        <div class="table-row heading">
+            <div class="row-item"> @Html.DisplayNameFor(model => model.Genere.Nome)</div>
+        </div>
+        <div class="table-row">
+            <div class="row-item">@Html.DisplayFor(model => model.Genere.Nome)</div>
+        </div>
+    </div>
+
+    @if (Model.Allerta == false)
+    {
+        <form method="post">
+            <input type="hidden" asp-for="Genere.Id" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-page="./Index" class="btn btn-secondary">Torna indietro</a>
+        </form>
+    }
+    else
+    {
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DeleteModal">
+            Delete
+        </button> 
+        <a asp-page="./Index" class="btn btn-secondary">Torna indietro</a>
+        <!-- Modal HTML -->
+        <div class="modal fade" id="DeleteModal" tabindex="-1" aria-labelledby="DeleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color: midnightblue;">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="DeleteModalLabel">Delete</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Questo Genere è associato ad uno o più libri!</p>
+                        <p>Se lo elimini i libri con quel Genere associato perderanno il Genere</p>
+                        <p>Vuoi confermare la cancellazione?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <form method="post">
+                            <input type="hidden" asp-for="Genere.Id" />
+                            <input type="submit" value="Confirm" class="btn btn-danger" /> |
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Ensure Bootstrap JavaScript is included for modal functionality -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

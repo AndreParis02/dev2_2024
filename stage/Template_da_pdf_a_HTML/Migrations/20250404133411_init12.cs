@@ -1,0 +1,29 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace Template_da_pdf_a_HTML.Migrations
+{
+    /// <inheritdoc />
+    public partial class init12 : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "seAssociato",
+                table: "Generi");
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AddColumn<bool>(
+                name: "seAssociato",
+                table: "Generi",
+                type: "INTEGER",
+                nullable: false,
+                defaultValue: false);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.Generi.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        <center><h1>Aggiungi Genere</h1></center>
+    <hr />
+    <div class="row" id="inserimento-genere">
+    <div class="col-md-4">
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Genere.Nome" class="control-label"></label>
+                <input asp-for="Genere.Nome" class="form-control" />
+                <span asp-validation-for="Genere.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <br><br>
+                <input type="submit" value="Create" class="btn btn-primary" />|
+                <a asp-page="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

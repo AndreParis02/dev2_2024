@@ -1,0 +1,51 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.Utenti.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<center>
+    <h1>Modifica Utente</h1>
+</center>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Utente.Id" />
+            <input type="hidden" asp-for="Utente.DataInserimento" />
+            <div class="form-group">
+
+                <label asp-for="Utente.Nome" class="control-label"></label>
+                <input asp-for="Utente.Nome" class="form-control" />
+                <span asp-validation-for="Utente.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="Utente.Cognome" class="control-label"></label>
+                <input asp-for="Utente.Cognome" class="form-control" />
+                <span asp-validation-for="Utente.Cognome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="Utente.DataNascita" class="control-label"></label>
+                <input type="date" asp-for="Utente.DataNascita" class="form-control" />
+                <span asp-validation-for="Utente.DataNascita" class="text-danger"></span>
+            </div>
+            <hr />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />|
+                <a asp-page="./Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

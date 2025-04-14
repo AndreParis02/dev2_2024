@@ -1,0 +1,80 @@
+@page
+@model Template_da_pdf_a_HTML.Pages_Prestiti.IndexModel
+
+@{
+    ViewData["Title"] = "Lista Prestiti";
+}
+
+<center>
+    <h1 style="margin-top: 5%;">@ViewData["Title"]</h1>
+</center>
+<br>
+
+@if(@Model.prestitoScaduto == true)
+{
+    <center><h3 style="color: red ";>sono presenti uno o più libri con data di riconsegna scaduta</h3></center>
+}
+
+<div class="main-container" style="border-radius: 10%;">
+
+
+@if (@Model.Prestito.Any() == true)
+{
+        <div class="table-container" style="border:none;">
+            <p>
+                <a href="Prestiti/Create">Aggiungi Prestito</a>
+            </p>
+
+            <div class="table-row heading">
+                <div class="row-item">Data Inizio Prestito</div>
+                <div class="row-item">Data Scadenza Prestito</div>
+                <div class="row-item">Utente</div>
+                <div class="row-item">Libro</div>
+                <div class="row-item">Actions</div>
+            </div>
+            @foreach (var item in Model.Prestito)
+            {
+                <div class="table-row">
+                    <div class="row-item">@item.DataInizioPrestito.ToString("dd/MM/yyyy")</div>
+                    <div class="row-item">@item.DataScadenzaPrestito.ToString("dd/MM/yyyy")</div>
+                    <div class="row-item">@Html.DisplayFor(modelItem => item.Utente.Nome) @Html.DisplayFor(modelItem => item.Utente.Cognome)</div>
+                    <div class="row-item">@Html.DisplayFor(modelItem => item.Libro.Titolo)</div>
+                    <div class="row-item">
+                        <div class="btn-group mt-auto">
+                            <button type="button" class="btn" id="btn-details">
+                        <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+}
+else
+    {
+        <div class="table-container" style="border:none;" >
+            <p>
+                <a href="Prestiti/Create">Aggiungi Prestito</a>
+            </p>
+          
+            <div class="table-row heading">
+                <div class="row-item">Data Inizio Prestito</div>
+                <div class="row-item">Data Scadenza Prestito</div>
+                <div class="row-item">Data Inserimento</div>
+                <div class="row-item">Data Modifica</div>
+                <div class="row-item">Utente</div>
+                <div class="row-item">Libro</div>
+                <div class="row-item">Actions</div>
+            </div>
+            <div class="table-row">
+                <div class="row-item">
+                    <h4>Nessun Prestito disponibile</h4>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+    <a href="/Library" class="btn btn-secondary">Torna indietro</a>
+   

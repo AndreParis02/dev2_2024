@@ -1,0 +1,1028 @@
+html {
+  font-size: 17px;
+}
+
+@media (max-width: 1149px) and (min-width: 720px) {
+  #Id_del_testo_xx {
+    font-size: 12px !important
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+#btn-standard {
+  color: cornflowerblue;
+  font-size: 16px;
+  border-color: cornflowerblue;
+  border-radius: 2px 15px 2px 15px;
+  padding: 12px 24px;
+  width: 150px;
+}
+
+#btn-standard-2 {
+  color: white;
+  background-color: cornflowerblue;
+  font-size: 16px;
+  border-radius: 2px 15px 2px 15px;
+  padding: 12px 24px;
+}
+
+
+#image-footer-layout {
+  width: 200px;
+  border-radius: 10%;
+  max-height: 129px;
+  max-width: 100%;
+}
+
+#container-layout {
+  max-width: 100%;
+}
+
+
+html {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+}
+
+body {
+  background-color: rgba(5, 9, 34, 255);
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.card {
+  width: 20rem;
+  height: 18rem;
+  color: white;
+  border-radius: 5%;
+  background-color: rgba(5, 9, 34, 255);
+}
+
+.flex {
+  width: 100px;
+}
+
+
+#footer {
+  background-color: #002c5b;
+  position: absolute;
+  min-width: 100%;
+}
+
+/*Home Page*/
+
+#container_home {
+  padding-top: 100px;
+  padding-bottom: 190px;
+  padding-left: 40px;
+}
+
+#loghi-social {
+  width: 10rem;
+  margin-left: -25px;
+}
+
+#btn-play {
+  border-radius: 50%;
+  background-color: rgb(85, 206, 247);
+  margin-left: 15px;
+  height: 45px;
+}
+
+/*Services Page*/
+
+#card_services_we_offer {
+  width: 100%;
+  height: 100%;
+}
+
+#cb-services_we_offer {
+  border-color: cornflowerblue;
+}
+
+#card-title-services {
+  color: cornflowerblue;
+}
+
+#text-card-aboutUs {
+  max-width: 100%;
+}
+
+#card-services {
+  border-color: cornflowerblue;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#button-services {
+  background-color: cornflowerblue;
+  width: 200px;
+  max-height: 50px;
+  margin-top: 70px;
+  color: white;
+  font-size: 16px;
+  border-radius: 2px 15px 2px 15px;
+}
+
+#button-PricingPlans {
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: cornflowerblue;
+  width: 200px;
+  height: 40px;
+  margin-top: 100px;
+  margin-left: 220px;
+  color: white;
+  font-size: 16px;
+  border-radius: 2px 15px 2px 15px;
+}
+
+
+#cards-services {
+  width: 100%;
+  padding-bottom: 100px;
+  background-color: #258cfb;
+}
+
+#cards-PricingPlans {
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+#card_Testimonials {
+  width: 100%;
+  margin-bottom: -150px;
+}
+
+/*About Us Page*/
+
+#container-main_aboutUs {
+  width: 100%;
+}
+
+#card_aboutUs {
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+
+#card_aboutUs-text {
+  max-width: 100%;
+}
+
+#card-aboutUs {
+  width: 17rem;
+  height: 150px;
+  margin-bottom: 50px;
+
+}
+
+#image-AboutUs {
+  margin-top: 5rem;
+
+}
+
+#logo-card-aboutUs {
+  height: 40px;
+  width: 40px;
+  background-color: cornflowerblue;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10%;
+}
+
+#badge-card {
+  background-color: rgb(5, 34, 64);
+  width: 3rem;
+  height: 3rem;
+  padding-top: 15px;
+  margin-top: 25px;
+}
+
+#container-asset {
+  margin-left: 30px;
+}
+
+#icone-aboutUs {
+  color: cornflowerblue;
+}
+
+#button-aboutUs {
+  border-radius: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: cornflowerblue;
+  max-width: 150px;
+  max-height: 50px;
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+  color: white;
+  font-size: 16px;
+  border-radius: 2px 15px 2px 15px;
+
+}
+
+/*WhyChooseUs page*/
+
+#container-main_whyChooseUs {
+  width: 100%;
+}
+
+#image-WhyChooseUs {
+  margin-top: 7rem;
+
+}
+
+#card-whyChooseUs {
+  width: 100%;
+  height: 100%;
+}
+
+#card_whyChooseUs-text {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+
+#badge-card-whyChooseUs {
+  color: cornflowerblue;
+  font-size: medium;
+}
+
+#container-asset-whyChooseUs {
+  width: 100%;
+  height: 100%;
+}
+
+#card-whyChooseUs-elenco {
+  width: 100%;
+  height: 100%;
+}
+
+#button-whyChooseUs {
+  border-radius: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: cornflowerblue;
+  width: 150px;
+  max-height: 50px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  color: white;
+  font-size: 16px;
+  border-radius: 2px 15px 2px 15px;
+}
+
+#conteiner-bottom-whyChooseUs {
+  background-color: rgb(10, 22, 54);
+  width: 10000px;
+  margin-left: -30px;
+}
+
+#card-whyChooseUs-bottom {
+  border-color: cornflowerblue;
+  border-top-width: 5px;
+  max-width: 100%;
+  max-height: 12rem;
+  border-top-color: cornflowerblue;
+}
+
+#card-line {
+  background-color: rgb(8, 175, 245);
+  height: 5px;
+  width: 273px;
+  margin-left: -17px;
+  margin-top: -17px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+
+#footer-WhyChooseUs {
+  background-color: rgb(10, 22, 54);
+  width: 100vw;
+  height: 250px;
+  border-radius: 10px;
+}
+
+/*Portfolio Page*/
+
+#conteiner-portfolio {
+  width: 100rem;
+  height: 15rem;
+  margin-left: 3rem;
+  margin-bottom: 5rem;
+}
+
+#button-portfolio {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: cornflowerblue;
+  max-width: 180px;
+  max-height: 50px;
+  margin-top: 70px;
+
+  color: white;
+  font-size: 16px;
+  border-radius: 2px 15px 2px 15px;
+}
+
+#card_portfolio {
+  height: 10rem;
+  width: 30rem;
+}
+
+#nav-portfolio-all, #nav-portfolio-mobileApps, #nav-portfolio-Cloud, #nav-portfolio-Data, #nav-portfolio-Hosting {
+  color: white;
+}
+
+#container-nav-portfolio {
+  margin-bottom: 2rem;
+  color: white;
+}
+
+#container-image-portfolio {
+  margin-bottom: 8rem;
+  width: 100%;
+}
+
+#image-portfolio-1, #image-portfolio-2, #image-portfolio-3, #image-portfolio-4, #image-portfolio-5, #image-portfolio-6{
+  width: 100%;
+  height: 100%;
+}
+
+/*Prices Plain Page*/
+
+#badge-dollar {
+  color: cornflowerblue;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+#badge-dollar-pro {
+  margin-top: 20px;
+  margin-left: -7px;
+}
+
+#price-text {
+  font-size: 70px;
+  margin: 0;
+}
+
+#price {
+  height: 80px;
+  width: 120px;
+}
+
+#price-pro {
+  height: 80px;
+  width: 120px;
+  background-color: #258cfb;
+  border: none;
+
+}
+
+#card-line-price {
+  background-color: rgb(8, 175, 245);
+  height: 3px;
+  width: 190px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+#card-line-price-pro {
+  background-color: rgb(255, 255, 255);
+  height: 3px;
+  width: 190px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+#card-plan {
+  border-color: #258cfb;
+  max-width: 100%;
+  min-width: 80%;
+  height: 37rem;
+}
+
+#card-plan-pro {
+  border-color: #258cfb;
+  background-color: #258cfb;
+  max-width: 100%;
+  min-width: 80%;
+  height: 37rem;
+}
+
+#btn-Select-Plan {
+  border-color: cornflowerblue;
+  color: cornflowerblue;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: 2rem;
+  font-size: 16px;
+  border-radius: 2px 15px 2px 15px;
+}
+
+#btn-Select-Plan-pro {
+  border-color: rgb(255, 255, 255);
+  color: white;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: 2rem;
+  font-size: 16px;
+  border-radius: 2px 15px 2px 15px;
+}
+
+#icona-card-plan {
+  margin-top: 20px;
+}
+
+#badge-pro-plan {
+  color: cornflowerblue;
+  rotate: 45deg;
+  margin-top: 127px;
+  margin-left: -104.5px;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #ffffff;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#most-popular {
+  margin-bottom: -40px;
+}
+
+#badge-dollar-2 {
+  margin-top: 20px;
+  margin-left: -7px;
+  color: cornflowerblue;
+}
+
+#footer-Pricing-plans {
+  background-color: rgb(10, 22, 54);
+  width: 1521px;
+  height: 250px;
+  margin-left: -50px;
+  margin-top: -180px;
+  height: 40rem;
+}
+
+#Testimonials {
+  color: cornflowerblue;
+  margin-top: 5rem;
+}
+
+
+#user-icon {
+  border-radius: 50%;
+}
+
+#container-carosello {
+  margin-top: 4rem;
+  width: 50rem;
+  font-size: 25px;
+  max-width: 100%;
+}
+
+#text-carosello {
+  margin-top: 3rem;
+  width: 70%;
+}
+
+#nome-utente {
+  margin-top: 3rem;
+}
+
+/*Blog page*/
+#container-blog {
+  width: 100rem;
+  height: 15rem;
+  margin-left: 3rem;
+  margin-bottom: 5rem;
+}
+
+#button-blog {
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: cornflowerblue;
+  max-width: 150px;
+  max-height: 50px;
+  margin-top: 70px;
+  margin-left: 630px;
+  color: white;
+  font-size: 16px;
+  border-radius: 2px 15px 2px 15px;
+}
+
+#card_blog {
+  height: 10rem;
+  width: 30rem;
+}
+
+
+#textbox-card {
+  background-color: rgb(5, 34, 64);
+  border-radius: 2%;
+  height: 20rem;
+}
+
+#container-image-blog {
+  margin-left: 35px;
+  margin-bottom: 25rem;
+  margin-top: -10rem;
+  max-width: 85rem;
+}
+
+#card-news-blog {
+  width: 100%;
+  height: 100%;
+}
+
+#image-blog {
+  max-height: 294px;
+}
+
+#badge-card-blog {
+  background-color: rgb(56, 55, 55);
+  opacity: 80%;
+  margin-left: 45px;
+  margin-top: 15px;
+}
+
+#footer-blog {
+  background-color: rgb(10, 22, 54);
+  width: 100vw;
+  margin-top: -70px;
+}
+
+*/
+
+/*Navbar*/
+.navbar {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+
+.navbar .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu li {
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar .menu li a:hover {
+  background-color: #575757;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  padding: 14px 20px;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar .menu li {
+    display: block;
+    text-align: left;
+  }
+
+  #menu-toggle:checked+.hamburger+.menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+#btn-nav {
+  margin-right: 60px;
+}
+
+#text {
+  max-width: 100%;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+}
+
+@media (min-width: 768px) {
+  #text {
+    font-size: 16px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .card-body h1 {
+    font-size: 1.2rem;
+  }
+
+  #text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-body h1 {
+    font-size: 1rem;
+  }
+
+  #text {
+    font-size: 0.8rem;
+  }
+
+  .card {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 1500px) {
+  #image-AboutUs {
+    display: none;
+  }
+
+  #image-WhyChooseUs {
+    display: none;
+  }
+
+  #btn-standard-2 {
+    margin-top: 50px;
+  }
+
+}
+
+@media (max-width:767px) {
+  #button-services {
+    margin-top: 20px;
+  }
+}
+
+#container-portfolio {
+  width: 100%;
+}
+
+@media (min-width: 0px) And (max-width:576px) {}
+
+
+#contanier-card-news-blog {
+  margin-bottom: 50px;
+}
+
+#container-main-whyChooseUs {
+  width: 100%;
+}
+
+#col-logo {
+  width: 100%;
+}
+
+.carousel-control-next-icon {
+  margin-right: -100px;
+}
+
+.carousel-control-prev-icon {
+  margin-left: -100px;
+}
+
+#carouselExampleIndicators {
+  margin-bottom: 100px;
+}
+
+.dropdown-menu li:hover {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  background-color: cornflowerblue;
+  width: 100%;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: rgba(5, 9, 34, 255);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #002c5b;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #0392ff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#modal-bg {
+  margin-top: 50px;
+  background-color: transparent;
+  border: none;
+}
+
+#search {
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: cornflowerblue;
+  font-size: 30px;
+  border-radius: 0px;
+  margin-top: -30px;
+
+  background-color: transparent;
+  color: white;
+}
+
+#header-modal {
+  border: none;
+}
+
+#close-btn {
+  background-color: white;
+}
+
+
+#card-services:hover {
+  background-color: rgb(9, 175, 244);
+  color: white;
+
+  #card-title-services {
+    color: white;
+  }
+
+  #card-read-more {
+    color: white;
+  }
+}
+
+#container-card-AboutUs:hover {
+  #badge-card {
+    background-color: white;
+  }
+
+  #icone-aboutUs {
+    color: #002c5b;
+  }
+
+  #title-card-aboutUs {
+    font-weight: bold;
+  }
+}
+
+#card-read-more {
+  text-decoration: none;
+}
+
+
+#campo-nome,
+#campo-cognome,
+#campo-email,
+#campo-oggetto,
+#campo-messaggio {
+  color: white;
+  background-color: rgba(5, 9, 34, 255);
+}
+
+#campo-messaggio {
+  height: 200px;
+}
+
+#btn-Question {
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: cornflowerblue;
+  max-width: 150px;
+  max-height: 50px;
+  color: white;
+  font-size: 16px;
+  border-radius: 2px 15px 2px 15px;
+  cursor: pointer;
+}
+
+#star {
+  color: red;
+}
+
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(5, 9, 34, 255);
+  margin-top: 5%;
+  margin-bottom: 3%;
+  
+}
+
+.table-container {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: rgba(5, 9, 34, 255);
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: 1px solid #DADADA;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, .08);
+}
+
+.table-row {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  border-bottom: 1px solid #dadada;
+}
+
+.heading {
+  background-color: cornflowerblue;
+  color: #3e3e3e;
+  font-weight: bold;
+}
+
+.row-item {
+  display: flex;
+  flex: 1;
+  font-size: 14px;
+  padding: 8px 0;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blanchedalmond;
+    transition: all 0.15s ease-in-out;
+}
+
+#main-container-details
+{
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+@media (max-width:1000px)
+{
+  #row-item-email
+  {display: none;}
+}
+
+@media (max-width:770px)
+{
+  #row-item-oggetto
+  {display: none;}
+}
+
+@media (max-width:500px)
+{
+  #row-item-data-list
+  {display: none;}
+}
+
+@media (max-width:1200px)
+{
+  #row-item-nome
+  {display: none;}
+}
+
+
+#btn-close-modal
+{
+  color: white;
+  background-color: rgb(60, 124, 243);
+}
+
+#btn-open-modal
+{
+  color: blue;
+  background-color: transparent;
+}
+
+#Delete-modal
+{
+  background-color: #124377;
+  border-radius: 5%;
+}
+
+
+#Modal
+{
+  margin-top: -20px;
+}
+
+#tr-search
+{
+  background-color: transparent;
+}
+
+#btn-search
+{
+  color: white;
+  border-radius: 10%;
+  border-color: cornflowerblue;
+}
+
+#card-services, #card-aboutUs{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#btn-nav
+{
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+#inserimento-genere
+{
+  margin-bottom: 100px;
+  margin-top:100px;
+}
+
+

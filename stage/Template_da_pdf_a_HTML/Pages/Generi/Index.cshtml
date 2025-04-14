@@ -1,0 +1,80 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.Generi.IndexModel
+
+@{
+    ViewData["Title"] = "Lista Generi";
+}
+
+<center>
+    <h1 style="margin-top: 5%;">@ViewData["Title"]</h1>
+</center>
+
+<div class="main-container" style="border-radius: 10%;">
+
+
+@if (@Model.Genere.Any() == true)
+{
+        <div class="table-container" style="border:none;">
+            <p>
+                <a asp-page="Create">Aggiungi Genere</a>
+            </p>
+
+            <form>
+                <p>
+                    <label><input type="text" class="Search" asp-for="SearchString" style="border-radius: 5%;"/></label>
+                    <input type="submit" value="Search" style="color: white; background-color: cornflowerblue; border-radius: 10%;"/>
+                </p>
+            </form>
+            <div class="table-row heading">
+                <div class="row-item"> @Html.DisplayNameFor(model => model.Genere[0].Nome)</div>
+                <div class="row-item">Actions</div>
+            </div>
+            @foreach (var item in Model.Genere)
+            {
+                <div class="table-row">
+                    <div class="row-item">@Html.DisplayFor(modelItem => item.Nome)</div>
+                    <div class="row-item">
+                        <div class="btn-group mt-auto">
+                            <button type="button" class="btn" id="btn-details">
+                                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+}
+else
+    {
+        <div class="table-container" style="border:none;">
+            <p>
+                <a asp-page="Create">Aggiungi Genere</a>
+            </p>
+
+            <form>
+                <p>
+                    <label><input type="text" class="Search" asp-for="SearchString" /></label>
+                    <input type="submit" value="Search" style="color: white; background-color: cornflowerblue;"/> |
+                     <a asp-page="./Index" class="btn btn-danger">Reset</a>
+                </p>
+            </form>
+           
+            <div class="table-row heading">
+                <div class="row-item">@Html.DisplayNameFor(model => model.Genere[0].Nome)</div>
+                <div class="row-item">Actions</div>
+            </div>
+            <div class="table-row">
+                <div class="row-item">
+                    <h4>Nessun Genere disponibile</h4>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+    <a href="/Library" class="btn btn-secondary">Torna indietro</a>
+
+

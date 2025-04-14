@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Template_da_pdf_a_HTML</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Google Font Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/image" />
+    <link rel="stylesheet" href="~/Template_da_pdf_a_HTML.styles.css" asp-append-version="true" />
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" style="color:white; margin-left:60px;" href="#">Flex-IT</a>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
+            <ul class="menu justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/AboutUs">About Us</a>
+                </li>
+
+                <div class="dropdown nav-item">
+                    <button class="dropbtn">
+                        Services +
+                    </button>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" href="/Services">Services</a>
+                        <a class="dropdown-item" href="#">See all</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+
+                    </div>
+                </div>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Portfolio">Portfolio</a>
+                </li>
+
+                <div class="dropdown nav-item">
+                    <button class="dropbtn">
+                        Blog +
+                    </button>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" href="/Blog">Blog</a>
+                        <a class="dropdown-item" href="#">See all post</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </div>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Library">Library</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/WhyChooseUs">Contact Us</a>
+                </li>
+
+                 <li class="nav-item">
+                    <a class="nav-link" href="Richieste/Index">Request</a>
+                </li>
+            </ul>
+            <!-- #region  search & Light/Dark mode -->
+            <div>
+                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#Modal"><i
+                        class="fa-solid fa-magnifying-glass" style="color: white;"></i></button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" id="modal-search">
+                        <div class="modal-content" id="modal-bg">
+                            <div class="modal-header" id="header-modal">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" id="close-btn"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div style="width: auto;">
+                                            <div class="container-fluid " style="width: 100%;">
+                                                <div class="row row-cols-2">
+                                                    <div class="d-flex flex-wrap" style="width: 100%;">
+                                                        <div class="d-flex justify-content-end">
+                                                        <input type="text" class="form-control search-input" id="search"
+                                                            placeholder="Search...">
+                                                            <button class="btn" type="button" href="/Index"><i
+                                                                class="fa-solid fa-magnifying-glass fa-xl"
+                                                                style="color: cornflowerblue;"></i></button>
+                                                    </div>
+                                                    </div>
+                                                    
+                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-primary" type="submit" id="btn-nav"><i class="fa-solid fa-sun"
+                        style="color: rgb(6, 0, 38);"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="text-center" id="footer">
+        <h6 style="color: #023973 ; padding-top: 10px;">Trusted By Over 500 Clients Around The World</h6>
+
+        <div class="container p-4">
+            <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 row-cols-lg-6 row-cols-xl-6 g-4">
+                <div class="col">
+                    <img src="/image/logo_1.PNG" id="image-footer-layout" />
+                </div>
+                <div class="col">
+                    <img src="/image/logo_2.PNG" id="image-footer-layout" />
+                </div>
+                <div class="col">
+                    <img src="/image/logo_3.PNG" id="image-footer-layout" />
+                </div>
+                <div class="col">
+                    <img src="/image/logo_4.PNG" id="image-footer-layout" />
+                </div>
+                <div class="col">
+                    <img src="/image/logo_5.PNG" id="image-footer-layout" />
+                </div>
+                <div class="col">
+                    <img src="/image/logo_6.PNG" id="image-footer-layout" />
+                </div>
+            </div>
+        </div>
+        <!-- Grid container -->
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

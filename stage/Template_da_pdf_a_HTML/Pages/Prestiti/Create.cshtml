@@ -1,0 +1,49 @@
+@page
+@model Template_da_pdf_a_HTML.Pages_Prestiti.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<center><h1>Aggiungi Prestito</h1></center>
+
+            <input type="hidden" asp-for="Prestito.DataInserimento" />
+            <input type="hidden" asp-for="Prestito.DataModifica" />
+<div class="row" style="margin-bottom: 5%; margin-top: 5%;">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                Data Inizio Prestito
+                <input type="date" asp-for="Prestito.DataInizioPrestito" class="form-control" />
+                <span asp-validation-for="Prestito.DataInizioPrestito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Utente</label>
+                <select asp-for="Prestito.UtenteId" class="form-control" asp-items="ViewBag.UtenteId">
+                    <option value="">-- Seleziona Utente --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Libro</label>
+                <select asp-for="Prestito.LibroId" class="form-control" asp-items="ViewBag.LibroId">
+                    <option value="">-- Seleziona Libro --</option>
+                </select>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" /> |
+                <a href="./Index" class="btn btn-secondary">Torna indietro</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

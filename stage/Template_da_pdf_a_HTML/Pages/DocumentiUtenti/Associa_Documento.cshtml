@@ -1,0 +1,49 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.DocumentiUtenti.Associa_documentoModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<center>
+    <h1>Associa Documento</h1>
+</center>
+
+<div class="row" id="inserimento-genere">
+    <div class="col-md-4">
+        <form method="post">
+            <input type="hidden" asp-for="DocumentoUtente.idUtente" value="@Model.Utente.Id"/>
+            <input type="hidden" asp-for="DocumentoUtente.Utente" value="@Model.Utente"/>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h3>Utente : @Model.Utente.Nome @Model.Utente.Cognome</h3>
+            <div class="form-group">
+                <label asp-for="DocumentoUtente.Numero" class="control-label"></label>
+                <input asp-for="DocumentoUtente.Numero" class="form-control" />
+                <span asp-validation-for="DocumentoUtente.Numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Tipo</label>
+                <select asp-for="DocumentoUtente.idTipo" class="form-control" asp-items="ViewBag.idTipo">
+                    <option value="">-- Seleziona Tipo --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DocumentoUtente.Scadenza" class="control-label"></label>
+                <input type="date" asp-for="DocumentoUtente.Scadenza" class="form-control" />
+                <span asp-validation-for="DocumentoUtente.Scadenza" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <a href="/Utenti/Index" class="btn btn-secondary">Torna indietro</a> |
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

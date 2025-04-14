@@ -1,0 +1,275 @@
+@page
+@model PricingPlansModel
+@{
+    ViewData["Title"] = "PricingPlans";
+}
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column">
+        <div class="d-flex flex-row justify-content-center">
+            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 g-4" style="width: 100%;">
+                <div class="d-flex justify-content-start">
+                    <div class="card" id="card_services_we_offer">
+
+                        <div class="card-body" style="border-color: cornflowerblue;">
+
+                            <p class="card-title" style="color: cornflowerblue;"> <b>•PRICING PLANS•</b></p>
+                            <h1 class="card-text" style="color: white;"><b>
+                                    <p>Affordable Pricing Plans</p>
+                                </b>
+                            </h1>
+                            <h6 style="color: #ffffff;">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Omnis Id
+                                Atue
+                                Dignissimos Reppellat Quae Ullam.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end" id="d-flex-btn-services">
+                    <button id="button-services">See All Plans <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class=" text-center row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 g-5"
+                id="cards-PricingPlans">
+
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="card" id="card-plan">
+                        <div class="card-body">
+                            <center>
+                                <p class="card-title fs-3" id="icona-card-plan"><i class="fa-solid fa-display fa-xl"
+                                        id="card-title-services"></i>
+                                </p>
+                                <p class="card-title fs-3"><b>Free Plan</b></p>
+                                <div class="card" id="price">
+                                    <span class="position-absolute top-0 start-0 translate-middle badge fs-3"
+                                        id="badge-dollar">$</span>
+                                    <h1 class="card-title" id="price-text">00</h1>
+                                </div>
+                                <p class="card-text fs-5" style="color: grey;">
+                                    Per Project
+                                </p>
+                                <div id="card-line-price"></div>
+                                <p class="card-text fs-6" style="color: white;">
+                                    150 Lorem, Ipsum Dolor.
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    20 Lorem, Ipsum Sit .
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Lorem, Ipsum Sit.
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Free Lorem, Ipsum Dolor .
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Added Lorem, Ipsum Dolor.
+                                </p>
+                                <a href="#" class="btn" id="btn-Select-Plan"><b>Select Plan</b></a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="card" id="card-plan">
+                        <div class="card-body">
+                            <center>
+                                <p class="card-title fs-3" id="icona-card-plan"><i class="fa-solid fa-user fa-xl"
+                                        id="card-title-services"></i>
+                                </p>
+                                <p class="card-title fs-3"><b>Standerd Plan</b></p>
+                                <div class="card" id="price">
+                                    <span class="position-absolute top-0 start-0 translate-middle badge fs-3"
+                                        id="badge-dollar">$</span>
+                                    <h1 class="card-title" id="price-text">85</h1>
+                                </div>
+                                <p class="card-text fs-5" style="color: grey;">
+                                    Per Project
+                                </p>
+                                <div id="card-line-price"></div>
+                                <p class="card-text fs-6" style="color: white;">
+                                    150 Lorem, Ipsum Dolor.
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    20 Lorem, Ipsum Sit .
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Lorem, Ipsum Sit.
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Free Lorem, Ipsum Dolor .
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Added Lorem, Ipsum Dolor.
+                                </p>
+                                <a href="#" class="btn" id="btn-Select-Plan"><b>Select Plan</b></a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="card" id="card-plan-pro">
+
+                        <span class="position-absolute top-0 start-100 translate-middle badge fs-5" id="badge-pro-plan">
+                            <div class="fs-5" id="most-popular">Most Popular</div>
+                        </span>
+                        <div class="card-body">
+                            <center>
+                                <p class="card-title fs-3" id="icona-card-plan"><i class="fa-solid fa-box fa-xl"
+                                        style="color: #ffffff;" id="card-title-services"></i>
+                                </p>
+                                <p class="card-title fs-3"><b>Pro Plan</b></p>
+                                <div class="card" id="price-pro">
+                                    <span class="position-absolute top-0 start-0 translate-middle badge fs-3"
+                                        id="badge-dollar-pro">$</span>
+                                    <h1 class="card-title" id="price-text">100</h1>
+                                </div>
+                                <p class="card-text fs-5" style="color: white;">
+                                    Per Project
+                                </p>
+                                <div id="card-line-price-pro"></div>
+                                <p class="card-text fs-6" style="color: white;">
+                                    150 Lorem, Ipsum Dolor.
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    20 Lorem, Ipsum Sit .
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Lorem, Ipsum Sit.
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Free Lorem, Ipsum Dolor .
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Added Lorem, Ipsum Dolor.
+                                </p>
+                                <a href="#" class="btn" id="btn-Select-Plan-pro"><b>Select Plan</b></a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="card" id="card-plan">
+                        <div class="card-body">
+                            <center>
+                                <p class="card-title fs-3" id="icona-card-plan"><i class="fa-solid fa-user-plus fa-xl"
+                                        id="card-title-services"></i>
+                                </p>
+                                <p class="card-title fs-3"><b>Ultimate Plan</b></p>
+                                <div class="card" id="price">
+                                    <span class="position-absolute top-0 start-0 translate-middle badge fs-3"
+                                        id="badge-dollar-2">$</span>
+                                    <h1 class="card-title" id="price-text">210</h1>
+                                </div>
+                                <p class="card-text fs-5" style="color: grey;">
+                                    Per Project
+                                </p>
+                                <div id="card-line-price"></div>
+                                <p class="card-text fs-6" style="color: white;">
+                                    150 Lorem, Ipsum Dolor.
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    20 Lorem, Ipsum Sit .
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Lorem, Ipsum Sit.
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Free Lorem, Ipsum Dolor .
+                                </p>
+                                <p class="card-text fs-6" style="color: white;">
+                                    Added Lorem, Ipsum Dolor.
+                                </p>
+                                <a href="#" class="btn" id="btn-Select-Plan"><b>Select Plan</b></a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center">
+    <center>
+        <div class="card" id="card_Testimonials">
+
+            <div class="card-body" style="border-color: cornflowerblue;">
+
+                <p class="card-title" style="color: cornflowerblue;"> <b>•TESTIMONIALS•</b></p>
+                <h1 class="card-text" style="color: white;"><b>
+                        <p>Customers Testimonials</p>
+                    </b>
+                </h1>
+            </div>
+        </div>
+    </center>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div id="carouselExampleIndicators" class="carousel slide text-center" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/image/user.PNG" id="user-icon">
+                    <p>ipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi Atue
+                        qui est
+                        ab,
+                        corporis quis maiores reiciendis
+                        explicabo odio tenetur nulla sint vel.</p>
+                    <p id="nome-utente">
+                    <h4>Fairouz Mhmd</h4>
+                    <h6 style="color:grey">Manager</h6>
+                    </p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/image/user.PNG" id="user-icon">
+                    <p>ipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi Atue
+                        qui est
+                        ab,
+                        corporis quis maiores reiciendis
+                        explicabo odio tenetur nulla sint vel.</p>
+                    <p id="nome-utente">
+                    <h4>Fairouz Mhmd</h4>
+                    <h6 style="color:grey">Manager</h6>
+                    </p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/image/user.PNG" id="user-icon">
+                    <p>ipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi Atue
+                        qui est
+                        ab,
+                        corporis quis maiores reiciendis
+                        explicabo odio tenetur nulla sint vel.</p>
+                    <p id="nome-utente">
+                    <h4>Fairouz Mhmd</h4>
+                    <h6 style="color:grey">Manager</h6>
+                    </p>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true">
+                    </span>
+                    <span class="visually-hidden">
+                        Previous
+                    </span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true">
+                    </span>
+                    <span class="visually-hidden">
+                        Next
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

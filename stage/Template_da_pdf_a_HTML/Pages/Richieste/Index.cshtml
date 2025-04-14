@@ -1,0 +1,91 @@
+@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "List Request";
+}
+
+<center>
+    <h1 style="margin-top: 5%;">@ViewData["Title"]</h1>
+</center>
+
+<div class="main-container" style="border-radius: 10%;">
+
+    @if (@Model.Richiesta.Any() == true)
+    {
+        <div class="table-container" style="border:none;">
+            <form>
+                <p>
+                    <label><input type="text" class="Search" asp-for="SearchString" style="border-radius: 5%;"/></label>
+                    <input type="submit" value="Search" style="color: white; background-color: cornflowerblue; border-radius: 10%;"/>
+                </p>
+            </form>
+            <div class="table-row heading">
+                <div class="row-item"><a asp-page="./Index" asp-route-sortOrder="@Model.EmailSort" asp-route-currentFilter="@Model.CurrentFilter">@Html.DisplayNameFor(model => model.Richiesta[0].Email)</a></div>
+                <div class="row-item" id="row-item-oggetto">@Html.DisplayNameFor(model => model.Richiesta[0].Oggetto)</div>
+                <div class="row-item" id="row-item-data-list"><a asp-page="./Index" asp-route-sortOrder="@Model.DateSort" asp-route-currentFilter="@Model.CurrentFilter">@Html.DisplayNameFor(model => model.Richiesta[0].Data_inserimento)</a></div>
+                <div class="row-item">Actions</div>
+            </div>
+            @foreach (var item in Model.Richiesta)
+            {
+                <div class="table-row">
+                    <div class="row-item">@Html.DisplayFor(modelItem => item.Email)</div>
+                    <div class="row-item" id="row-item-oggetto">@Html.DisplayFor(modelItem => item.Oggetto)</div>
+                    <div class="row-item" id="row-item-data-list">@Html.DisplayFor(modelItem => item.Data_inserimento)</div>
+                    <div class="row-item">
+                        <div class="btn-group mt-auto">
+                            <button type="button" class="btn" id="btn-details">
+                                <a asp-page="Details" asp-route-id="@item.Id" style="text-decoration: none">Details</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="table-container" style="border:none;">
+            <form>
+                <p>
+                    <label><input type="text" class="Search" asp-for="SearchString" /></label>
+                    <input type="submit" value="Search" style="color: white; background-color: cornflowerblue;"/> |
+                     <a asp-page="./Index" class="btn btn-secondary">Torna indietro</a>
+                </p>
+            </form>
+            <div class="table-row heading">
+                <div class="row-item" id="row-item-email">@Html.DisplayNameFor(model => model.Richiesta[0].Email)</div>
+                <div class="row-item" id="row-item-oggetto">@Html.DisplayNameFor(model => model.Richiesta[0].Oggetto)</div>
+                <div class="row-item" id="row-item-data-list">@Html.DisplayNameFor(model => model.Richiesta[0].Data_inserimento)</div>
+                <div class="row-item">Actions</div>
+            </div>
+            <div class="table-row">
+                <div class="row-item">
+                    <h4>Nessuna Richiesta disponibile</h4>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@{
+    var prevDisabled = !Model.Richiesta.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Richiesta.HasNextPage ? "disabled" : "";
+}
+<center>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Richiesta.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    <
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Richiesta.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+   >
+</a>
+</center>
+

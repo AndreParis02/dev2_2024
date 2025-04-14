@@ -1,0 +1,56 @@
+@page
+@model Template_da_pdf_a_HTML.Pages.Autori.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Autore</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Autore.Id" />
+            <div class="form-group">
+
+                <label asp-for="Autore.Nome" class="control-label"></label>
+                <input asp-for="Autore.Nome" class="form-control" />
+                <span asp-validation-for="Autore.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="Autore.Cognome" class="control-label"></label>
+                <input asp-for="Autore.Cognome" class="form-control" />
+                <span asp-validation-for="Autore.Cognome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="Autore.DataNascita" class="control-label"></label>
+                <input type="date" asp-for="Autore.DataNascita" class="form-control" />
+                <span asp-validation-for="Autore.DataNascita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label>Data Morte</label>
+                <input type="date" asp-for="Autore.DataMorte" class="form-control" />
+                <span asp-validation-for="Autore.DataMorte" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" /> |
+                <a asp-page="./Index" class="btn btn-secondary">Torna indietro</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

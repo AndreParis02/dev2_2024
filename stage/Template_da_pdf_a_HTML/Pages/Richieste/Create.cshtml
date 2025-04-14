@@ -1,0 +1,49 @@
+@page
+@model CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="d-flex flex-wrap  justify-content-center">
+
+    <h2> Have Any Questions? Let's Answer Them</h2>
+    <form method="post">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 g-4" style="width: 100%;">
+            <div class="form-group">
+                <label for="Nome" id="text-box"><b style="color: red;">*</b> Name</label>  
+                <span asp-validation-for="@Model.Nome" class="text-danger"></span>
+                <input asp-for="@Model.Nome" class="form-control" id="campo-nome"/>
+            </div>
+
+            <div class="form-group">
+                <label for="Cognome"id="text-box"><b style="color: red;">*</b> Surname</label> 
+                <span asp-validation-for="@Model.Cognome" class="text-danger"></span>
+                <input asp-for="@Model.Cognome" class="form-control" id="campo-cognome"/>
+            </div>
+
+            <div class="form-group">
+                <label for="Email" id="text-box"><b style="color: red;">*</b> E-Mail</label>  
+                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                <input asp-for="@Model.Email" class="form-control" id="campo-email"/>
+            </div>
+
+            <div class="form-group">
+                <label for="Oggetto" id="text-box"><b style="color: red;">*</b> Subject</label>  
+                <span asp-validation-for="@Model.Oggetto" class="text-danger"></span>
+                <input asp-for="@Model.Oggetto"class="form-control" id="campo-oggetto"/>
+            </div>
+
+            <div class="form-group" style="width: 100%;">
+                <label for="Messaggio" id="text-box"><b style="color: red;">*</b> Your Message</label>  
+                <span asp-validation-for="@Model.Messaggio" class="text-danger"></span>
+                <textarea asp-for="@Model.Messaggio" class="form-control" rows="3" id="campo-messaggio"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="btn my-3" id="btn-Question" href="WhyChooseUs">Send Your Message</button>
+    </form>
+</div>
+
+
+

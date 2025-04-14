@@ -1,0 +1,160 @@
+@page
+@model PortfolioModel
+@{
+    ViewData["Title"] = "Portfolio page";
+}
+<div class="d-flex justify-content-center" id="container-main-Portfolio">
+    <div class="d-flex flex-column">
+        <div class="d-flex flex-row justify-content-center">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 g-4"
+                style="width: 100%;">
+                <div class="d-flex justify-content-start">
+                    <div class="card" id="card_services_we_offer">
+
+                        <div class="card-body" style="border-color: cornflowerblue;">
+
+                            <p class="card-title" style="color: cornflowerblue;"> <b>•PORTFOLIO•</b></p>
+                            <h1 class="card-text" style="color: white;"><b>
+                                    <p>Awesome Portfolio</p>
+                                </b>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end" id="d-flex-btn-services">
+                    <button id="button-services">See More <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid" id="container-nav-portfolio">
+                    <ul class="nav">
+                        <!-- #region All -->
+                        <li class="nav-item">
+                            <form method="get">
+                                <button type="submit" name="selected" id="btn-nav" value="All">All</button>
+                            </form>
+                        </li>
+
+                        <!-- #region Mobile Apps -->
+                        <li class="nav-item">
+                            <form method="get">
+                                <button type="submit" name="selected" id="btn-nav" value="MobileApps">Mobile
+                                    Apps</button>
+                            </form>
+                        </li>
+
+                        <!-- #region Cloud -->
+                        <li class="nav-item">
+                            <form method="get">
+                                <button type="submit" name="selected" id="btn-nav" value="Cloud">Cloud</button>
+                            </form>
+                        </li>
+
+                        <!-- #region Data Analaysis -->
+                        <li class="nav-item">
+                            <form method="get">
+                                <button type="submit" name="selected" id="btn-nav" value="Data">Data Analaysis</button>
+                            </form>
+                        </li>
+
+                        <!-- #region Hosting -->
+                        <li class="nav-item">
+                            <form method="get">
+                                <button type="submit" name="selected" id="btn-nav" value="Hosting">Hosting</button>
+                            </form>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+@if (Model.Selected == "All" || Model.Selected == null)
+{
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 g-4">
+            <div class="d-flex flex-wrap justify-content-center">
+                <img id="image-portfolio-1" src="image\Image_1_portfolio.PNG" />
+            </div>
+            <div class="d-flex flex-wrap justify-content-center">
+                <img id="image-portfolio-2" src="image\Image_2_portfolio.PNG" />
+            </div>
+            <div class="d-flex flex-wrap justify-content-center">
+                <img id="image-portfolio-3" src="image\Image_3_portfolio.PNG" />
+            </div>
+            <div class="d-flex flex-wrap justify-content-center">
+                <img id="image-portfolio-4" src="image\Image_4_portfolio.PNG" />
+            </div>
+            <div class="d-flex flex-wrap justify-content-center">
+                <img id="image-portfolio-5" src="image\Image_5_portfolio.PNG" />
+            </div>
+            <div class="d-flex flex-wrap justify-content-center">
+                <img id="image-portfolio-6" src="image\Image_6_portfolio.PNG" />
+            </div>
+        </div>
+    </div>
+}
+
+@if (Model.Selected == "MobileApps")
+{
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 g-4">
+            <div class="d-flex flex-wrap justify-content-center">
+                <img id="image-portfolio-1" src="image\Image_1_portfolio.PNG" />
+            </div>
+            <div class="d-flex flex-wrap justify-content-center">
+                <img id="image-portfolio-3" src="image\Image_3_portfolio.PNG" />
+            </div>
+        </div>
+    </div>
+
+}
+
+@if (Model.Selected == "Cloud")
+{
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-1 g-4">
+            <div class="d-flex flex-wrap justify-content-center">
+                <center>
+                    <img id="image-portfolio-5" src="image\Image_5_portfolio.PNG" />
+                </center>
+            </div>
+        </div>
+    </div>
+
+}
+
+@if (Model.Selected == "Data")
+{
+
+
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-1 g-4">
+            <div class="d-flex flex-wrap justify-content-center">
+                <img id="image-portfolio-4" src="image\Image_4_portfolio.PNG" />
+            </div>
+        </div>
+    </div>
+
+}
+
+@if (Model.Selected == "Hosting")
+{
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 g-4">
+            <div class="d-flex flex-wrap justify-content-center">
+                <img id="image-portfolio-2" src="image\Image_2_portfolio.PNG" />
+            </div>
+            <div class="d-flex flex-wrap justify-content-center">
+                <img id="image-portfolio-6" src="image\Image_6_portfolio.PNG" />
+            </div>
+        </div>
+    </div>
+
+}
+</div>
