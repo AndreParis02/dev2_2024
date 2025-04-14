@@ -1,0 +1,38 @@
+@page
+@model EditModel
+@{
+    ViewData["Title"] = "Modifica Prodotto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form method="post">
+        <div class="form-group ">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" name="nome" value="@Model.Prodotto.Nome" />
+        </div>
+        <div class="form-group mb-3">
+            <label for="nome">Prezzo</label>
+            <input type="text" class="form-control" name="prezzo" value="@Model.Prodotto.Prezzo" />
+        </div>
+        <div class="form-group mb-3">
+            <label for="nome">Quantita</label>
+            <input type="text" class="form-control" name="quantita" value="@Model.Prodotto.Quantita" />
+        </div>
+        <div class="form-group mb-3">
+            <label for="categoria">Categoria
+                <select class="form-control" name="categoria">
+                    <option value="@Model.Prodotto.Categoria">@Model.Prodotto.Categoria</option>
+                    @foreach (var categoria in Model.Categorie)
+                    {
+                        <option value="@categoria">@categoria</option>
+                    }
+                </select>
+            </label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-dark">Salva</button>
+        <a href="/Prodotti/Index" class="btn btn-secondary">Torna indietro</a>
+    </form>
+</div>

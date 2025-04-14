@@ -1,0 +1,964 @@
+2025-02-17 10:11:47 - Exception: SQL logic error
+no such column: p.Id
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 62
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 20
+2025-02-17 10:11:58 - Exception: SQL logic error
+no such column: p.Id
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 62
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 20
+2025-02-17 10:50:09 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:09 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:09 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:10 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:10 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:10 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:10 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:11 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:11 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:12 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:12 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:12 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:12 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:13 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:14 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:14 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:14 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:15 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:15 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:15 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:16 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:50:16 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:55:51 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:55:52 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:55:52 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:55:52 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:55:52 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:55:52 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:55:53 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:55:53 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:55:53 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 10:55:53 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 63
+2025-02-17 11:46:52 - Exception: Invalid cast from 'System.Int64' to '_37_WebApp_SQLite.Models.Prodotto'.
+Stack Trace:    at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteScalar[T](String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 42
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 21
+2025-02-17 12:03:44 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetString(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.<>c.<OnGet>b__4_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 21
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 65
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-17 12:06:05 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetString(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.<>c.<OnGet>b__4_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 21
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 65
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-17 12:12:16 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 64
+2025-02-17 12:20:33 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 64
+2025-02-17 12:29:36 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Categorie.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Elimina.cshtml.cs:line 62
+2025-02-17 12:38:08 - Exception: SQL logic error
+no such table: Categoria
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Categorie.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Modifica.cshtml.cs:line 49
+2025-02-17 12:38:09 - Exception: SQL logic error
+no such table: Categoria
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Categorie.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Modifica.cshtml.cs:line 49
+2025-02-17 12:38:09 - Exception: SQL logic error
+no such table: Categoria
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Categorie.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Modifica.cshtml.cs:line 49
+2025-02-17 12:38:10 - Exception: SQL logic error
+no such table: Categoria
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Categorie.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Modifica.cshtml.cs:line 49
+2025-02-17 12:38:10 - Exception: SQL logic error
+no such table: Categoria
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteNonQuery(String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 20
+   at _37_WebApp_SQLite.Pages.Categorie.ModificaModel.OnPost() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Modifica.cshtml.cs:line 49
+2025-02-17 13:46:11 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 64
+2025-02-17 14:31:35 - Exception: SQL logic error
+no such column: Isd
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 62
+   at _37_WebApp_SQLite.Pages.Categorie.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Dettaglio.cshtml.cs:line 20
+2025-02-18 10:13:54 - Exception: SQL logic error
+no such column: p.Id
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 62
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-18 10:27:51 - Exception: unknown error
+Insufficient parameters supplied to the command
+Stack Trace:    at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   at System.Data.SQLite.SQLiteStatement.BindParameters()
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 62
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 75
+2025-02-18 10:39:43 - Exception: SQL logic error
+no such function: CONT
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteScalar(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteScalar()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteScalar[T](String sql, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 37
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 72
+2025-02-18 11:44:29 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 11:44:33 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ModificaModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Modifica.cshtml.cs:line 21
+2025-02-18 11:44:39 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 11:44:42 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:25:09 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 12:25:11 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:25:17 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 12:25:18 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:38:09 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 12:38:11 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:38:12 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 12:38:13 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:38:15 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 12:38:16 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:38:19 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:54:37 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 12:54:38 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 13:00:17 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at DashboardModel.<>c.<OnGet>b__13_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 30
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 22
+2025-02-18 13:00:18 - Exception: Specified cast is not valid.
+Stack Trace:    at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetDouble(Int32 i)
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.<>c.<OnGet>b__8_0(SQLiteDataReader reader) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 24
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 66
+   at _37_WebApp_SQLite.Pages.Prodotti.ProdottiModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Index.cshtml.cs:line 22
+2025-02-18 13:13:19 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Categorie.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Elimina.cshtml.cs:line 62
+2025-02-20 10:08:08 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:10:27 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:11:20 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:02 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:06 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:08 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:09 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:11 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:17:13 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 10:21:52 - Exception: SQL logic error
+near "LEFT": syntax error
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-20 10:22:14 - Exception: SQL logic error
+near "LEFT": syntax error
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-20 10:26:28 - Exception: SQL logic error
+near "LEFT": syntax error
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-20 10:27:24 - Exception: SQL logic error
+near "LEFT": syntax error
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at _37_WebApp_SQLite.Pages.Prodotti.DettaglioModel.OnGet(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Dettaglio.cshtml.cs:line 18
+2025-02-20 10:32:07 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 66
+2025-02-20 10:33:31 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 68
+2025-02-20 10:47:35 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 68
+2025-02-20 10:49:38 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Categorie.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Elimina.cshtml.cs:line 62
+2025-02-20 10:50:16 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 11:15:08 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60
+2025-02-20 11:26:26 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 23
+2025-02-20 11:26:26 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 50
+2025-02-20 11:26:26 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 89
+2025-02-20 11:26:26 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 131
+2025-02-20 11:28:27 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 23
+2025-02-20 11:28:27 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 50
+2025-02-20 11:28:27 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 89
+2025-02-20 11:28:27 - Exception: SQL logic error
+no such table: Fornitore
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 131
+2025-02-20 11:33:27 - Exception: SQL logic error
+no such column: f.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 89
+2025-02-20 11:33:27 - Exception: SQL logic error
+no such column: c.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 130
+2025-02-20 11:33:57 - Exception: SQL logic error
+no such column: f.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 89
+2025-02-20 11:33:57 - Exception: SQL logic error
+no such column: c.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 130
+2025-02-20 11:34:39 - Exception: SQL logic error
+no such column: f.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 89
+2025-02-20 11:34:39 - Exception: SQL logic error
+no such column: c.Nome
+Stack Trace:    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at _37_WebApp_SQLite.Utilities.DbUtils.ExecuteReader[T](String sql, Func`2 converter, Action`1 setupParameters) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Utilities\DbUtils.cs:line 63
+   at DashboardModel.OnGet() in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Dashboard.cshtml.cs:line 130
+2025-02-20 11:43:11 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 68
+2025-02-20 14:12:21 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Prodotti.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Prodotti\Elimina.cshtml.cs:line 68
+2025-02-20 14:14:02 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Categorie.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Categorie\Elimina.cshtml.cs:line 62
+2025-02-20 14:14:30 - Exception: Sequence contains no elements
+Stack Trace:    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at _37_WebApp_SQLite.Pages.Fornitori.EliminaModel.OnPost(Int32 id) in C:\Users\Dev2\Documents\Dev2_2024\xx-Esercitazioni\37_WebApp-SQLite\Pages\Fornitori\Elimina.cshtml.cs:line 60

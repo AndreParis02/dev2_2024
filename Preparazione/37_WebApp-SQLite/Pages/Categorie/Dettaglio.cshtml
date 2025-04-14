@@ -1,0 +1,27 @@
+@page 
+@model DettaglioModel
+
+@using _37_WebApp_SQLite.Pages.Categorie;
+
+@{
+    ViewData["Title"] = "Dettaglio Categoria";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+        </tr>
+    </thead>
+    <tbody>
+         <tr>
+                <td>@Model.Categoria.Id</td>
+                <td>@Model.Categoria.Nome</td>
+            </tr>
+    </tbody>
+</table>
+
+<a asp-page="Index" class="btn btn-secondary">Torna alle categorie</a>

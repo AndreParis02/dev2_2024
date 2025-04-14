@@ -1,0 +1,75 @@
+@page
+@model ProdottiModel
+@{
+    ViewData["Title"] = "Prodotti";
+}
+
+<h1>Lista Prodotti</h1>
+
+@if (Model.Prodotti != null && Model.Prodotti.Any())
+{
+    <div class="table-container" style="border:none; margin-bottom: 50px;">
+        <p>
+            <a asp-page="Create">Aggiungi Prodotto</a>
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Prezzo</th>
+                    <th>Quantità</th>
+                    <th>Categoria</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Prodotti)
+                {
+                    <tr>
+                        <td>@item.Nome</td>
+                        <td>@item.Prezzo.ToString("C")</td>
+                        <td>@item.Quantita</td>
+                        <td>@item.Categoria</td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+}
+else
+{
+    <div class="table-container" style="border: none; margin-bottom: 50px;">
+        <p>
+            <a asp-page="Create">Aggiungi Prodotto</a>
+        </p>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Prezzo</th>
+                    <th>Quantità</th>
+                    <th>Categoria</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5">
+                        <center><h4>Nessun Prodotto disponibile</h4></center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}
+<a href="Index" class="btn btn-secondary">Torna indietro</a>

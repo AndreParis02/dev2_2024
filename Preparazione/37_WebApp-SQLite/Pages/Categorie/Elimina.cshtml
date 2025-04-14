@@ -1,0 +1,32 @@
+@page
+@model EliminaModel
+@using _37_WebApp_SQLite.Pages.Categorie;
+@{
+    ViewData["Title"] = "Elimina Categoria";
+    ViewData["ReurnUrl"] = Request.Headers["Referer"].ToString();
+}
+<h1>@ViewData["Title"]Elimina Categoria</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Categoria.Id" />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Categoria.Id</td>
+                <td>@Model.Categoria.Nome</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="submit" class="btn btn-primary my-3">Elimina</button>
+    <a asp-page="Index" class="btn btn-secondary">Annulla</a>
+
+</form>

@@ -1,0 +1,59 @@
+@page "Index"
+@model FornitoriModel
+@using _37_WebApp_SQLite.Models
+@using _37_WebApp_SQLite.Utilities
+@using _37_WebApp_SQLite.Pages.Fornitori;
+
+
+@{
+    ViewData["Title"] = "Fornitori Paginati";
+    //configuriamo il modello per la paginazione.
+
+
+    var paginationModel = new PaginationModel
+    {
+        PageIndex = Model.Fornitori.PageIndex,
+        TotalPages = Model.Fornitori.TotalPages,
+        PageUrl = page => Url.Page("Index", new { pageIndex = page })
+    };
+}
+
+
+<h1>Fornitori Paginati</h1>
+                    <div class="d-flex">
+                        @await Html.PartialAsync("FornitoreSearch")
+                    </div>
+                    <br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fornitore in Model.Fornitori)
+        {
+            <tr>
+                <td>@fornitore.Id</td>
+                <td>@fornitore.Nome</td>
+                <td><div class="btn-group mt-auto">
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                            <a asp-page="Dettaglio" asp-route-id="@fornitore.Id">Details</a>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                            <a asp-page="Modifica" asp-route-id="@fornitore.Id">Edit</a>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">
+                            <a asp-page="Elimina" asp-route-id="@fornitore.Id">Delete</a>
+                        </button>
+                    </div></td>
+            </tr>
+        }
+    </tbody>
+</table>
+@await Html.PartialAsync("_Pagination", paginationModel)
+
+
+</div>

@@ -1,0 +1,32 @@
+@page
+@model EliminaModel
+@using _37_WebApp_SQLite.Pages.Fornitori;
+@{
+    ViewData["Title"] = "Elimina Fornitore";
+    ViewData["ReurnUrl"] = Request.Headers["Referer"].ToString();
+}
+<h1>@ViewData["Title"]Elimina Fornitore</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Fornitore.Id" />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Fornitore.Id</td>
+                <td>@Model.Fornitore.Nome</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="submit" class="btn btn-primary my-3">Elimina</button>
+    <a asp-page="Index" class="btn btn-secondary">Annulla</a>
+
+</form>

@@ -1,0 +1,36 @@
+@page
+@model DetailsModel
+@{
+    ViewData["Title"] = "Dettaglio del prodotto";
+}
+
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <table class="table">
+        <thred>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Prezzo</th>
+                <th>Quantità</th>
+                <th>Categoria</th>
+                <th>Data Inserimento</th>
+
+            </tr>
+        </thred>
+        <tbody>
+                <tr>
+                    <td>@Model.Prodotto.Id</td>
+                    <td>@Model.Prodotto.Nome</td>
+                    <td>@Model.Prodotto.Prezzo</td>
+                    <td>@Model.Prodotto.Quantita</td>
+                    <td>@Model.Prodotto.Categoria</td>
+                    <td>@Model.Prodotto.Data</td>
+
+                </tr>   
+        </tbody>
+    </table>
+    <a asp-page="/Prodotti/Index"> Torna a Prodotti</a>
+</div>

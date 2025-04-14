@@ -1,0 +1,11 @@
+[
+  {
+    "Id": 1,
+    "Nome": "Prova",
+    "Prezzo": 12.0,
+    "Dettaglio": null,
+    "Quantita": 3,
+    "Data": "2025-04-14T12:45:27.4174792+02:00",
+    "Categoria": "Elettronica"
+  }
+]
